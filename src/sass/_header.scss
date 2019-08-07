@@ -1,0 +1,13 @@
+.header {
+    background-color: #fff;
+    grid-column: sidebar-start / main-end;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0px 3px 10px -5px rgba(0,0,0,.5);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
