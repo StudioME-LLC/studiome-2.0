@@ -8,6 +8,36 @@
     box-shadow: 0px 3px 10px -5px rgba(0,0,0,.5);
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
+    &__menu-button {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        margin-left: 1rem;
+
+        &:hover,
+        &:focus {
+            background-color: #F5F5F5;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: #8DCBC0;
+        }
+
+        &:active .header__menu-icon {
+            fill: #fff; 
+        }
+    }
+
+    &__menu-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+        fill: #8DCBC0;
+    }
 }

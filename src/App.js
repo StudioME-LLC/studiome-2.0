@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.scss';
 
+import { ReactComponent as MenuButton } from './assets/SVGs/menu.svg';
+
 function App() {
 	return (
 		<div className="container">
 			<div className="header">
-				<div className="header__menu">Menu</div>
+				<button className="header__menu-button">
+					<MenuButton className="header__menu-icon" />
+				</button>
 				<div className="header__logo">Logo</div>
 				<div className="header__cart">Cart</div>
 				<div className="header__profile">Profile</div>
