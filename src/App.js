@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 
+import Logo from "./assets/PNGs/StudioME-Logo.png"
+
 import { ReactComponent as MenuButton } from './assets/SVGs/menu.svg';
 
 function App() {
@@ -10,7 +12,9 @@ function App() {
 				<button className="header__menu-button">
 					<MenuButton className="header__menu-icon" />
 				</button>
-				<div className="header__logo">Logo</div>
+				<div className="header__fab">
+					<img src={Logo} alt="Logo" className="header__logo"/>
+				</div>
 				<div className="header__cart">Cart</div>
 				<div className="header__profile">Profile</div>
 			</div>
