@@ -75,4 +75,64 @@
         width: 6rem;
         height: 6rem;
     }
+
+    // CART
+    &__cart-button {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        margin-right: 2rem;
+
+        &:hover {
+            background-color: #F5F5F5;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: #8DCBC0;
+        }
+
+        &:active .header__cart-icon {
+            fill: #fff; 
+        }
+    }
+
+    &__cart-icon {
+        fill: #8DCBC0;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    // USER
+    &__user-button {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        background-color: #fff;
+        border: none;
+        outline: none;
+        margin-right: 3rem;
+
+        &:hover {
+            background-color: #F5F5F5;
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: #8DCBC0;
+        }
+
+        &:active .header__user-icon {
+            fill: #fff; 
+        }
+    }
+
+    &__user-icon {
+        fill: #8DCBC0;
+        width: 3rem;
+        height: 3rem;
+    }
 }
