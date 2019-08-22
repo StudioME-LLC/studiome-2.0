@@ -1,4 +1,4 @@
-.sidebar {
+.small-sidebar {
     background-color: #F5F5F5;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
@@ -35,4 +35,13 @@
         height: 3rem;
         margin-bottom: 1rem;
     }
+}
+
+.large-sidebar {
+    background-color: #F5F5F5;
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: 2 / -1;
+
+    display: flex;
+    flex-direction: column;
 }
