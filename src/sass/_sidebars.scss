@@ -24,7 +24,7 @@
             background-color: #fff;
         }
 
-        &:active .sidebar__button-icon {
+        &:active .small-sidebar__button-icon {
             fill: #8DCBC0;
         }
     }
@@ -44,4 +44,42 @@
 
     display: flex;
     flex-direction: column;
+
+    &__header {
+        background-color: #757575;
+        color: #fff;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #DB754F;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    &__section {
+        color: #757575;
+        font-size: 1.4rem;
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: center;
+        border-bottom: solid 1px rgba(117, 117, 117, .3);
+
+        &:hover {
+            background-color: rgba(117, 117, 117, .2);
+            cursor: pointer;
+        }
+    }
+
+    &__button-icon {
+        fill: #757575;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+        margin-left: .2rem;
+    }
 }

@@ -11,6 +11,10 @@ html {
     font-size: 62.5%; // 10px
 }
 
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .small-sidebar-container {
     display: grid;
     grid-template-rows: 6rem 150rem 20rem;
@@ -23,7 +27,7 @@ html {
 .large-sidebar-container {
     display: grid;
     grid-template-rows: 6rem 150rem 20rem;
-    grid-template-columns: [sidebar-start] 20rem
+    grid-template-columns: [sidebar-start] 25rem
                             [sidebar-end main-start] 1fr
                             [main-end];
     font-size: 1.8rem;
