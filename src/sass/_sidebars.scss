@@ -5,6 +5,7 @@
 
     display: flex;
     flex-direction: column;
+
     
     &__button {
         padding: 2rem 0;
@@ -15,7 +16,12 @@
 
         &:hover {
             background-color: rgba(117, 117, 117, .2);
+            color: #DB754F;
             cursor: pointer;
+        }
+
+        &:hover .small-sidebar__button-icon {
+            fill: #DB754F;
         }
 
         &:active,
