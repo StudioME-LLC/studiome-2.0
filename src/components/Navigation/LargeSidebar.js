@@ -18,6 +18,7 @@ import { ReactComponent as PodcastIcon } from '../../assets/SVGs/largeSidebar/mi
 export default function LargeSidebar() {
     return (
         <div className="large-sidebar">
+            <div className="large-sidebar__container">
 
             {/*Book*/}
             <NavLink 
@@ -110,6 +111,7 @@ export default function LargeSidebar() {
             >
                 <p>Contact</p>
             </NavLink>
+            </div>
         </div>
     )
 }

@@ -2,9 +2,10 @@
 
 .small-sidebar-active {
     background-color: #fff !important;
+    border-right: solid 3px #8DCBC0 !important;
 
     @include respond(phone) {
-        border-top: none !important;
+        border-top: solid 3px #8DCBC0 !important;
     }
 }
 
@@ -28,6 +29,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: fixed;
+    top: 6rem;
+    height: 100vh;
+    width: 7rem;
 
     @include respond(phone) {
         grid-column: sidebar-start / main-end;
@@ -118,6 +124,16 @@
 
     @include respond(phone) {
         z-index: 5;
+    }
+
+    &__container {
+        position: fixed;
+        top: 6rem;
+        left: 0;
+        width: 25rem;
+        height: 100vh;
+        overflow: scroll;
+        padding-bottom: 6rem;
     }
 
     &__header {

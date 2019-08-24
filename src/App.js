@@ -38,11 +38,9 @@ export default class App extends React.Component {
 						>
 							<MenuButton className="header__menu-icon" />
 						</button>
-						<div className="header__fab">
-							<Link to="/">
-								<img src={Logo} alt="Logo" className="header__logo"/>
-							</Link>
-						</div>
+						<Link className="header__fab" to="/">
+							<img src={Logo} alt="Logo" className="header__logo"/>
+						</Link>
 						<button className="header__cart-button">
 							<Cart className="header__cart-icon" />
 						</button>
