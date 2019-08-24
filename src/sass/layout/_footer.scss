@@ -1,4 +1,8 @@
 .footer {
     background-color: #C0C0C0;
     grid-column: sidebar-end / main-end;
+
+    @include respond(phone) {
+        width: 0px;
+    }
 }

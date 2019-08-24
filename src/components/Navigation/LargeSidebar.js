@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+
 // Large Sidebar SVGs
 import { ReactComponent as RentalIcon } from '../../assets/SVGs/largeSidebar/camera.svg';
 import { ReactComponent as ServiceIcon } from '../../assets/SVGs/largeSidebar/video-camera.svg';
@@ -18,30 +20,54 @@ export default function LargeSidebar() {
         <div className="large-sidebar">
 
             {/*Book*/}
-            <div className="large-sidebar__header">
-                Book
-            </div>
-            <div className="large-sidebar__section">
+            <NavLink 
+                activeClassName="large-sidebar-active"
+                className="large-sidebar__header"
+                to="/" exact style={{textDecoration: 'none'}}
+            >
+                <p>Book</p>
+            </NavLink>
+            <NavLink 
+                activeClassName="large-sidebar-section-active"
+                className="large-sidebar__section"
+                to="/#rentals" exact style={{textDecoration: 'none'}}
+            >
                 <RentalIcon className='large-sidebar__button-icon' />
                 <p>Rental & DIY</p>
-            </div>
-            <div className="large-sidebar__section">
+            </NavLink>
+            <NavLink 
+                activeClassName="large-sidebar-section-active"
+                className="large-sidebar__section"
+                to="/#full-service" exact style={{textDecoration: 'none'}}
+            >
                 <ServiceIcon className='large-sidebar__button-icon' />
                 <p>Full Service</p>
-            </div>
-            <div className="large-sidebar__section">
+            </NavLink>
+            <NavLink 
+                activeClassName="large-sidebar-section-active"
+                className="large-sidebar__section"
+                to="/#memberships" exact style={{textDecoration: 'none'}}
+            >
                 <MembershipsIcon className='large-sidebar__button-icon' />
                 <p>Memberships</p>
-            </div>
-            <div className="large-sidebar__section">
+            </NavLink>
+            <NavLink 
+                activeClassName="large-sidebar-section-active"
+                className="large-sidebar__section"
+                to="/checkout" exact style={{textDecoration: 'none'}}
+            >
                 <CheckoutIcon className='large-sidebar__button-icon' />
                 <p>Checkout</p>
-            </div>
+            </NavLink>
 
             {/*About*/}
-            <div className="large-sidebar__header">
-                About
-            </div>
+            <NavLink 
+                activeClassName="large-sidebar-active"
+                className="large-sidebar__header"
+                to="/about" exact style={{textDecoration: 'none'}}
+            >
+                <p>About</p>
+            </NavLink>
             <div className="large-sidebar__section">
                 <GeneralIcon className='large-sidebar__button-icon' />
                 <p>General</p>
@@ -56,9 +82,13 @@ export default function LargeSidebar() {
             </div>
 
             {/*Our Projects*/}
-            <div className="large-sidebar__header">
-                Our Projects
-            </div>
+            <NavLink 
+                activeClassName="large-sidebar-active"
+                className="large-sidebar__header"
+                to="/projects" exact style={{textDecoration: 'none'}}
+            >
+                <p>Our Projects</p>
+            </NavLink>
             <div className="large-sidebar__section">
                 <LearnIcon className='large-sidebar__button-icon' />
                 <p>Learn</p>
@@ -73,9 +103,13 @@ export default function LargeSidebar() {
             </div>
 
             {/*Contact*/}
-            <div className="large-sidebar__header">
-                Contact
-            </div>
+            <NavLink 
+                activeClassName="large-sidebar-active"
+                className="large-sidebar__header"
+                to="/contact" exact style={{textDecoration: 'none'}}
+            >
+                <p>Contact</p>
+            </NavLink>
         </div>
     )
 }

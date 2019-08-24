@@ -22,6 +22,10 @@ body {
                             [sidebar-end main-start] 1fr
                             [main-end];
     font-size: 1.8rem;
+
+    @include respond(phone) {
+        grid-template-rows: 6rem 150rem;
+    }
 }
 
 .large-sidebar-container {

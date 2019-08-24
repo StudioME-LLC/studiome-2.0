@@ -1,5 +1,13 @@
-@import "sass/base";
-@import "sass/footer";
-@import "sass/header";
-@import "sass/main";
-@import "sass/sidebars";
+// Abstracts
+@import "sass/abstracts/mixins";
+@import "sass/abstracts/variables";
+
+// Components
+@import "sass/components/backdrop";
+
+// Layout
+@import "sass/layout/base";
+@import "sass/layout/footer";
+@import "sass/layout/header";
+@import "sass/layout/main";
+@import "sass/layout/sidebars";

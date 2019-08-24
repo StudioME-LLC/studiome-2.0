@@ -10,31 +10,41 @@ import { ReactComponent as Contact } from '../../assets/SVGs/phone.svg';
 export default function Sidebar() {
     return (
         <div className="small-sidebar">
-            <NavLink className="small-sidebar__button" to="book">
-                    <Book className='small-sidebar__button-icon' />
-                    <p>Book</p>
+            <NavLink
+                activeClassName="small-sidebar-active"
+                className="small-sidebar__button"
+                to="/" exact style={{textDecoration: 'none'}}
+            >
+                <Book className='small-sidebar__button-icon' />
+                <p>Book</p>
             </NavLink>
 
 
-            <NavLink to="about" style={{textDecoration: 'none'}}>
-                <div className="small-sidebar__button">
-                    <About className='small-sidebar__button-icon' />
-                    <p>About</p>
-                </div>
+            <NavLink
+                activeClassName="small-sidebar-active"
+                className="small-sidebar__button"
+                to="/about" exact style={{textDecoration: 'none'}}
+            >
+                <About className='small-sidebar__button-icon' />
+                <p>About</p>
             </NavLink>
 
-            <NavLink to="projects" style={{textDecoration: 'none'}}>
-                <div className="small-sidebar__button">
-                    <Projects className='small-sidebar__button-icon' />
-                    <p>Our Projects</p>
-                </div>
+            <NavLink
+                activeClassName="small-sidebar-active"
+                className="small-sidebar__button"
+                to="/projects" exact style={{textDecoration: 'none'}}
+            >
+                <Projects className='small-sidebar__button-icon' />
+                <p>Our Projects</p>
             </NavLink>
 
-            <NavLink to="contact" style={{textDecoration: 'none'}}>
-                <div className="small-sidebar__button">
-                    <Contact className='small-sidebar__button-icon' />
-                    <p>Contact</p>
-                </div>
+            <NavLink
+                activeClassName="small-sidebar-active"
+                className="small-sidebar__button"
+                to="/contact" exact style={{textDecoration: 'none'}}
+            >
+                <Contact className='small-sidebar__button-icon' />
+                <p>Contact</p>
             </NavLink>
         </div>
     )

@@ -1,3 +1,25 @@
+// Active Small Sidebar
+
+.small-sidebar-active {
+    background-color: #fff !important;
+
+    @include respond(phone) {
+        border-top: none !important;
+    }
+}
+
+.small-sidebar-active p {
+    color: #8DCBC0;
+    background-color: #fff !important;
+}
+
+.small-sidebar-active .small-sidebar__button-icon {
+    fill: #8DCBC0 !important;
+}
+
+
+// Main Small Sidebar
+
 .small-sidebar {
     background-color: #F5F5F5;
     grid-column: sidebar-start / sidebar-end;
@@ -5,6 +27,17 @@
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    @include respond(phone) {
+        grid-column: sidebar-start / main-end;
+        grid-row: 3 / -1;
+
+        flex-direction: row;
+        position: sticky;
+        bottom: 0;
+        height: 7rem;
+    }
 
     
     &__button {
@@ -13,6 +46,13 @@
         color: #757575;
         text-align: center;
         border-bottom: solid 1px rgba(117, 117, 117, .2);
+        width: 100%;
+
+        @include respond(phone) {
+            font-size: 0px;
+            align-self: center;
+            border-top: solid 1px rgba(117, 117, 117, .2);
+        }
 
         &:hover {
             background-color: rgba(117, 117, 117, .2);
@@ -27,10 +67,10 @@
         &:active,
         &:focus {
             color: #8DCBC0;
-            background-color: #fff;
         }
 
-        &:active .small-sidebar__button-icon {
+        &:active .small-sidebar__button-icon,
+        &:focus .small-sidebar__button-icon {
             fill: #8DCBC0;
         }
     }
@@ -40,8 +80,33 @@
         width: 3rem;
         height: 3rem;
         margin-bottom: 1rem;
+
+        @include respond(phone) {
+            margin-bottom: 0rem;
+        }
     }
 }
+
+// Active Large Sidebar
+
+.large-sidebar-active {
+    background-color: #8DCBC0 !important;
+}
+
+.large-sidebar-section-active {
+    color: #8DCBC0 !important;
+    background-color: #fff !important;
+}
+
+.large-sidebar-section-active .large-sidebar__button-icon{
+    fill: #8DCBC0 !important;
+}
+
+.large-sidebar-active p {
+    color: #fff;
+}
+
+// Main Large Sidebar
 
 .large-sidebar {
     background-color: #F5F5F5;
@@ -50,6 +115,10 @@
 
     display: flex;
     flex-direction: column;
+
+    @include respond(phone) {
+        z-index: 5;
+    }
 
     &__header {
         background-color: #757575;
@@ -64,6 +133,11 @@
             background-color: #DB754F;
             color: #fff;
             cursor: pointer;
+        }
+
+        &:active,
+        &:focus {
+            color: #8DCBC0;
         }
     }
 
