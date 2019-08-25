@@ -2,9 +2,11 @@
 
 .small-sidebar-active {
     background-color: #fff !important;
+    border-right: solid 3px #8DCBC0;
 
     @include respond(phone) {
         border-top: solid 3px #8DCBC0 !important;
+        border-right: none;
     }
 }
 
