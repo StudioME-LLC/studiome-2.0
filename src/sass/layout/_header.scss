@@ -1,11 +1,11 @@
 .header {
-    background-color: #fff;
+    background-color: $color-white;
     grid-column: sidebar-start / main-end;
 
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0px 3px 10px -5px rgba(0,0,0,.5);
+    box-shadow: $shadow-medium;
 
     display: flex;
     align-items: center;
@@ -16,30 +16,30 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        background-color: #fff;
+        background-color: $color-white;
         border: none;
         outline: none;
         margin-left: 1rem;
         margin-right: auto;
 
         &:hover {
-            background-color: #F5F5F5;
+            background-color: $color-grey-light;
             cursor: pointer;
         }
 
         &:active {
-            background-color: #8DCBC0;
+            background-color: $color-teal;
         }
 
         &:active .header__menu-icon {
-            fill: #fff; 
+            fill: $color-white; 
         }
     }
 
     &__menu-icon {
         width: 3.5rem;
         height: 3.5rem;
-        fill: #8DCBC0;
+        fill: $color-teal;
     }
 
     // MENU LOGO
@@ -47,13 +47,13 @@
     &__fab {
         width: 9rem;
         height: 9rem;
-        background-color: #8DCBC0;
+        background-color: $color-teal;
         border-radius: 50%;
         position: absolute;
         transform: translate(-50%, 0);
         left: 50%;
         top: 2rem;
-        box-shadow: 0px 3px 10px -5px rgba(0,0,0,.5);
+        box-shadow: $shadow-medium;
         transition: all .2s ease;
 
         @include respond(phone) {
@@ -69,7 +69,7 @@
 
         &:active {
             transform: translate(-50%, 0) scale(.97);
-            box-shadow: 0px 3px 7px -4px rgba(0,0,0,.8);
+            box-shadow: $shadow-dark;
         }
     }
 
@@ -94,7 +94,7 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        background-color: #fff;
+        background-color: $color-white;
         border: none;
         outline: none;
         margin-right: 2rem;
@@ -104,21 +104,21 @@
         }
 
         &:hover {
-            background-color: #F5F5F5;
+            background-color: $color-grey-light;
             cursor: pointer;
         }
 
         &:active {
-            background-color: #8DCBC0;
+            background-color: $color-teal;
         }
 
         &:active .header__cart-icon {
-            fill: #fff; 
+            fill: $color-white; 
         }
     }
 
     &__cart-icon {
-        fill: #8DCBC0;
+        fill: $color-teal;
         width: 3rem;
         height: 3rem;
 
@@ -133,7 +133,7 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        background-color: #fff;
+        background-color: $color-white;
         border: none;
         outline: none;
         margin-right: 3rem;
@@ -143,21 +143,21 @@
         }
 
         &:hover {
-            background-color: #F5F5F5;
+            background-color: $color-grey-light;
             cursor: pointer;
         }
 
         &:active {
-            background-color: #8DCBC0;
+            background-color: $color-teal;
         }
 
         &:active .header__user-icon {
-            fill: #fff; 
+            fill: $color-white; 
         }
     }
 
     &__user-icon {
-        fill: #8DCBC0;
+        fill: $color-teal;
         width: 3rem;
         height: 3rem;
 

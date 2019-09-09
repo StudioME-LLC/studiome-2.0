@@ -18,99 +18,125 @@ import { ReactComponent as PodcastIcon } from '../../assets/SVGs/largeSidebar/mi
 export default function LargeSidebar() {
     return (
         <div className="large-sidebar">
+            <div className="large-sidebar__top">
+                <h1 className="large-sidebar__top-heading">StudioME</h1>
+            </div>
             <div className="large-sidebar__container">
+                {/*Book*/}
+                <NavLink 
+                    activeClassName="large-sidebar-active"
+                    className="large-sidebar__header"
+                    to="/" exact style={{textDecoration: 'none'}}
+                >
+                    <p>Book</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/#rentals" exact style={{textDecoration: 'none'}}
+                >
+                    <RentalIcon className='large-sidebar__button-icon' />
+                    <p>Rental & DIY</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/#full-service" exact style={{textDecoration: 'none'}}
+                >
+                    <ServiceIcon className='large-sidebar__button-icon' />
+                    <p>Full Service</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/#memberships" exact style={{textDecoration: 'none'}}
+                >
+                    <MembershipsIcon className='large-sidebar__button-icon' />
+                    <p>Memberships</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/checkout" exact style={{textDecoration: 'none'}}
+                >
+                    <CheckoutIcon className='large-sidebar__button-icon' />
+                    <p>Checkout</p>
+                </NavLink>
 
-            {/*Book*/}
-            <NavLink 
-                activeClassName="large-sidebar-active"
-                className="large-sidebar__header"
-                to="/" exact style={{textDecoration: 'none'}}
-            >
-                <p>Book</p>
-            </NavLink>
-            <NavLink 
-                activeClassName="large-sidebar-section-active"
-                className="large-sidebar__section"
-                to="/#rentals" exact style={{textDecoration: 'none'}}
-            >
-                <RentalIcon className='large-sidebar__button-icon' />
-                <p>Rental & DIY</p>
-            </NavLink>
-            <NavLink 
-                activeClassName="large-sidebar-section-active"
-                className="large-sidebar__section"
-                to="/#full-service" exact style={{textDecoration: 'none'}}
-            >
-                <ServiceIcon className='large-sidebar__button-icon' />
-                <p>Full Service</p>
-            </NavLink>
-            <NavLink 
-                activeClassName="large-sidebar-section-active"
-                className="large-sidebar__section"
-                to="/#memberships" exact style={{textDecoration: 'none'}}
-            >
-                <MembershipsIcon className='large-sidebar__button-icon' />
-                <p>Memberships</p>
-            </NavLink>
-            <NavLink 
-                activeClassName="large-sidebar-section-active"
-                className="large-sidebar__section"
-                to="/checkout" exact style={{textDecoration: 'none'}}
-            >
-                <CheckoutIcon className='large-sidebar__button-icon' />
-                <p>Checkout</p>
-            </NavLink>
+                {/*About*/}
+                <NavLink 
+                    activeClassName="large-sidebar-active"
+                    className="large-sidebar__header"
+                    to="/about" exact style={{textDecoration: 'none'}}
+                >
+                    <p>About</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/about/#general" exact style={{textDecoration: 'none'}}
+                >
+                    <GeneralIcon className='large-sidebar__button-icon' />
+                    <p>General</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/about/#team" exact style={{textDecoration: 'none'}}
+                >
+                    <TeamIcon className='large-sidebar__button-icon' />
+                    <p>Team</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/about/#work" exact style={{textDecoration: 'none'}}
+                >
+                    <WorkIcon className='large-sidebar__button-icon' />
+                    <p>Our Work</p>
+                </NavLink>
 
-            {/*About*/}
-            <NavLink 
-                activeClassName="large-sidebar-active"
-                className="large-sidebar__header"
-                to="/about" exact style={{textDecoration: 'none'}}
-            >
-                <p>About</p>
-            </NavLink>
-            <div className="large-sidebar__section">
-                <GeneralIcon className='large-sidebar__button-icon' />
-                <p>General</p>
-            </div>
-            <div className="large-sidebar__section">
-                <TeamIcon className='large-sidebar__button-icon' />
-                <p>Team</p>
-            </div>
-            <div className="large-sidebar__section">
-                <WorkIcon className='large-sidebar__button-icon' />
-                <p>Our Work</p>
-            </div>
+                {/*Our Projects*/}
+                <NavLink 
+                    activeClassName="large-sidebar-active"
+                    className="large-sidebar__header"
+                    to="/projects" exact style={{textDecoration: 'none'}}
+                >
+                    <p>Our Projects</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/projects/#team" exact style={{textDecoration: 'none'}}
+                >
+                    <LearnIcon className='large-sidebar__button-icon' />
+                    <p>Learn</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/projects/#team" exact style={{textDecoration: 'none'}}
+                >
+                    <EventsIcon className='large-sidebar__button-icon' />
+                    <p>Studio Events</p>
+                </NavLink>
+                <NavLink 
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/projects/#team" exact style={{textDecoration: 'none'}}
+                >
+                    <PodcastIcon className='large-sidebar__button-icon' />
+                    <p>Our Podcast</p>
+                </NavLink>
 
-            {/*Our Projects*/}
-            <NavLink 
-                activeClassName="large-sidebar-active"
-                className="large-sidebar__header"
-                to="/projects" exact style={{textDecoration: 'none'}}
-            >
-                <p>Our Projects</p>
-            </NavLink>
-            <div className="large-sidebar__section">
-                <LearnIcon className='large-sidebar__button-icon' />
-                <p>Learn</p>
-            </div>
-            <div className="large-sidebar__section">
-                <EventsIcon className='large-sidebar__button-icon' />
-                <p>Studio Events</p>
-            </div>
-            <div className="large-sidebar__section">
-                <PodcastIcon className='large-sidebar__button-icon' />
-                <p>Our Podcast</p>
-            </div>
-
-            {/*Contact*/}
-            <NavLink 
-                activeClassName="large-sidebar-active"
-                className="large-sidebar__header"
-                to="/contact" exact style={{textDecoration: 'none'}}
-            >
-                <p>Contact</p>
-            </NavLink>
+                {/*Contact*/}
+                <NavLink 
+                    activeClassName="large-sidebar-active"
+                    className="large-sidebar__header"
+                    to="/contact" exact style={{textDecoration: 'none'}}
+                >
+                    <p>Contact</p>
+                </NavLink>
             </div>
         </div>
     )

@@ -1,29 +1,27 @@
 // Active Small Sidebar
-
 .small-sidebar-active {
-    background-color: #fff !important;
-    border-right: solid 3px #8DCBC0;
+    background-color: $color-white !important;
+    border-right: solid 3px $color-teal;
 
     @include respond(phone) {
-        border-top: solid 3px #8DCBC0 !important;
+        border-top: solid 3px $color-teal !important;
         border-right: none;
     }
 }
 
 .small-sidebar-active p {
-    color: #8DCBC0;
-    background-color: #fff !important;
+    color: $color-teal;
+    background-color: $color-white !important;
 }
 
 .small-sidebar-active .small-sidebar__button-icon {
-    fill: #8DCBC0 !important;
+    fill: $color-teal !important;
 }
 
 
 // Main Small Sidebar
-
 .small-sidebar {
-    background-color: #F5F5F5;
+    background-color: $color-grey-light;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
 
@@ -51,41 +49,35 @@
     &__button {
         padding: 2rem 0;
         font-size: 1.4rem;
-        color: #757575;
+        color: $color-grey;
         text-align: center;
-        border-bottom: solid 1px rgba(117, 117, 117, .2);
+        border-bottom: $border-grey;
         width: 100%;
 
         @include respond(phone) {
             font-size: 0px;
             align-self: center;
-            border-top: solid 1px rgba(117, 117, 117, .2);
-            background-color: #F5F5F5;
+            border-top: $border-grey;
+            background-color: $color-grey-light;
         }
 
         &:hover {
-            background-color: rgba(117, 117, 117, .2);
-            color: #DB754F;
-            cursor: pointer;
-        }
-
-        &:hover .small-sidebar__button-icon {
-            fill: #DB754F;
+            background-color: $color-grey-light-hover;
         }
 
         &:active,
         &:focus {
-            color: #8DCBC0;
+            color: $color-teal;
         }
 
         &:active .small-sidebar__button-icon,
         &:focus .small-sidebar__button-icon {
-            fill: #8DCBC0;
+            fill: $color-teal;
         }
     }
 
     &__button-icon {
-        fill: #757575;
+        fill: $color-grey;
         width: 3rem;
         height: 3rem;
         margin-bottom: 1rem;
@@ -97,51 +89,64 @@
 }
 
 // Active Large Sidebar
-
 .large-sidebar-active {
-    background-color: #8DCBC0 !important;
+    background-color: $color-teal !important;
 }
 
 .large-sidebar-section-active {
-    color: #8DCBC0 !important;
-    background-color: #fff !important;
+    color: $color-teal !important;
+    background-color: $color-white !important;
 }
 
 .large-sidebar-section-active .large-sidebar__button-icon{
-    fill: #8DCBC0 !important;
+    fill: $color-teal !important;
 }
 
 .large-sidebar-active p {
-    color: #fff;
+    color: $color-white;
 }
 
 // Main Large Sidebar
-
 .large-sidebar {
-    background-color: #F5F5F5;
+    background-color: $color-grey-light;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
 
     display: flex;
     flex-direction: column;
 
+    height: 100vh;
+    width: 25rem;
+    position: fixed;
+    left: 0;
+
     @include respond(phone) {
-        z-index: 5;
+        z-index: 100;
+    }
+
+    &__top {
+        position: relative;
+        height: 10rem;
+        background-color: $color-white;
+        box-shadow: $shadow-medium;
+    }
+
+    &__top-heading {
+        font-size: 2rem;
+        color: $color-teal;
+        position: relative;
+        top: 2rem;
+        left: 1.5rem;
     }
 
     &__container {
-        position: fixed;
-        top: 6rem;
-        left: 0;
-        width: 25rem;
-        height: 100vh;
         overflow: scroll;
         padding-bottom: 6rem;
     }
 
     &__header {
-        background-color: #757575;
-        color: #fff;
+        background-color: $color-grey;
+        color: $color-white;
         font-size: 2rem;
         padding: 1rem 2rem;
         display: flex;
@@ -149,33 +154,32 @@
         text-transform: uppercase;
 
         &:hover {
-            background-color: #DB754F;
-            color: #fff;
+            background-color: $color-grey-hover;
             cursor: pointer;
         }
 
         &:active,
         &:focus {
-            color: #8DCBC0;
+            color: $color-teal;
         }
     }
 
     &__section {
-        color: #757575;
+        color: $color-grey;
         font-size: 1.4rem;
         padding: 1.5rem 2rem;
         display: flex;
         align-items: center;
-        border-bottom: solid 1px rgba(117, 117, 117, .3);
+        border-bottom: $border-grey;
 
         &:hover {
-            background-color: rgba(117, 117, 117, .2);
+            background-color: $color-grey-light-hover;
             cursor: pointer;
         }
     }
 
     &__button-icon {
-        fill: #757575;
+        fill: $color-grey;
         width: 2rem;
         height: 2rem;
         margin-right: 2rem;
