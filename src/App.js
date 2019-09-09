@@ -49,7 +49,12 @@ export default class App extends React.Component {
 						</button>
 					</div>
 
-					{!this.state.largeSidebar ? <SmallSidebar /> : <LargeSidebar />}
+					{!this.state.largeSidebar 
+						? <SmallSidebar /> 
+						: <LargeSidebar
+							toggleLargeSidebar={this.toggleLargeSidebar}
+						/>
+					}
 
 					<div className="main">
 						{this.state.largeSidebar && <div onClick={this.toggleLargeSidebar} ><Backdrop /></div>}

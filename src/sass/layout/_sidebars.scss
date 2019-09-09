@@ -126,9 +126,12 @@
 
     &__top {
         position: relative;
-        height: 10rem;
+        height: 6rem;
         background-color: $color-white;
-        box-shadow: $shadow-medium;
+
+        @include respond(phone) {
+            box-shadow: $shadow-medium;
+        }
     }
 
     &__top-heading {
@@ -139,9 +142,22 @@
         left: 1.5rem;
     }
 
+    &__close-icon {
+        width: 3rem;
+        height: 3rem;
+        fill: $color-teal;
+        position: relative;
+        left: 20rem;
+        top: -.8rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     &__container {
         overflow: scroll;
-        padding-bottom: 6rem;
+        padding-bottom: 10rem;
     }
 
     &__header {

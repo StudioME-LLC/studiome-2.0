@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 // Large Sidebar SVGs
+import { ReactComponent as CloseIcon} from '../../assets/SVGs/largeSidebar/cross.svg';
+
 import { ReactComponent as RentalIcon } from '../../assets/SVGs/largeSidebar/camera.svg';
 import { ReactComponent as ServiceIcon } from '../../assets/SVGs/largeSidebar/video-camera.svg';
 import { ReactComponent as MembershipsIcon } from '../../assets/SVGs/largeSidebar/profile.svg';
@@ -15,11 +17,14 @@ import { ReactComponent as LearnIcon } from '../../assets/SVGs/largeSidebar/book
 import { ReactComponent as EventsIcon } from '../../assets/SVGs/largeSidebar/calendar.svg';
 import { ReactComponent as PodcastIcon } from '../../assets/SVGs/largeSidebar/mic.svg';
 
-export default function LargeSidebar() {
+export default function LargeSidebar(props) {
     return (
         <div className="large-sidebar">
             <div className="large-sidebar__top">
                 <h1 className="large-sidebar__top-heading">StudioME</h1>
+                <CloseIcon className='large-sidebar__close-icon'
+                    onClick={props.toggleLargeSidebar}
+                />
             </div>
             <div className="large-sidebar__container">
                 {/*Book*/}
