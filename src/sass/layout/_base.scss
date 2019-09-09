@@ -12,7 +12,8 @@ html {
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: $font-main;
+    font-size: 1.8rem;
 }
 
 .small-sidebar-container {
@@ -21,7 +22,6 @@ body {
     grid-template-columns: [sidebar-start] 7rem
                             [sidebar-end main-start] 1fr
                             [main-end];
-    font-size: 1.8rem;
 
     @include respond(phone) {
         grid-template-rows: 6rem 100rem;
@@ -34,5 +34,4 @@ body {
     grid-template-columns: [sidebar-start] 25rem
                             [sidebar-end main-start] 1fr
                             [main-end];
-    font-size: 1.8rem;
 }

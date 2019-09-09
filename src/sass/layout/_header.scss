@@ -5,10 +5,10 @@
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: $shadow-medium;
 
     display: flex;
     align-items: center;
+    box-shadow: $shadow-medium;
 
     // MENU BUTTON
 
@@ -16,11 +16,12 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
+        margin-left: 1rem;
+        margin-right: auto;
+
         background-color: $color-white;
         border: none;
         outline: none;
-        margin-left: 1rem;
-        margin-right: auto;
 
         &:hover {
             background-color: $color-grey-light;
@@ -45,14 +46,16 @@
     // MENU LOGO
 
     &__fab {
-        width: 9rem;
-        height: 9rem;
-        background-color: $color-teal;
-        border-radius: 50%;
         position: absolute;
         transform: translate(-50%, 0);
         left: 50%;
         top: 2rem;
+
+        width: 9rem;
+        height: 9rem;
+
+        background-color: $color-teal;
+        border-radius: 50%;
         box-shadow: $shadow-medium;
         transition: all .2s ease;
 
@@ -78,14 +81,16 @@
         top: 4.5rem;
         left: 4.5rem;
         transform: translate(-50%, -50%);
+
         width: 6rem;
         height: 6rem;
 
         @include respond(phone) {
-            width: 4rem;
-            height: 4rem;
             top: 3rem;
             left: 3rem;
+
+            width: 4rem;
+            height: 4rem;
         }
     }
 
@@ -94,10 +99,11 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        background-color: $color-white;
+        margin-right: 2rem;
+
         border: none;
         outline: none;
-        margin-right: 2rem;
+        background-color: $color-white;
 
         @include respond(phone) {
             margin-right: 1rem;
@@ -118,9 +124,10 @@
     }
 
     &__cart-icon {
-        fill: $color-teal;
         width: 3rem;
         height: 3rem;
+
+        fill: $color-teal;
 
         @include respond(phone) {
             width: 2.5rem;
@@ -132,11 +139,12 @@
     &__user-button {
         width: 5rem;
         height: 5rem;
-        border-radius: 50%;
-        background-color: $color-white;
+        margin-right: 3rem;
+
         border: none;
         outline: none;
-        margin-right: 3rem;
+        border-radius: 50%;
+        background-color: $color-white;
 
         @include respond(phone) {
             margin-right: 1rem;
@@ -157,9 +165,10 @@
     }
 
     &__user-icon {
-        fill: $color-teal;
         width: 3rem;
         height: 3rem;
+
+        fill: $color-teal;
 
         @include respond(phone) {
             width: 2.5rem;

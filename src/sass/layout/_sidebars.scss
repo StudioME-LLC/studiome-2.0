@@ -21,42 +21,45 @@
 
 // Main Small Sidebar
 .small-sidebar {
-    background-color: $color-grey-light;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     position: fixed;
     top: 6rem;
     height: 100vh;
     width: 7rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $color-grey-light;
+
     @include respond(phone) {
         grid-column: sidebar-start / main-end;
         grid-row: 3 / -1;
 
-        flex-direction: row;
         position: sticky;
         bottom: 0;
+
+        flex-direction: row;
         height: 7rem;
         width: 100%;
     }
 
     
     &__button {
-        padding: 2rem 0;
-        font-size: 1.4rem;
-        color: $color-grey;
-        text-align: center;
-        border-bottom: $border-grey;
         width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+
+        border-bottom: $border-grey;
+        color: $color-grey;
+        font-size: $font-paragraph-medium;
 
         @include respond(phone) {
-            font-size: 0px;
             align-self: center;
+            font-size: 0px;
             border-top: $border-grey;
             background-color: $color-grey-light;
         }
@@ -77,10 +80,11 @@
     }
 
     &__button-icon {
-        fill: $color-grey;
         width: 3rem;
         height: 3rem;
         margin-bottom: 1rem;
+
+        fill: $color-grey;
 
         @include respond(phone) {
             margin-bottom: 0rem;
@@ -108,25 +112,27 @@
 
 // Main Large Sidebar
 .large-sidebar {
-    background-color: $color-grey-light;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
 
+    position: fixed;
+    left: 0;
     display: flex;
     flex-direction: column;
 
     height: 100vh;
     width: 25rem;
-    position: fixed;
-    left: 0;
+
+    background-color: $color-grey-light;
 
     @include respond(phone) {
-        z-index: 100;
+        z-index: 20;
     }
 
     &__top {
         position: relative;
         height: 6rem;
+
         background-color: $color-white;
 
         @include respond(phone) {
@@ -135,20 +141,22 @@
     }
 
     &__top-heading {
-        font-size: 2rem;
-        color: $color-teal;
         position: relative;
         top: 2rem;
-        left: 1.5rem;
+        left: 2.5rem;
+
+        font-size: $font-paragraph-large;
+        color: $color-teal;
     }
 
     &__close-icon {
-        width: 3rem;
-        height: 3rem;
-        fill: $color-teal;
         position: relative;
         left: 20rem;
         top: -.8rem;
+
+        width: 3rem;
+        height: 3rem;
+        fill: $color-teal;
 
         &:hover {
             cursor: pointer;
@@ -161,13 +169,14 @@
     }
 
     &__header {
-        background-color: $color-grey;
-        color: $color-white;
-        font-size: 2rem;
-        padding: 1rem 2rem;
         display: flex;
         justify-content: center;
         text-transform: uppercase;
+        padding: 1rem 2rem;
+
+        background-color: $color-grey;
+        color: $color-white;
+        font-size: $font-paragraph-large;
 
         &:hover {
             background-color: $color-grey-hover;
@@ -181,12 +190,13 @@
     }
 
     &__section {
-        color: $color-grey;
-        font-size: 1.4rem;
         padding: 1.5rem 2rem;
         display: flex;
         align-items: center;
+
         border-bottom: $border-grey;
+        color: $color-grey;
+        font-size: $font-paragraph-medium;
 
         &:hover {
             background-color: $color-grey-light-hover;
@@ -195,10 +205,11 @@
     }
 
     &__button-icon {
-        fill: $color-grey;
         width: 2rem;
         height: 2rem;
         margin-right: 2rem;
         margin-left: .2rem;
+        
+        fill: $color-grey;
     }
 }
