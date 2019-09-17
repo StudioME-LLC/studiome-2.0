@@ -2,10 +2,10 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 // SVGs
-import { ReactComponent as Book } from '../../assets/SVGs/shop.svg';
-import { ReactComponent as About } from '../../assets/SVGs/info-with-circle.svg';
-import { ReactComponent as Projects } from '../../assets/SVGs/video.svg';
-import { ReactComponent as Contact } from '../../assets/SVGs/phone.svg';
+import { ReactComponent as Book } from '../assets/SVGs/shop.svg';
+import { ReactComponent as About } from '../assets/SVGs/info-with-circle.svg';
+import { ReactComponent as Projects } from '../assets/SVGs/video.svg';
+import { ReactComponent as Contact } from '../assets/SVGs/phone.svg';
 
 export default function Sidebar() {
     return (

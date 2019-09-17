@@ -4,11 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 
 // Components
-import Header from './components/Navigation/Header';
-import SmallSidebar from './components/Navigation/SmallSidebar';
-import LargeSidebar from './components/Navigation/LargeSidebar';
-import Backdrop from './components/Navigation/Backdrop';
-import Router from './components/Navigation/Router';
+import Header from './Navigation/Header';
+import SmallSidebar from './Navigation/SmallSidebar';
+import LargeSidebar from './Navigation/LargeSidebar';
+import Backdrop from './Navigation/Backdrop';
+import Router from './Navigation/Router';
 
 export default class App extends React.Component {
 	state = {

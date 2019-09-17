@@ -4,6 +4,7 @@
 
 // Components
 @import "sass/components/backdrop";
+@import "sass/components/spinner";
 
 // Layout
 @import "sass/layout/base";
@@ -11,3 +12,6 @@
 @import "sass/layout/header";
 @import "sass/layout/main";
 @import "sass/layout/sidebars";
+
+// Pages
+@import "sass/pages/home";
