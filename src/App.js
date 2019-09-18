@@ -10,9 +10,18 @@ import LargeSidebar from './Navigation/LargeSidebar';
 import Backdrop from './Navigation/Backdrop';
 import Router from './Navigation/Router';
 
+import "scroll-behavior-polyfill";
+
 export default class App extends React.Component {
 	state = {
 		largeSidebar: false,
+	}
+
+	onScrollHome = () => {
+		window.scroll({
+			top: 0,
+			behavior: 'smooth'
+		});
 	}
 
 	toggleLargeSidebar = () => {
@@ -30,6 +39,7 @@ export default class App extends React.Component {
 				}>
 					<Header
 						toggleLargeSidebar={this.toggleLargeSidebar}
+						onScrollHome={this.onScrollHome}
 					/>
 					
 					{!this.state.largeSidebar 

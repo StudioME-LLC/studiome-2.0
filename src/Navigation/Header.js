@@ -18,7 +18,7 @@ export default function Header(props) {
             >
                 <MenuButton className="header__menu-icon" />
             </button>
-                <Link className="header__fab" to="/">
+                <Link onClick={props.onScrollHome} className="header__fab" to="/">
                     <img src={Logo} alt="Logo" className="header__logo"/>
                 </Link>
             <button className="header__cart-button">

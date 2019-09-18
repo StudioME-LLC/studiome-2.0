@@ -18,7 +18,7 @@ body {
 
 .small-sidebar-container {
     display: grid;
-    grid-template-rows: 6rem 100rem 20rem;
+    grid-template-rows: 6rem auto 20rem;
     grid-template-columns: [sidebar-start] 7rem
                             [sidebar-end main-start] 1fr
                             [main-end];
@@ -30,7 +30,7 @@ body {
 
 .large-sidebar-container {
     display: grid;
-    grid-template-rows: 6rem 50rem 20rem;
+    grid-template-rows: 6rem auto 20rem;
     grid-template-columns: [sidebar-start] 25rem
                             [sidebar-end main-start] 1fr
                             [main-end];

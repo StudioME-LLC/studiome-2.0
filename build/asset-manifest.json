@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.f43f0dfe.chunk.css",
-    "main.js": "/static/js/main.eac0e26f.chunk.js",
-    "main.js.map": "/static/js/main.eac0e26f.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.368f719e.js",
-    "runtime~main.js.map": "/static/js/runtime~main.368f719e.js.map",
-    "static/js/2.7e64cdd2.chunk.js": "/static/js/2.7e64cdd2.chunk.js",
-    "static/js/2.7e64cdd2.chunk.js.map": "/static/js/2.7e64cdd2.chunk.js.map",
-    "static/js/3.26fcea77.chunk.js": "/static/js/3.26fcea77.chunk.js",
-    "static/js/3.26fcea77.chunk.js.map": "/static/js/3.26fcea77.chunk.js.map",
+    "main.css": "/static/css/main.864271be.chunk.css",
+    "main.js": "/static/js/main.f25d36a4.chunk.js",
+    "main.js.map": "/static/js/main.f25d36a4.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.140e4157.js",
+    "runtime~main.js.map": "/static/js/runtime~main.140e4157.js.map",
+    "static/js/2.2c58198b.chunk.js": "/static/js/2.2c58198b.chunk.js",
+    "static/js/2.2c58198b.chunk.js.map": "/static/js/2.2c58198b.chunk.js.map",
+    "static/js/3.10f2974c.chunk.js": "/static/js/3.10f2974c.chunk.js",
+    "static/js/3.10f2974c.chunk.js.map": "/static/js/3.10f2974c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.d3066bd43e8b1e3fb7ab4dce43c04f32.js": "/precache-manifest.d3066bd43e8b1e3fb7ab4dce43c04f32.js",
+    "precache-manifest.580c9e622c54ec146338efc19da69d2a.js": "/precache-manifest.580c9e622c54ec146338efc19da69d2a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.f43f0dfe.chunk.css.map": "/static/css/main.f43f0dfe.chunk.css.map",
+    "static/css/main.864271be.chunk.css.map": "/static/css/main.864271be.chunk.css.map",
     "static/media/bookmark.b220984f.svg": "/static/media/bookmark.b220984f.svg",
     "static/media/calendar.a474ff42.svg": "/static/media/calendar.a474ff42.svg",
     "static/media/camera.cf4a2c6a.svg": "/static/media/camera.cf4a2c6a.svg",
@@ -30,6 +30,7 @@
     "static/media/user.9d577869.svg": "/static/media/user.9d577869.svg",
     "static/media/users.3040e8f7.svg": "/static/media/users.3040e8f7.svg",
     "static/media/video-camera.190f353f.svg": "/static/media/video-camera.190f353f.svg",
-    "static/media/video.1fd7ea5c.svg": "/static/media/video.1fd7ea5c.svg"
+    "static/media/video.1fd7ea5c.svg": "/static/media/video.1fd7ea5c.svg",
+    "static/media/web-hero.mp4": "/static/media/web-hero.7204f19f.mp4"
   }
 }
