@@ -1,14 +1,17 @@
 import React from 'react';
 
-// Assets
-import webVideo from '../../assets/home/hero/web-hero.mp4';
+// Components
+import Spinner from '../../components/Spinner';
+
+const HeroVideo = React.lazy(() => import ('./Media/HeroVideo'));
 
 export default function Hero() {
     return (
         <div className="home__web-hero">
-            <div className="home__hero-video-container">
-                <video src={webVideo} className="home__hero-video" autoPlay loop muted playsInline />
-            </div>
+
+            <React.Suspense fallback={<Spinner />}>
+                <HeroVideo />
+            </React.Suspense>
 
             <div className="home__hero-circle" />
             

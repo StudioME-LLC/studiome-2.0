@@ -15,6 +15,8 @@ import "scroll-behavior-polyfill";
 export default class App extends React.Component {
 	state = {
 		largeSidebar: false,
+		largeSidebarClassToggle: false,
+		largeSidebarClass: 'large-sidebar',
 	}
 
 	onScrollHome = () => {
@@ -25,9 +27,23 @@ export default class App extends React.Component {
 	}
 
 	toggleLargeSidebar = () => {
-		this.setState({ largeSidebar: !this.state.largeSidebar })
-		console.log('test')
+		this.setState({
+			largeSidebar: !this.state.largeSidebar,
+			largeSidebarClassToggle: !this.state.largeSidebarClass,
+		})
+
+		if (this.state.largeSidebarClass) {
+			this.setState({
+				largeSidebarClass: 'large-sidebar large-sidebar__active',
+			})
+		} else {
+			this.setState({
+				largeSidebarClass: 'large-sidebar',
+			})
+		}
 	}
+
+	
 
 	render() {
 		return (
@@ -46,6 +62,7 @@ export default class App extends React.Component {
 						? <SmallSidebar /> 
 						: <LargeSidebar
 							toggleLargeSidebar={this.toggleLargeSidebar}
+							largeSidebarClass={this.state.largeSidebarClass}
 						/>
 					}
 
