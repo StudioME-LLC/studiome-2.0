@@ -2,20 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 // Large Sidebar SVGs
-import { ReactComponent as CloseIcon} from '../assets/SVGs/largeSidebar/cross.svg';
+import { ReactComponent as CloseIcon} from '../assets/navigation/SVGs/largeSidebar/cross.svg';
 
-import { ReactComponent as RentalIcon } from '../assets/SVGs/largeSidebar/camera.svg';
-import { ReactComponent as ServiceIcon } from '../assets/SVGs/largeSidebar/video-camera.svg';
-import { ReactComponent as MembershipsIcon } from '../assets/SVGs/largeSidebar/profile.svg';
-import { ReactComponent as CheckoutIcon } from '../assets/SVGs/largeSidebar/cart.svg';
+import { ReactComponent as RentalIcon } from '../assets/navigation/SVGs/largeSidebar/camera.svg';
+import { ReactComponent as ServiceIcon } from '../assets/navigation/SVGs/largeSidebar/video-camera.svg';
+import { ReactComponent as MembershipsIcon } from '../assets/navigation/SVGs/largeSidebar/profile.svg';
+import { ReactComponent as CheckoutIcon } from '../assets/navigation/SVGs/largeSidebar/cart.svg';
 
-import { ReactComponent as GeneralIcon } from '../assets/SVGs/largeSidebar/info.svg';
-import { ReactComponent as TeamIcon } from '../assets/SVGs/largeSidebar/users.svg';
-import { ReactComponent as WorkIcon } from '../assets/SVGs/largeSidebar/film.svg';
+import { ReactComponent as GeneralIcon } from '../assets/navigation/SVGs/largeSidebar/info.svg';
+import { ReactComponent as TeamIcon } from '../assets/navigation/SVGs/largeSidebar/users.svg';
+import { ReactComponent as WorkIcon } from '../assets/navigation/SVGs/largeSidebar/film.svg';
 
-import { ReactComponent as LearnIcon } from '../assets/SVGs/largeSidebar/bookmark.svg';
-import { ReactComponent as EventsIcon } from '../assets/SVGs/largeSidebar/calendar.svg';
-import { ReactComponent as PodcastIcon } from '../assets/SVGs/largeSidebar/mic.svg';
+import { ReactComponent as LearnIcon } from '../assets/navigation/SVGs/largeSidebar/bookmark.svg';
+import { ReactComponent as EventsIcon } from '../assets/navigation/SVGs/largeSidebar/calendar.svg';
+import { ReactComponent as PodcastIcon } from '../assets/navigation/SVGs/largeSidebar/mic.svg';
 
 export default function LargeSidebar(props) {
     return (

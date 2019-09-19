@@ -1,4 +1,13 @@
-import React from 'react'
+import React from 'react';
+
+import { ReactComponent as Icon1 } from '../../assets/home/mission/connection.svg';
+import { ReactComponent as Icon2 } from '../../assets/home/mission/display.svg';
+import { ReactComponent as Icon3 } from '../../assets/home/mission/video-camera.svg';
+import { ReactComponent as Icon4 } from '../../assets/home/mission/volume-mute2.svg';
+import { ReactComponent as Icon5 } from '../../assets/home/mission/mug.svg';
+import { ReactComponent as Icon6 } from '../../assets/home/mission/man-woman.svg';
+import { ReactComponent as Icon7 } from '../../assets/home/mission/printer.svg';
+import { ReactComponent as Icon8 } from '../../assets/home/mission/video.svg';
 
 export default function Mission() {
     return (
@@ -14,45 +23,39 @@ export default function Mission() {
             <p className="home__mission-offer">What we offer.</p>
 
             <div className="home__mission-container home__mission-container--1">
-                <div className="home__mission-item">
-                    <p className="home__mission-perk">High Speed Internet</p>
-                </div>
+                <Icon1 className="home__mission-icon--1" />
+                <p className="home__mission-text">High Speed Internet</p>
             </div>
             <div className="home__mission-container home__mission-container--2">
                 <div className="home__mission-item">
-                    <p className="home__mission-perk">Retina Display Workstations</p>
+                    <Icon2 className="home__mission-icon--1" />
+                    <p className="home__mission-text">Retina Display Workstations</p>
                 </div>
             </div>
             <div className="home__mission-container home__mission-container--3">
-                <div className="home__mission-item">
-                    <p className="home__mission-perk">Rentable Camera Gear</p>
-                </div>
+                <Icon3 className="home__mission-icon--1" />
+                <p className="home__mission-text">Rentable Camera Gear</p>
             </div>
             <div className="home__mission-container home__mission-container--4">
-                <div className="home__mission-item">
-                    <p className="home__mission-perk">Soundproof Recording Studios</p>
-                </div>
+                <Icon4 className="home__mission-icon--1" />
+                <p className="home__mission-text">Soundproof Recording Studios</p>
             </div>
 
             <div className="home__mission-container home__mission-container--5">
-                <div className="home__mission-item">
-                    <p className="home__mission-perk">Coffee, Tea, & Water Stations</p>
-                </div>
+                <Icon5 className="home__mission-icon--2" />
+                <p className="home__mission-text">Coffee, Tea, & Water Stations</p>
             </div>
             <div className="home__mission-container home__mission-container--6">
-                <div className="home__mission-item">
-                    <p className="home__mission-perk">Dressing Rooms</p>
-                </div>
+                <Icon6 className="home__mission-icon--2" />
+                <p className="home__mission-text">Dressing Rooms</p>
             </div>
             <div className="home__mission-container home__mission-container--7">
-                <div className="home__mission-item">
-                    <p className="home__mission-perk">Printing & Photocopying</p>
-                </div>
+                <Icon7 className="home__mission-icon--2" />
+                <p className="home__mission-text">Printing & Photocopying</p>
             </div>
             <div className="home__mission-container home__mission-container--8">
-                <div className="home__mission-item">
-                    <p className="home__mission-perk">Professional Media Assistance</p>
-                </div>
+                <Icon8 className="home__mission-icon--2" />
+                <p className="home__mission-text">Professional Media Assistance</p>
             </div>
         </div>
     )

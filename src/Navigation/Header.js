@@ -2,12 +2,12 @@ import React from 'react';
 import {  Link } from 'react-router-dom';
 
 // PNGs
-import Logo from "../assets/PNGs/StudioME-Logo.png";
+import Logo from "../assets/navigation/PNGs/StudioME-Logo.png";
 
 // SVGs
-import { ReactComponent as MenuButton } from '../assets/SVGs/menu.svg';
-import { ReactComponent as Cart } from '../assets/SVGs/shopping-cart.svg';
-import { ReactComponent as User } from '../assets/SVGs/user.svg';
+import { ReactComponent as MenuButton } from '../assets/navigation/SVGs/menu.svg';
+import { ReactComponent as Cart } from '../assets/navigation/SVGs/shopping-cart.svg';
+import { ReactComponent as User } from '../assets/navigation/SVGs/user.svg';
 
 export default function Header(props) {
     return (

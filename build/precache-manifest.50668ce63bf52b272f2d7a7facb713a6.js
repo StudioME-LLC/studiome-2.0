@@ -1,35 +1,63 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16868089dbd41d62697e0f57449b02d7",
+    "revision": "5d8b240512575b80c114328191c4a914",
     "url": "/index.html"
   },
   {
-    "revision": "dc04a3fe78af14931082",
-    "url": "/static/css/main.9fe9c49f.chunk.css"
+    "revision": "cf40f33d820827ce017e",
+    "url": "/static/css/main.6a0d9f3c.chunk.css"
   },
   {
-    "revision": "e3f623789b6f5a789c95",
-    "url": "/static/js/2.8c252b7a.chunk.js"
+    "revision": "4e02964d7e270a2b0e2e",
+    "url": "/static/js/2.9b420f53.chunk.js"
   },
   {
-    "revision": "cbeff7ee2bb70cc2220e",
-    "url": "/static/js/3.23570d06.chunk.js"
+    "revision": "f3bebe1bef4927993550",
+    "url": "/static/js/3.c0ab57f7.chunk.js"
   },
   {
-    "revision": "efc0f8e12d4578343641",
-    "url": "/static/js/4.be488deb.chunk.js"
+    "revision": "7df009a5a24a4d83049d",
+    "url": "/static/js/4.f0e45edd.chunk.js"
   },
   {
-    "revision": "dce7c7086ef1830cf7de",
-    "url": "/static/js/5.1f4c0a78.chunk.js"
+    "revision": "cf40f33d820827ce017e",
+    "url": "/static/js/main.dd566679.chunk.js"
   },
   {
-    "revision": "dc04a3fe78af14931082",
-    "url": "/static/js/main.e0e34978.chunk.js"
+    "revision": "75af375153dee2217162",
+    "url": "/static/js/runtime~main.fa741c41.js"
   },
   {
-    "revision": "bdb31437e82f8f47cf25",
-    "url": "/static/js/runtime~main.c385afa5.js"
+    "revision": "0632eae1e936681e224db537c1ecbf9d",
+    "url": "/static/media/Audio-Room.0632eae1.jpg"
+  },
+  {
+    "revision": "c7bf6719b455294108c6bb4c8fd5b41d",
+    "url": "/static/media/Banner-1.c7bf6719.jpg"
+  },
+  {
+    "revision": "d357248ce0f629d843ef743184472054",
+    "url": "/static/media/Banner-2.d357248c.jpg"
+  },
+  {
+    "revision": "7f348e99acd564e7ef8d3281a0ad965a",
+    "url": "/static/media/Camera.7f348e99.jpg"
+  },
+  {
+    "revision": "bdd77eb4fb35ba34207e38951ff44013",
+    "url": "/static/media/MP-Studio.bdd77eb4.jpg"
+  },
+  {
+    "revision": "3134a69c563849d5282fc0704f6ddd58",
+    "url": "/static/media/Podcast.3134a69c.jpg"
+  },
+  {
+    "revision": "d782b939e1de9736bf3cd9197257a8d2",
+    "url": "/static/media/Studio-E.d782b939.jpg"
+  },
+  {
+    "revision": "2a5c64c4f65bc1c0471ebdf5192197fc",
+    "url": "/static/media/Workstation.2a5c64c4.jpg"
   },
   {
     "revision": "b220984f4272ccd73dc55f1d5bac52b9",
@@ -48,8 +76,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cart.3f9e466f.svg"
   },
   {
+    "revision": "ffd002cb295a0307f7c9e56d90d513e2",
+    "url": "/static/media/chevron-thin-down.ffd002cb.svg"
+  },
+  {
+    "revision": "02bdd87d83086abe9da8b7ada5bc0c0c",
+    "url": "/static/media/connection.02bdd87d.svg"
+  },
+  {
     "revision": "59d7fd203a0142242d12fa4fbd128aa3",
     "url": "/static/media/cross.59d7fd20.svg"
+  },
+  {
+    "revision": "ab490c14507c397e4dcf77663e084ac9",
+    "url": "/static/media/display.ab490c14.svg"
   },
   {
     "revision": "98f6af01ff95dd888d696bd6e3d39b93",
@@ -64,6 +104,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/info.fb1af8a6.svg"
   },
   {
+    "revision": "80f58d160de981af69850f92c5f4efff",
+    "url": "/static/media/man-woman.80f58d16.svg"
+  },
+  {
     "revision": "3349dd3964f21588efe65bd328866e88",
     "url": "/static/media/menu.3349dd39.svg"
   },
@@ -72,8 +116,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/mic.fd8ccbdd.svg"
   },
   {
+    "revision": "ac0e266f57106aedf2be3a8903846aae",
+    "url": "/static/media/mug.ac0e266f.svg"
+  },
+  {
     "revision": "36786e2da8bfbfee7b87d90803edecf4",
     "url": "/static/media/phone.36786e2d.svg"
+  },
+  {
+    "revision": "f60f397fd7267a552d5789bb4d951e69",
+    "url": "/static/media/printer.f60f397f.svg"
   },
   {
     "revision": "a701b8be873a0aefb2307ab929df9fd9",
@@ -102,6 +154,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "1fd7ea5c94f87213395cfc8745802230",
     "url": "/static/media/video.1fd7ea5c.svg"
+  },
+  {
+    "revision": "73d2dec914ca7c8b093052ac947ef425",
+    "url": "/static/media/volume-mute2.73d2dec9.svg"
   },
   {
     "revision": "7204f19f9d4cf5014e5c0f81012faa87",

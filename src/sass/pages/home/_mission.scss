@@ -1,21 +1,22 @@
 .home {
-    
-    // Mission
     &__mission {
         display: grid;
         grid-template-columns: 1fr repeat(4, 22.5rem) 1fr;
-        grid-template-rows: 30rem 10rem 15rem 15rem 10rem;
+        grid-template-rows: 30rem 15rem 15rem 15rem 10rem;
     }
 
+    // Banner
     &__mission-banner {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
 
-        background-color: $color-teal;
+        background-image: url(./assets/home/mission/Banner-1.jpg);
+        background-size: cover;
+        background-position: center;
     }
 
     &__mission-banner-container {
-        grid-column: 2 / 6;
+        grid-column: 3 / 5;
         grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
@@ -38,14 +39,17 @@
     &__mission-subheading {
         color: $color-white;
         font-weight: 100;
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
+    // Perks
     &__mission-offer {
         grid-column: 2 / 6;
         grid-row: 2 / 3;
         justify-self: center;
         align-self: center;
+
+        margin-top: 2rem;
 
         color: $color-grey;
         font-size: 2.4rem;
@@ -58,6 +62,7 @@
 
         text-align: center;
         padding: 3rem;
+        color: $color-grey;
 
         &--1 {
             grid-column: 2 / 3;
@@ -98,5 +103,21 @@
             grid-column: 5 / 6;
             grid-row: 4 / 5;
         }
+    }
+
+    &__mission-icon {
+
+        &--1 {
+            fill: $color-orange;
+        }
+
+        &--2 {
+            fill: $color-green;
+        }
+    }
+
+    &__mission-text {
+        font-size: 1.4rem;
+        margin-top: 2rem;
     }
 }

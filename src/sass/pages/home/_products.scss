@@ -1,17 +1,17 @@
 .home {
-    // Products
+
+    // Heading
     &__products {
         display: grid;
         grid-template-columns: 1fr repeat(3, 30rem) 1fr;
-        grid-template-rows: 20rem 20rem 40rem 40rem 10rem;
+        grid-template-rows: 18rem 20rem 40rem 40rem 10rem;
     }
 
     &__products-heading {
         grid-column: 2 / 5;
         grid-row: 1 / 2;
         justify-self: center;
-
-        margin-top: 8rem;
+        align-self: center;
 
         color: $color-grey;
         font-size: 2.4rem;
@@ -19,14 +19,69 @@
         text-transform: uppercase;
     }
 
+    &__products-arrow {
+        grid-column: 2 / 5;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: flex-end;
+
+        width: 5rem;
+        height: 5rem;
+
+        fill: $color-teal;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // Buttons
     &__products-rentals-button {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         justify-self: center;
         align-self: center;
 
-        width: 10rem;
+        width: 25rem;
         height: 6rem;
+
+        border: 1px solid $color-grey-mild;
+        background-color: $color-white;
+        border-radius: 5px;
+        outline: none;
+        
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $color-teal;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-light;
+        }
+    }
+
+    &__products-rentals-button--active {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+        align-self: center;
+
+        width: 25rem;
+        height: 6rem;
+
+        border: none;
+        background-color: $color-teal;
+        border-radius: 5px;
+        box-shadow: $shadow-button;
+        outline: none;
+        
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $color-white;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__products-services-button {
@@ -35,8 +90,46 @@
         justify-self: center;
         align-self: center;
 
-        width: 10rem;
+        width: 25rem;
         height: 6rem;
+
+        border: 1px solid $color-grey-mild;
+        background-color: $color-white;
+        border-radius: 5px;
+        outline: none;
+        
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $color-teal;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-light;
+        }
+    }
+
+    &__products-services-button--active {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        justify-self: center;
+        align-self: center;
+
+        width: 25rem;
+        height: 6rem;
+
+        border: none;
+        background-color: $color-teal;
+        border-radius: 5px;
+        box-shadow: $shadow-button;
+        outline: none;
+        
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $color-white;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__products-memberships-button {
@@ -45,10 +138,49 @@
         justify-self: center;
         align-self: center;
 
-        width: 10rem;
+        width: 25rem;
         height: 6rem;
+
+        border: 1px solid $color-grey-mild;
+        background-color: $color-white;
+        border-radius: 5px;
+        outline: none;
+        
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $color-teal;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-light;
+        }
     }
 
+    &__products-memberships-button--active {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+        justify-self: center;
+        align-self: center;
+
+        width: 25rem;
+        height: 6rem;
+
+        border: none;
+        background-color: $color-teal;
+        border-radius: 5px;
+        box-shadow: $shadow-button;
+        outline: none;
+        
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: $color-white;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // Products
     &__products-container {
         justify-self: center;
         align-self: flex-start;
@@ -56,11 +188,13 @@
         width: 25rem;
         height: 33rem;
 
-        border: 2px solid $color-teal;
-
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 25rem 7rem;
+
+        box-shadow: $shadow-button;
+        border-radius: 5px;
+        overflow: hidden;
 
         &--1 {
             grid-column: 2 / 3;
@@ -97,7 +231,48 @@
         grid-column: 1 / -1;
         grid-row: 1 / 2;
 
-        background-color: $color-grey;
+        transition: .5s filter ease;
+
+        &:hover {
+            filter: saturate(0);
+            cursor: pointer;
+        }
+
+        &--1 {
+            background-image: url(./assets/home/products/Studio-E.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &--2 {
+            background-image: url(./assets/home/products/MP-Studio.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &--3 {
+            background-image: url(./assets/home/products/Podcast.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &--4 {
+            background-image: url(./assets/home/products/Audio-Room.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &--5 {
+            background-image: url(./assets/home/products/Camera.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &--6 {
+            background-image: url(./assets/home/products/Workstation.jpg);
+            background-position: center;
+            background-size: cover;
+        }
     }
 
     &__products-name {
@@ -106,6 +281,8 @@
         justify-self: flex-start;
         align-self: flex-start;
         margin: 1.5rem;
+
+        color: $color-grey;
     }
 
     &__products-view {
@@ -117,5 +294,18 @@
 
         width: 6rem;
         height: 4rem;
+
+        background-color: $color-green;
+        border: none;
+        border-radius: 5px;
+        box-shadow: $shadow-button;
+        color: $color-white;
+        text-transform: uppercase;
+        outline: none;
+        font-weight: 600;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
