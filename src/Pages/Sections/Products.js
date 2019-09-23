@@ -40,8 +40,8 @@ export default class Products extends Component {
     render() {
         return (
             <div className="home__products">
-                <h2 className="home__products-heading">Our Products and Services</h2>
-                <ChevronArrow className="home__products-arrow" />
+                <h2 onClick={this.props.onProductsHandler} className="home__products-heading">Our Products and Services</h2>
+                <ChevronArrow onClick={this.props.onProductsHandler} className="home__products-arrow" />
 
                 <button
                     className={this.state.rentalsButtonClass}

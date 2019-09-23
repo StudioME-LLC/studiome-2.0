@@ -9,11 +9,25 @@ import Explain from './Sections/Explain';
 
 
 export default class Home extends Component {
+    state = {
+        myRefProducts: null,
+    }
+
+    onProductsHandler = () => {
+        window.scroll({
+			top: this.myRefProducts.offsetTop,
+			behavior: 'smooth'
+        });
+        
+        console.log('test')
+    }
+
     render() {
         return (
             <div className="home">
                 <Hero />
-                <Products />
+                <div style={{position: 'relative', top: '100px'}} ref={ (ref) => this.myRefProducts=ref }></div>
+                <Products onProductsHandler={this.onProductsHandler} />
                 <Mission />
                 <Explain />
             </div>

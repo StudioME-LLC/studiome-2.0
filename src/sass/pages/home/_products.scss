@@ -8,7 +8,7 @@
 
         @include respond(phone) {
             grid-template-columns: 1fr repeat(6, 6.5rem) 1fr;  
-            grid-template-rows: 18rem 20rem repeat(3, 28rem) 10rem;
+            grid-template-rows: 10rem 15rem repeat(3, 28rem) 10rem;
         }
 
         @include respond(small-phone) {
@@ -32,6 +32,10 @@
             grid-column: 2 / 8;
             text-align: center;
             align-self: flex-start;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
@@ -78,9 +82,10 @@
 
         @include respond(phone) {
             grid-column: 2 / 4;
-            width: 10rem;
+            width: 12rem;
             height: 5rem;
             font-size: 1.4rem;
+            justify-self: flex-start;
         }
 
         @include respond(small-phone) {
@@ -118,9 +123,10 @@
 
         @include respond(phone) {
             grid-column: 2 / 4;
-            width: 10rem;
+            width: 12rem;
             height: 5rem;
             font-size: 1.4rem;
+            justify-self: flex-start;
         }
 
         @include respond(small-phone) {
@@ -160,9 +166,10 @@
 
         @include respond(phone) {
             grid-column: 4 / 6;
-            width: 10rem;
+            width: 12rem;
             height: 5rem;
             font-size: 1.4rem;
+            justify-self: center;
         }
 
         @include respond(small-phone) {
@@ -200,7 +207,7 @@
 
         @include respond(phone) {
             grid-column: 4 / 6;
-            width: 10rem;
+            width: 12rem;
             height: 5rem;
             font-size: 1.4rem;
         }
@@ -242,9 +249,10 @@
 
         @include respond(phone) {
             grid-column: 6 / 8;
-            width: 10rem;
+            width: 12rem;
             height: 5rem;
             font-size: 1.4rem;
+            justify-self: right;
         }
 
         @include respond(small-phone) {
@@ -283,9 +291,10 @@
 
         @include respond(phone) {
             grid-column: 6 / 8;
-            width: 10rem;
+            width: 12rem;
             height: 5rem;
             font-size: 1.4rem;
+            justify-self: right;
         }
 
         @include respond(small-phone) {
