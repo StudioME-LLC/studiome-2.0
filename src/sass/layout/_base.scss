@@ -24,7 +24,7 @@ body {
                             [main-end];
 
     @include respond(phone) {
-        grid-template-rows: 6rem 100rem;
+        grid-template-rows: 6rem minmax(100rem, 1fr);
     }
 }
 

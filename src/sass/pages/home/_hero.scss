@@ -10,7 +10,15 @@
         }
 
         @include respond(tab-port) {
-            grid-template-rows: 50rem;
+            grid-template-columns: 1fr 40rem;
+        }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+
+        @include respond(small-phone) {
+            grid-template-columns: 1fr;
         }
     }
 
@@ -25,6 +33,10 @@
 
     &__hero-video {
         width: 100%;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__hero-circle {
@@ -46,6 +58,15 @@
         @include respond(tab-land) {
             width: 45rem;
         }
+
+        @include respond(tab-port) {
+            width: 42rem;
+        }
+
+        @include respond(phone) {
+            width: 40rem;
+            height: 70%;
+        }
     }
 
     &__hero-messaging {
@@ -59,8 +80,13 @@
         z-index: 3;
 
         @include respond(tab-land) {
-            margin-top: 10rem;
+            margin-top: 0;
             margin-right: 3rem;
+        }
+
+        @include respond(tab-port) {
+            margin-top: 0;
+            margin-right: 2rem;
         }
     }
 
@@ -72,7 +98,10 @@
 
         @include respond(tab-land) {
             margin-top: 10rem;
-            margin-right: 3rem;
+        }
+
+        @include respond(phone) {
+            font-size: 4rem;
         }
     }
 
@@ -80,5 +109,10 @@
         color: $color-white;
         font-size: 2.4rem;
         font-weight: 100;
+
+        @include respond(phone) {
+            font-size: 2rem;
+            width: 30rem;
+        }
     }
 }
