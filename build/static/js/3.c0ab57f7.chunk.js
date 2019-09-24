@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{38:function(e,n,o){e.exports=o.p+"static/media/web-hero.7204f19f.mp4"},39:function(e,n,o){"use strict";o.r(n),o.d(n,"default",function(){return c});var a=o(0),t=o.n(a),i=o(38),r=o.n(i);function c(){return t.a.createElement("div",{className:"home__hero-video-container"},t.a.createElement("video",{src:r.a,className:"home__hero-video",autoPlay:!0,loop:!0,muted:!0,playsInline:!0}))}}}]);
-//# sourceMappingURL=3.c0ab57f7.chunk.js.map

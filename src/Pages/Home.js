@@ -26,7 +26,7 @@ export default class Home extends Component {
         return (
             <div className="home">
                 <Hero />
-                <div style={{position: 'relative', top: '100px'}} ref={ (ref) => this.myRefProducts=ref }></div>
+                <div style={{position: 'relative', top: '60px'}} ref={ (ref) => this.myRefProducts=ref }></div>
                 <Products onProductsHandler={this.onProductsHandler} />
                 <Mission />
                 <Explain />
