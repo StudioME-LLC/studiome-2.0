@@ -8,14 +8,16 @@ import Spinner from '../components/Spinner';
 const Home = React.lazy(() => import ('../Pages/Home'));
 
 
-export default function Router() {
+export default function Router(props) {
     return (
         <React.Fragment>
             <Switch>
                 <Route path="/" exact
                 render={() => 
                     <React.Suspense fallback={<Spinner />}>
-                        <Home />
+                        <Home
+                            sidebarSelection={props.sidebarSelection}
+                        />
                     </React.Suspense>} 
                 />
                 <Route path="/checkout" exact>Checkout Page</Route>

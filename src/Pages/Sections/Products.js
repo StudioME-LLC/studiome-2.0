@@ -1,13 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-import { ReactComponent as ChevronArrow } from '../../assets/home/products/chevron-thin-down.svg';
+// Components
+import Modal from '../../components/ProductModal';
+import Backdrop from '../../components/MainBackdrop';
 
 export default class Products extends Component {
 
     state = {
-        rentalsButtonClass: 'home__products-rentals-button',
+        rentalsButtonClass: 'home__products-rentals-button--active',
         servicesButtonClass: 'home__products-services-button',
         membershipsButtonClass: 'home__products-memberships-button',
+
+        modalToggle: false,
     }
 
     onActiveButton = (button) => {
@@ -37,12 +41,16 @@ export default class Products extends Component {
         
     }
 
+    onModalToggle = () => {
+        this.setState({
+            ...this.state,
+            modalToggle: !this.state.modalToggle,
+        })
+    }
+
     render() {
         return (
             <div className="home__products">
-                <h2 onClick={this.props.onProductsHandler} className="home__products-heading">Our Products and Services</h2>
-                <ChevronArrow onClick={this.props.onProductsHandler} className="home__products-arrow" />
-
                 <button
                     className={this.state.rentalsButtonClass}
                     onClick={this.onActiveButton.bind(this, 'rentals')}
@@ -63,11 +71,17 @@ export default class Products extends Component {
                 >
                     Memberships
                 </button>
+                
+                { this.state.modalToggle && <div>
+                        <Modal />
+                        <div onClick={this.onModalToggle}><Backdrop /></div>
+                    </div>
+                }
 
                 <div className="home__products-container home__products-container--1">
                     <div className="home__products-photo home__products-photo--1" />
                     <div className="home__products-name">Self-Guided Studio</div>
-                    <button className="home__products-view">View</button>
+                    <button className="home__products-view" onClick={this.onModalToggle}>View</button>
                 </div>
 
                 <div className="home__products-container home__products-container--2">

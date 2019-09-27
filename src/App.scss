@@ -3,8 +3,10 @@
 @import "sass/abstracts/variables";
 
 // Components
+@import "sass/components/mainBackdrop";
 @import "sass/components/backdrop";
 @import "sass/components/spinner";
+@import "sass/components/productModal";
 
 // Layout
 @import "sass/layout/base";

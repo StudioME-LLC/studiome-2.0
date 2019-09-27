@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import './App.scss';
+import "scroll-behavior-polyfill";
 
 // Components
 import Header from './Navigation/Header';
@@ -10,20 +11,26 @@ import LargeSidebar from './Navigation/LargeSidebar';
 import Backdrop from './Navigation/Backdrop';
 import Router from './Navigation/Router';
 
-import "scroll-behavior-polyfill";
+// Handlers
+import {
+	onScrollHome
+} from './handlers/RefHandlers';
 
 export default class App extends React.Component {
 	state = {
 		largeSidebar: false,
 		largeSidebarClassToggle: false,
 		largeSidebarClass: 'large-sidebar',
+
+		sidebarSelection: null,
 	}
 
-	onScrollHome = () => {
-		window.scroll({
-			top: 0,
-			behavior: 'smooth'
-		});
+	onSidebarSelection = (selected) => {
+		this.setState({
+			...this.state,
+			sidebarSelection: selected,
+		})
+		console.log('clicked')
 	}
 
 	toggleLargeSidebar = () => {
@@ -43,8 +50,6 @@ export default class App extends React.Component {
 		}
 	}
 
-	
-
 	render() {
 		return (
 			<BrowserRouter>
@@ -55,20 +60,25 @@ export default class App extends React.Component {
 				}>
 					<Header
 						toggleLargeSidebar={this.toggleLargeSidebar}
-						onScrollHome={this.onScrollHome}
+						onScrollHome={onScrollHome}
 					/>
 					
 					{!this.state.largeSidebar 
-						? <SmallSidebar /> 
+						? <SmallSidebar onSidebarSelection={this.onSidebarSelection} /> 
 						: <LargeSidebar
+							onSidebarSelection={this.onSidebarSelection}
 							toggleLargeSidebar={this.toggleLargeSidebar}
 							largeSidebarClass={this.state.largeSidebarClass}
 						/>
 					}
 
 					<div className="main">
-						{this.state.largeSidebar && <div onClick={this.toggleLargeSidebar} ><Backdrop /></div>}
-						<Router />
+						{this.state.largeSidebar && <div onClick={this.toggleLargeSidebar}>
+							<Backdrop />
+						</div>}
+						<Router
+							sidebarSelection={this.state.sidebarSelection}
+						/>
 					</div>
 					<div className="footer"></div>
 				</div>

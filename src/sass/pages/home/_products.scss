@@ -4,65 +4,23 @@
     &__products {
         display: grid;
         grid-template-columns: 1fr repeat(3, 30rem) 1fr;
-        grid-template-rows: 18rem 20rem 40rem 40rem 10rem;
+        grid-template-rows: 20rem 40rem 40rem 10rem;
 
         @include respond(phone) {
             grid-template-columns: 1fr repeat(6, 6.5rem) 1fr;  
-            grid-template-rows: 10rem 15rem repeat(3, 28rem) 10rem;
+            grid-template-rows: 15rem repeat(3, 28rem) 10rem;
         }
 
         @include respond(small-phone) {
             grid-template-columns: 1fr repeat(6, 5rem) 1fr;
-            grid-template-rows: 12rem 12rem repeat(3, 25rem) 5rem;
-        }
-    }
-
-    &__products-heading {
-        grid-column: 2 / 5;
-        grid-row: 1 / 2;
-        justify-self: center;
-        align-self: center;
-
-        color: $color-grey;
-        font-size: 2.4rem;
-        font-weight: 100;
-        text-transform: uppercase;
-
-        @include respond(phone) {
-            grid-column: 2 / 8;
-            text-align: center;
-            align-self: flex-start;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    &__products-arrow {
-        grid-column: 2 / 5;
-        grid-row: 1 / 2;
-        justify-self: center;
-        align-self: flex-end;
-
-        width: 5rem;
-        height: 5rem;
-
-        fill: $color-teal;
-
-        @include respond(phone) {
-            grid-column: 2 / 8;
-        }
-
-        &:hover {
-            cursor: pointer;
+            grid-template-rows: 12rem repeat(3, 25rem) 5rem;
         }
     }
 
     // Buttons
     &__products-rentals-button {
         grid-column: 2 / 3;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
 
@@ -102,7 +60,7 @@
 
     &__products-rentals-button--active {
         grid-column: 2 / 3;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
 
@@ -146,7 +104,7 @@
 
     &__products-services-button {
         grid-column: 3 / 4;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
 
@@ -186,7 +144,7 @@
 
     &__products-services-button--active {
         grid-column: 3 / 4;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
 
@@ -229,7 +187,7 @@
 
     &__products-memberships-button {
         grid-column: 4 / 5;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
 
@@ -270,7 +228,7 @@
 
     &__products-memberships-button--active {
         grid-column: 4 / 5;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
 
@@ -347,16 +305,36 @@
 
         &--1 {
             grid-column: 2 / 3;
-            grid-row: 3 / 4;
+            grid-row: 2 / 3;
 
             @include respond(phone) {
                 grid-column: 1 / 5;
-                grid-row: 3 / 4;
+                grid-row: 2 / 3;
             }
         }
 
         &--2 {
             grid-column: 3 / 4;
+            grid-row: 2 / 3;
+
+            @include respond(phone) {
+                grid-column: 5 / 9;
+                grid-row: 2 / 3;
+            }
+        }
+
+        &--3 {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+
+            @include respond(phone) {
+                grid-column: 1 / 5;
+                grid-row: 3 / 4;
+            }
+        }
+
+        &--4 {
+            grid-column: 2 / 3;
             grid-row: 3 / 4;
 
             @include respond(phone) {
@@ -365,8 +343,8 @@
             }
         }
 
-        &--3 {
-            grid-column: 4 / 5;
+        &--5 {
+            grid-column: 3 / 4;
             grid-row: 3 / 4;
 
             @include respond(phone) {
@@ -375,33 +353,13 @@
             }
         }
 
-        &--4 {
-            grid-column: 2 / 3;
-            grid-row: 4 / 5;
+        &--6 {
+            grid-column: 4 / 5;
+            grid-row: 3 / 4;
 
             @include respond(phone) {
                 grid-column: 5 / 9;
                 grid-row: 4 / 5;
-            }
-        }
-
-        &--5 {
-            grid-column: 3 / 4;
-            grid-row: 4 / 5;
-
-            @include respond(phone) {
-                grid-column: 1 / 5;
-                grid-row: 5 / 6;
-            }
-        }
-
-        &--6 {
-            grid-column: 4 / 5;
-            grid-row: 4 / 5;
-
-            @include respond(phone) {
-                grid-column: 5 / 9;
-                grid-row: 5 / 6;
             }
         }
     }

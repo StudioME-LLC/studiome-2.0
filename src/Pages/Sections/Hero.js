@@ -7,6 +7,9 @@ import videoSVG from '../../assets/home/hero/video.json';
 // Components
 import Spinner from '../../components/Spinner';
 
+// SVGs
+import { ReactComponent as ChevronArrow } from '../../assets/home/products/chevron-thin-down.svg';
+
 const HeroVideo = React.lazy(() => import ('./Media/HeroVideo'));
 
 export default class Hero extends Component {
@@ -47,6 +50,9 @@ export default class Hero extends Component {
                     <h1 className="home__hero-heading">Media Made Easy</h1>
                     <h3 className="home__hero-subheading">A user-friendly space for media creation.</h3>
                 </div>
+
+                <h2 onClick={this.props.onProductsHandler} className="home__hero-arrow-heading">Our Products and Services</h2>
+                <ChevronArrow onClick={this.props.onProductsHandler} className="home__hero-arrow" />
             </div>
         )
     }

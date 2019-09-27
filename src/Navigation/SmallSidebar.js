@@ -7,10 +7,11 @@ import { ReactComponent as About } from '../assets/navigation/SVGs/info-with-cir
 import { ReactComponent as Projects } from '../assets/navigation/SVGs/video.svg';
 import { ReactComponent as Contact } from '../assets/navigation/SVGs/phone.svg';
 
-export default function Sidebar() {
+export default function Sidebar(props) {
     return (
         <div className="small-sidebar">
             <NavLink
+                onClick={props.onSidebarSelection.bind(this, 'products')}
                 activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
                 to="/" exact style={{textDecoration: 'none'}}

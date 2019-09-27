@@ -28,7 +28,8 @@ export default function LargeSidebar(props) {
             </div>
             <div className="large-sidebar__container">
                 {/*Book*/}
-                <NavLink 
+                <NavLink
+                    onClick={props.onSidebarSelection.bind(this, 'products')}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/" exact style={{textDecoration: 'none'}}
@@ -59,14 +60,13 @@ export default function LargeSidebar(props) {
                     <MembershipsIcon className='large-sidebar__button-icon' />
                     <p>Memberships</p>
                 </NavLink>
-                <NavLink 
+                <a 
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    to="/checkout" exact style={{textDecoration: 'none'}}
+                    href="https://studiome.me/cart/" exact style={{textDecoration: 'none'}}
                 >
                     <CheckoutIcon className='large-sidebar__button-icon' />
-                    <p>Checkout</p>
-                </NavLink>
+                </a>
 
                 {/*About*/}
                 <NavLink 

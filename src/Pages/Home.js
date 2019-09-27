@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 
 // Sections
 import Hero from './Sections/Hero';
@@ -7,30 +7,44 @@ import Mission from './Sections/Mission';
 import Explain from './Sections/Explain';
 
 
-
 export default class Home extends Component {
+
     state = {
-        myRefProducts: null,
+        myRefProducts: createRef()
     }
 
     onProductsHandler = () => {
         window.scroll({
-			top: this.myRefProducts.offsetTop,
-			behavior: 'smooth'
+            top: this.state.myRefProducts.current.offsetTop,
+            behavior: 'smooth'
         });
-        
-        console.log('test')
+    }
+
+    componentDidMount() {
+        if (this.props.sidebarSelection === 'products') {
+            this.onProductsHandler();
+        } else {
+            return;
+        }
+    }
+
+    componentDidUpdate() {
+        if (this.props.sidebarSelection === 'products') {
+            this.onProductsHandler();
+        } else {
+            return;
+        }
     }
 
     render() {
         return (
             <div className="home">
-                <Hero />
-                <div style={{position: 'relative', top: '60px'}} ref={ (ref) => this.myRefProducts=ref }></div>
-                <Products onProductsHandler={this.onProductsHandler} />
-                <Mission />
-                <Explain />
-            </div>
+            <Hero onProductsHandler={this.onProductsHandler} />
+            <div style={{position: 'relative', top: '-75px'}} ref={this.state.myRefProducts} />
+            <Products />
+            <Mission />
+            <Explain />
+        </div>
         )
     }
 }
