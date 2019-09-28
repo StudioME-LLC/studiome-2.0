@@ -66,6 +66,7 @@ export default function LargeSidebar(props) {
                     href="https://studiome.me/cart/" exact style={{textDecoration: 'none'}}
                 >
                     <CheckoutIcon className='large-sidebar__button-icon' />
+                    <p>Checkout</p>
                 </a>
 
                 {/*About*/}

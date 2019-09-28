@@ -21,9 +21,11 @@ export default function Header(props) {
                 <Link onClick={props.onScrollHome} className="header__fab" to="/">
                     <img src={Logo} alt="Logo" className="header__logo"/>
                 </Link>
-            <button className="header__cart-button">
-                <Cart className="header__cart-icon" />
-            </button>
+            <a href="https://studiome.me/cart/">
+                <button className="header__cart-button">
+                    <Cart className="header__cart-icon" />
+                </button>
+            </a>
             <button className="header__user-button">
                 <User className="header__user-icon" />
             </button>
