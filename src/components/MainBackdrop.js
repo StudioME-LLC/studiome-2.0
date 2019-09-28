@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Backdrop() {
+export default function Backdrop(props) {
     return (
-        <div className="main-backdrop"></div>
+        <div className={props.class}></div>
     )
 }

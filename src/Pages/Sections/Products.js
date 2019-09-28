@@ -12,6 +12,8 @@ export default class Products extends Component {
         membershipsButtonClass: 'home__products-memberships-button',
 
         modalToggle: false,
+        modalClass: 'product-modal',
+        backdropClass: 'main-backdrop',
     }
 
     onActiveButton = (button) => {
@@ -42,10 +44,21 @@ export default class Products extends Component {
     }
 
     onModalToggle = () => {
-        this.setState({
-            ...this.state,
-            modalToggle: !this.state.modalToggle,
-        })
+        if (!this.state.modalToggle) {
+            this.setState({
+                ...this.state,
+                modalClass: "product-modal product-modal__popup",
+                modalToggle: true,
+                backdropClass: 'main-backdrop main-backdrop__fadeIn',
+            })
+        } else if (this.state.modalToggle) {
+            this.setState({
+                ...this.state,
+                modalClass: "product-modal product-modal__popdown",
+                modalToggle: false,
+                backdropClass: 'main-backdrop main-backdrop__fadeOut',
+            })
+        }
     }
 
     render() {
@@ -71,17 +84,18 @@ export default class Products extends Component {
                 >
                     Memberships
                 </button>
+
+
+                <Modal class={this.state.modalClass} />
                 
-                { this.state.modalToggle && <div>
-                        <Modal />
-                        <div onClick={this.onModalToggle}><Backdrop /></div>
-                    </div>
-                }
+                <div onClick={this.onModalToggle}>
+                    <Backdrop class={this.state.backdropClass} />
+                </div>
 
                 <div className="home__products-container home__products-container--1">
-                    <div className="home__products-photo home__products-photo--1" />
+                    <div onClick={this.onModalToggle} className="home__products-photo home__products-photo--1" />
                     <div className="home__products-name">Self-Guided Studio</div>
-                    <button className="home__products-view" onClick={this.onModalToggle}>View</button>
+                    <button onClick={this.onModalToggle} className="home__products-view">View</button>
                 </div>
 
                 <div className="home__products-container home__products-container--2">
