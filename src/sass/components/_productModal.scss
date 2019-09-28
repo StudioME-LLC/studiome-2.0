@@ -163,6 +163,22 @@
         }
     }
 
+    &__alt-placement-1 {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        justify-self: flex-end;
+        align-self: center;
+        margin-right: -5rem;
+
+        @include respond(phone) {
+            grid-column: 1 / -1;
+            grid-row: 5 / 6;
+            justify-self: center;
+            align-self: flex-end;
+            margin-right: 0;
+        }
+    }
+
     &__placement-2 {
         grid-column: 3 / 4;
         grid-row: 3 / 4;
@@ -172,6 +188,22 @@
         @include respond(phone) {
             grid-column: 1 / -1;
             grid-row: 5 / 6;
+        }
+    }
+
+    &__alt-placement-2 {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+        justify-self: flex-start;
+        align-self: center;
+        margin-left: -5rem;
+
+        @include respond(phone) {
+            grid-column: 1 / -1;
+            grid-row: 4 / 5;
+            justify-self: center;
+            align-self: flex-end;
+            margin-left: 0;
         }
     }
 

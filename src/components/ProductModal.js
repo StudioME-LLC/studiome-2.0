@@ -4,23 +4,54 @@ import React from 'react';
 import { ReactComponent as Close } from '../assets/home/products/cross.svg';
 
 export default function ProductModal(props) {
+    console.log(props.option3)
     return (
-        <div className={props.class}>
-            <div className="product-modal__close-container">
-                <Close onClick={props.toggle} className="product-modal__close" />
-            </div>
-            <h2 className="product-modal__heading" >Self-Guided Studio</h2>
-            <div className="product-modal__border" />
-            <p className="product-modal__subheading">Pick a duration for your booking:</p>
-            <a className="product-modal__placement-1" href="https://studiome.me/product/self-guided-studio-e-2-hour-package/">
-                <button className="product-modal__button">2 Hours</button>
-            </a>
-            <a className="product-modal__placement-2" href="https://studiome.me/product/self-guided-studio-e-6-hour-package/">
-                <button className="product-modal__button">6 Hours</button>
-            </a>
-            <a className="product-modal__placement-3" href="https://studiome.me/product/self-guided-studio-e-10-hour-package/">
-                <button className="product-modal__button">10 Hours</button>
-            </a>
-        </div>
+        <div>
+            {props.option3 === '' ? (<div className={props.class}>
+                <div className="product-modal__close-container">
+                    <Close onClick={props.toggle} className="product-modal__close" />
+                </div>
+                <h2 className="product-modal__heading" >{props.heading}</h2>
+                <div className="product-modal__border" />
+                <p className="product-modal__subheading">{props.subheading}</p>
+                <a
+                    className="product-modal__alt-placement-1"
+                    href={props.url1}
+                >
+                    <button className="product-modal__button">{props.option1}</button>
+                </a>
+                <a
+                    className="product-modal__alt-placement-2"
+                    href={props.url2}
+                >
+                    <button className="product-modal__button">{props.option2}</button>
+                </a>
+            </div>) : (<div className={props.class}>
+                <div className="product-modal__close-container">
+                    <Close onClick={props.toggle} className="product-modal__close" />
+                </div>
+                <h2 className="product-modal__heading" >{props.heading}</h2>
+                <div className="product-modal__border" />
+                <p className="product-modal__subheading">{props.subheading}</p>
+                <a
+                    className="product-modal__placement-1"
+                    href={props.url1}
+                >
+                    <button className="product-modal__button">{props.option1}</button>
+                </a>
+                <a
+                    className="product-modal__placement-2"
+                    href={props.url2}
+                >
+                    <button className="product-modal__button">{props.option2}</button>
+                </a>
+                <a
+                    className="product-modal__placement-3"
+                    href={props.url3}
+                >
+                    <button className="product-modal__button">{props.option3}</button>
+                </a>
+            </div>)}
+        </div> 
     )
 }
