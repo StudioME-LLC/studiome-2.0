@@ -86,7 +86,7 @@ export default class Products extends Component {
                 </button>
 
 
-                <Modal class={this.state.modalClass} />
+                <Modal toggle={this.onModalToggle} class={this.state.modalClass} />
                 
                 <div onClick={this.onModalToggle}>
                     <Backdrop class={this.state.backdropClass} />

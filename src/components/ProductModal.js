@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class ProductModal extends Component {
+// SVGs
+import { ReactComponent as Close } from '../assets/home/products/cross.svg';
 
-    
-
-    render() {
-        
-
-        return (
-            <div className={this.props.class}>
-            <p className="product-modal__heading">Pick a duration for your booking:</p>
+export default function ProductModal(props) {
+    return (
+        <div className={props.class}>
+            <div className="product-modal__close-container">
+                <Close onClick={props.toggle} className="product-modal__close" />
+            </div>
+            <h2 className="product-modal__heading" >Self-Guided Studio</h2>
             <div className="product-modal__border" />
+            <p className="product-modal__subheading">Pick a duration for your booking:</p>
             <a className="product-modal__placement-1" href="https://studiome.me/product/self-guided-studio-e-2-hour-package/">
                 <button className="product-modal__button">2 Hours</button>
             </a>
@@ -21,6 +22,5 @@ export default class ProductModal extends Component {
                 <button className="product-modal__button">10 Hours</button>
             </a>
         </div>
-        )
-    }
+    )
 }
