@@ -6,6 +6,16 @@
     box-sizing: inherit;
 }
 
+::selection {
+    background: $color-orange;
+    color: white;
+  }
+
+::-moz-selection {
+background: $color-orange;
+color: white;
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10px

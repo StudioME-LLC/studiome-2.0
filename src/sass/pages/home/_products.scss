@@ -505,19 +505,46 @@
         
         animation: onServiceFadeIn .7s ease-out;
 
+        @include respond(phone) {
+            width: 40rem;
+            height: 25rem;
+            grid-template-rows: 6rem 1.5rem 6rem 10rem;
+        }
+
+        @include respond(small-phone) {
+            width: 30rem;
+            height: 22rem;
+            grid-template-rows: 5rem 1.5rem 6rem 10rem;
+        }
+
         &--1 {
             grid-column: 2 / 3;
             grid-row: 2 / 4;
+
+            @include respond(phone) {
+                grid-column: 2 / 8;
+                grid-row: 2 / 3;
+            }
         }
 
         &--2 {
             grid-column: 3 / 4;
             grid-row: 2 / 4;
+
+            @include respond(phone) {
+                grid-column: 2 / 8;
+                grid-row: 3 / 4;
+            }
         }
 
         &--3 {
             grid-column: 4 / 5;
             grid-row: 2 / 4;
+
+            @include respond(phone) {
+                grid-column: 2 / 8;
+                grid-row: 4 / 5;
+            }
         }
     }
 
@@ -531,6 +558,10 @@
         &:hover {
             cursor: pointer;
         }
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__products-services-heading {
@@ -541,6 +572,14 @@
         text-transform: uppercase;
         font-weight: 100;
         font-size: 2.4rem;
+
+        @include respond(phone) {
+            grid-row: 1 / 2;
+        }
+
+        @include respond(small-phone) {
+            font-size: 1.8rem;
+        }
     }
 
     &__products-services-border {
@@ -550,11 +589,24 @@
 
         border-bottom: 1px solid $color-orange;
         width: 10rem;
+
+        @include respond(phone) {
+            grid-row: 2 / 3;
+        }
     }
 
     &__products-services-paragraph {
         padding: 2rem;
         font-size: 1.4rem;
+
+        @include respond(phone) {
+            grid-row: 3 / 4;
+        }
+
+        @include respond(small-phone) {
+            font-size: 1.2rem;
+            padding: 2rem 3rem;
+        }
     }
 
     &__products-services-subheading {
@@ -562,11 +614,19 @@
 
         text-align: center;
         font-size: 1.4rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__products-services-list {
         padding: 2rem 0 0 5rem;
         font-size: 1.2rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__products-services-quote {
@@ -596,16 +656,20 @@
         &:active {
             box-shadow: none;
         }
+
+        @include respond(phone) {
+            grid-row: 4 / 5;
+        }
     }
 
-    // Products Services
+    // Products Memberships
     &__products-memberships {
         justify-self: center;
 
         grid-column: 2 / 5;
         grid-row: 2 / 3;
 
-        width: 100%;
+        width: 85rem;
         height: 70rem;
 
         box-shadow: $shadow-button;
@@ -617,6 +681,18 @@
         grid-template-rows: 30rem 8rem 2rem 8rem 20rem;
 
         animation: onMembershipsFadeIn .7s ease-out;
+
+        @include respond(phone) {
+            width: 50rem;
+            grid-column: 2 / 8;
+            grid-template-rows: 30rem 8rem 2rem 14rem 14rem;
+        }
+
+        @include respond(small-phone) {
+            width: 30rem;
+            grid-column: 2 / 8;
+            grid-template-rows: 25rem 8rem 2rem 14rem 14rem;
+        }
     }
 
     &__products-memberships-image {
@@ -624,6 +700,15 @@
         height: 30rem;
         background-position-y: -550px;
         background-size: cover;
+
+        @include respond(phone) {
+            background-position-y: -250px;
+        }
+
+        @include respond(small-phone) {
+            height: 25rem;
+            background-position-y: -100px;
+        }
     }
 
     &__products-memberships-heading {
@@ -632,6 +717,14 @@
         text-transform: uppercase;
         font-weight: 100;
         font-size: 3.6rem;
+
+        @include respond(phone) {
+            font-size: 2.4rem;
+        }
+
+        @include respond(small-phone) {
+            font-size: 1.8rem;
+        }
     }
 
     &__products-memberships-border {
@@ -647,6 +740,16 @@
         align-self: flex-end;
         text-align: center;
         font-size: 1.8rem;
+
+        @include respond(phone) {
+            padding: 4rem;
+            font-size: 1.8rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 3rem;
+            font-size: 1.4rem;
+        }
     }
 
     &__products-memberships-survey {
