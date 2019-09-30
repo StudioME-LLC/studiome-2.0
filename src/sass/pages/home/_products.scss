@@ -599,6 +599,7 @@
     }
 
     &__products-services-paragraph {
+        grid-row: 4 / 5;
         padding: 2rem;
         font-size: 1.4rem;
 
@@ -613,6 +614,7 @@
     }
 
     &__products-services-subheading {
+        grid-row: 5 / 6;
         align-self: center;
 
         text-align: center;
@@ -624,6 +626,7 @@
     }
 
     &__products-services-list {
+        grid-row: 6 / 7;
         padding: 2rem 0 0 5rem;
         font-size: 1.2rem;
 
@@ -633,8 +636,13 @@
     }
 
     &__products-services-link {
+        grid-row: 7 / 8;
         justify-self: center;
         align-self: center;
+
+        @include respond(phone) {
+            grid-row: 4 / 5;
+        }
     }
 
     &__products-services-quote {

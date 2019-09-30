@@ -10,7 +10,6 @@ export default function ProductServices(props) {
         <React.Fragment>
             <div className="home__products-services home__products-services--1">
                 <a
-                    className="home__products-services-link"
                     target="_blank" href="https://forms.gle/66Qij1NFffSaKcQZ8"
                     rel="noopener noreferrer"
                 >
@@ -39,7 +38,6 @@ export default function ProductServices(props) {
             </div>
             <div className="home__products-services home__products-services--2">
                 <a
-                    className="home__products-services-link"
                     target="_blank" href="https://forms.gle/66Qij1NFffSaKcQZ8"
                     rel="noopener noreferrer"
                 >
@@ -70,7 +68,6 @@ export default function ProductServices(props) {
             </div>
             <div className="home__products-services home__products-services--3">
                 <a
-                    className="home__products-services-link"
                     target="_blank" href="https://forms.gle/66Qij1NFffSaKcQZ8"
                     rel="noopener noreferrer"
                 >
