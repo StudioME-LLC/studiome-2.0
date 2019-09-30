@@ -3,6 +3,7 @@
     top: 40%;
     left: 50%;
     z-index: 15;
+    transform: translate(-50%, -50%) scale(0);
 
     height: 22rem;
     width: 60rem;
@@ -14,8 +15,6 @@
     display: grid;
     grid-template-columns: 1fr repeat(3, 15rem) 1fr;
     grid-template-rows: 7rem 6rem 7rem;
-
-    transform: translate(-50%, -50%) scale(0);
 
     @include respond(phone) {
         height: 40rem;

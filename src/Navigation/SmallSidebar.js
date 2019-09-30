@@ -39,14 +39,14 @@ export default function Sidebar(props) {
                 <p>Our Projects</p>
             </NavLink>
 
-            <NavLink
-                activeClassName="small-sidebar-active"
+            <a
                 className="small-sidebar__button"
-                to="/contact" exact style={{textDecoration: 'none'}}
+                href="https://studiome.me/contact/"
+                style={{textDecoration: 'none'}}
             >
                 <Contact className='small-sidebar__button-icon' />
                 <p>Contact</p>
-            </NavLink>
+            </a>
         </div>
     )
 }

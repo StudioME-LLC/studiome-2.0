@@ -170,6 +170,7 @@ export default class Products extends Component {
     }
 
     render() {
+        
         return (
             <div className="home__products">
                 <button
@@ -209,8 +210,8 @@ export default class Products extends Component {
                     url3={this.state.url3}
                 />
                 
-                <div onClick={this.onModalToggle}>
-                    <Backdrop class={this.state.backdropClass} />
+                <div className={this.state.backdropClass} onClick={this.onModalToggle}>
+                    <Backdrop />
                 </div>
 
                 {this.state.rentalToggle && <ProductRentals

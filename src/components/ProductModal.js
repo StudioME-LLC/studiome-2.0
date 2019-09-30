@@ -4,7 +4,6 @@ import React from 'react';
 import { ReactComponent as Close } from '../assets/home/products/cross.svg';
 
 export default function ProductModal(props) {
-    console.log(props.option3)
     return (
         <div>
             {props.option3 === '' ? (<div className={props.class}>

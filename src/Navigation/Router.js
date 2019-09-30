@@ -20,7 +20,7 @@ export default function Router(props) {
                         />
                     </React.Suspense>} 
                 />
-                <Route path="/checkout" exact>Checkout Page</Route>
+                <Route path="/checkout" exact />
                 <Route path="/about" exact>About Page</Route>
                 <Route path="/projects" exact>Our Projects Page</Route>
                 <Route path="/contact" exact>Contact Page</Route>

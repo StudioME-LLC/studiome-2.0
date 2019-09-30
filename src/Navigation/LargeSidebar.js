@@ -61,9 +61,9 @@ export default function LargeSidebar(props) {
                     <p>Memberships</p>
                 </NavLink>
                 <a 
-                    activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    href="https://studiome.me/cart/" exact style={{textDecoration: 'none'}}
+                    href="https://studiome.me/cart/"
+                    style={{textDecoration: 'none'}}
                 >
                     <CheckoutIcon className='large-sidebar__button-icon' />
                     <p>Checkout</p>

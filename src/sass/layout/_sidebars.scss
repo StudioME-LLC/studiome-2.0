@@ -21,6 +21,7 @@
 
 // Main Small Sidebar
 .small-sidebar {
+    z-index: 5;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 2 / -1;
 
