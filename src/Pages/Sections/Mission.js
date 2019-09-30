@@ -17,7 +17,7 @@ export default function Mission() {
                 <h1 className="home__mission-heading">Our Mission</h1>
                 <div className="home__mission-border" />
                 <h3 className="home__mission-subheading">The StudioME model was created with the challenge to deliver high quality
-                Content using brand new approaches to an outdated, over-priced model.</h3>
+                content using brand new approaches to an outdated, over-priced model.</h3>
             </div>
 
             <p className="home__mission-offer">What we offer.</p>

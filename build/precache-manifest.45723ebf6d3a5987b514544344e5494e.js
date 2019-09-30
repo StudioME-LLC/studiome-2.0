@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ac87ec720423951c22ef82aac750e269",
+    "revision": "871118c71545627a436a42a381a99a96",
     "url": "/index.html"
   },
   {
-    "revision": "103b18d0926d83f4cad7",
-    "url": "/static/css/main.ad3eda06.chunk.css"
+    "revision": "afcaa70a8934aa6f64e6",
+    "url": "/static/css/main.c474e44e.chunk.css"
   },
   {
     "revision": "42a80aad770117e4aa92",
@@ -16,20 +16,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/3.1d06367e.chunk.js"
   },
   {
-    "revision": "138b36d8102b45a7df95",
-    "url": "/static/js/4.3f554e08.chunk.js"
+    "revision": "0a77754f510593406f05",
+    "url": "/static/js/4.5febd79d.chunk.js"
   },
   {
-    "revision": "9acad435666234761c6e",
-    "url": "/static/js/5.e05b31d1.chunk.js"
+    "revision": "5d43d88979ca958a5ba4",
+    "url": "/static/js/5.ebabc08e.chunk.js"
   },
   {
-    "revision": "103b18d0926d83f4cad7",
-    "url": "/static/js/main.7eca1efb.chunk.js"
+    "revision": "afcaa70a8934aa6f64e6",
+    "url": "/static/js/main.caf6fe98.chunk.js"
   },
   {
-    "revision": "99fabe05150ec0356ed2",
-    "url": "/static/js/runtime~main.866ad60e.js"
+    "revision": "781141e73d18b70c6e61",
+    "url": "/static/js/runtime~main.dc73f8e8.js"
   },
   {
     "revision": "0632eae1e936681e224db537c1ecbf9d",
@@ -52,8 +52,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/MP-Studio.bdd77eb4.jpg"
   },
   {
+    "revision": "4c8bcf25be4fb4584a29f38a459901fc",
+    "url": "/static/media/Membership-Banner.4c8bcf25.png"
+  },
+  {
     "revision": "3134a69c563849d5282fc0704f6ddd58",
     "url": "/static/media/Podcast.3134a69c.jpg"
+  },
+  {
+    "revision": "e286beab7beb035bf13bc12760a408ea",
+    "url": "/static/media/Post-Editing.e286beab.jpg"
+  },
+  {
+    "revision": "1015a245c7f93276d43b76a0ad371897",
+    "url": "/static/media/Production.1015a245.jpg"
+  },
+  {
+    "revision": "c47fa1b637d08d1e303f73631ab27f82",
+    "url": "/static/media/StartToFinish.c47fa1b6.jpg"
   },
   {
     "revision": "d782b939e1de9736bf3cd9197257a8d2",

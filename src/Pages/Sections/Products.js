@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 
-// Product Items
-import ProductItem from './Products/ProductItem';
-
 // Components
-import StudioEModal from '../../components/ProductModal';
+import ProductsModal from '../../components/ProductModal';
 import Backdrop from '../../components/MainBackdrop';
+import ProductRentals from './Products/ProductRentals';
+import ProductServices from './Products/ProductServices';
+import ProductMemberships from './Products/ProductMemberships';
 
 export default class Products extends Component {
 
     state = {
+        // Main Buttons
         rentalsButtonClass: 'home__products-rentals-button--active',
         servicesButtonClass: 'home__products-services-button',
         membershipsButtonClass: 'home__products-memberships-button',
+        rentalToggle: true,
+        servicesToggle: false,
+        membershipsToggle: false,
 
+        // Modal Functionality
         modalToggle: false,
         modalClass: 'product-modal',
         backdropClass: 'main-backdrop',
 
+        // Modal Details
         heading: '',
         subheading: '',
         option1: '',
@@ -36,6 +42,9 @@ export default class Products extends Component {
                 rentalsButtonClass: 'home__products-rentals-button--active',
                 servicesButtonClass: 'home__products-services-button',
                 membershipsButtonClass: 'home__products-memberships-button',
+                rentalToggle: true,
+                servicesToggle: false,
+                membershipsToggle: false,
             })
         } else if (button === 'services') {
             this.setState({
@@ -43,6 +52,9 @@ export default class Products extends Component {
                 rentalsButtonClass: 'home__products-rentals-button',
                 servicesButtonClass: 'home__products-services-button--active',
                 membershipsButtonClass: 'home__products-memberships-button',
+                rentalToggle: false,
+                servicesToggle: true,
+                membershipsToggle: false,
             })
         } else if (button === 'memberships') {
             this.setState({
@@ -50,6 +62,9 @@ export default class Products extends Component {
                 rentalsButtonClass: 'home__products-rentals-button',
                 servicesButtonClass: 'home__products-services-button',
                 membershipsButtonClass: 'home__products-memberships-button--active',
+                rentalToggle: false,
+                servicesToggle: false,
+                membershipsToggle: true,
             })
         }
         
@@ -179,7 +194,7 @@ export default class Products extends Component {
                 </button>
 
 
-                <StudioEModal
+                <ProductsModal
                     toggle={this.onModalToggle}
                     class={this.state.modalClass}
 
@@ -198,45 +213,13 @@ export default class Products extends Component {
                     <Backdrop class={this.state.backdropClass} />
                 </div>
 
-                <ProductItem
-                    index={1}
-                    name={"Self-Guided Studio"}
-                    onModalToggle={this.onModalToggle.bind(this, 1)}
-                />
+                {this.state.rentalToggle && <ProductRentals
+                    onModalToggle={this.onModalToggle}
+                />}
 
-                <ProductItem
-                    index={2}
-                    name={"Multi-Purpose Studio"}
-                    onModalToggle={this.onModalToggle.bind(this, 2)}
-                />
+                {this.state.servicesToggle && <ProductServices />}
 
-                <ProductItem
-                    index={3}
-                    name={"Podcast Lounge"}
-                    onModalToggle={this.onModalToggle.bind(this, 3)}
-                />
-
-                <ProductItem
-                    index={4}
-                    name={"Audio Studio"}
-                    onModalToggle={this.onModalToggle.bind(this, 4)}
-                />
-
-                <ProductItem
-                    index={5}
-                    name={"Equipment"}
-                    onModalToggle={this.onModalToggle.bind(this, 5)}
-                />
-
-                <div className="home__products-container home__products-container--6">
-                    <a className="home__products-photo-link" href="https://studiome.me/book-me/post-production/">
-                        <div className="home__products-photo home__products-photo--6" />
-                    </a>
-                    <div className="home__products-name">Edit Stations</div>
-                    <a href="https://studiome.me/book-me/post-production/">
-                        <button className="home__products-view">View</button>
-                    </a>
-                </div>
+                {this.state.membershipsToggle && <ProductMemberships />}
             </div>
         )
     }
