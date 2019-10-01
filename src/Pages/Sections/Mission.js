@@ -14,12 +14,12 @@ export default function Mission() {
         <div className="home__mission">
             <div className="home__mission-banner" />
             <div className="home__mission-banner-container">
-                <h1 className="home__mission-heading">Our Mission</h1>
+                <h1 className="home__mission-heading">What we do</h1>
                 <div className="home__mission-border" />
-                <h3 className="home__mission-subheading">The StudioME model was created with the challenge to deliver high quality
-                content using brand new approaches to an outdated, over-priced model.</h3>
+                <h3 className="home__mission-subheading">We make it as simple as possible to go from concept to creation.</h3>
             </div>
 
+            <p className="home__mission-explanation">StudioME is for media creators of all kinds from first-timers to professional.  We offer innovative, user-friendly studio space, equipment rental, editing workstations, and custom media production services.  We help our customers create great looking video, photo and audio content from concept to creation, keeping our promise of "Media Made Easy."</p>
             <p className="home__mission-offer">What we offer.</p>
 
             <div className="home__mission-container home__mission-container--1">
