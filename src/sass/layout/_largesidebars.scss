@@ -1,98 +1,3 @@
-// Active Small Sidebar
-.small-sidebar-active {
-    background-color: $color-white !important;
-    border-right: solid 3px $color-teal;
-
-    @include respond(phone) {
-        border-top: solid 3px $color-teal !important;
-        border-right: none;
-    }
-}
-
-.small-sidebar-active p {
-    color: $color-teal;
-    background-color: $color-white !important;
-}
-
-.small-sidebar-active .small-sidebar__button-icon {
-    fill: $color-teal !important;
-}
-
-
-// Main Small Sidebar
-.small-sidebar {
-    z-index: 5;
-    grid-column: sidebar-start / sidebar-end;
-    grid-row: 2 / -1;
-
-    position: fixed;
-    top: 6rem;
-    height: 100vh;
-    width: 7rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background-color: $color-grey-light;
-
-    @include respond(phone) {
-        grid-column: sidebar-start / main-end;
-        grid-row: 3 / -1;
-
-        position: sticky;
-        bottom: 0;
-
-        flex-direction: row;
-        height: 7rem;
-        width: 100%;
-    }
-
-    
-    &__button {
-        width: 100%;
-        padding: 2rem 0;
-        text-align: center;
-
-        border-bottom: $border-grey;
-        color: $color-grey;
-        font-size: $font-paragraph-medium;
-
-        @include respond(phone) {
-            align-self: center;
-            font-size: 0px;
-            border-top: $border-grey;
-            background-color: $color-grey-light;
-        }
-
-        &:hover {
-            background-color: $color-grey-light-hover;
-        }
-
-        &:active,
-        &:focus {
-            color: $color-teal;
-        }
-
-        &:active .small-sidebar__button-icon,
-        &:focus .small-sidebar__button-icon {
-            fill: $color-teal;
-        }
-    }
-
-    &__button-icon {
-        width: 3rem;
-        height: 3rem;
-        margin-bottom: 1rem;
-
-        fill: $color-grey;
-
-        @include respond(phone) {
-            margin-bottom: 0rem;
-        }
-    }
-}
-
 // Active Large Sidebar
 .large-sidebar-active {
     background-color: $color-teal !important;
@@ -123,11 +28,24 @@
 
     height: 100vh;
     width: 25rem;
+    transform: translateX(-25rem);
+    z-index: 9;
 
     background-color: $color-grey-light;
 
     @include respond(phone) {
+        transform: translateX(-25rem);
+        transition: all .3s ease;
         z-index: 20;
+    }
+
+    &__active {
+        transform: translateX(0);
+
+        @include respond(phone) {
+            transform: translateX(0);
+            box-shadow: $shadow-large;
+        }
     }
 
     &__top {

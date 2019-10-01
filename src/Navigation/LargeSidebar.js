@@ -19,7 +19,7 @@ import { ReactComponent as PodcastIcon } from '../assets/navigation/SVGs/largeSi
 
 export default function LargeSidebar(props) {
     return (
-        <div className="large-sidebar">
+        <div className={props.largeSidebarClass}>
             <div className="large-sidebar__top">
                 <h1 className="large-sidebar__top-heading">StudioME</h1>
                 <CloseIcon className='large-sidebar__close-icon'
@@ -29,14 +29,15 @@ export default function LargeSidebar(props) {
             <div className="large-sidebar__container">
                 {/*Book*/}
                 <NavLink
-                    onClick={props.onSidebarSelection.bind(this, 'products')}
+                    onClick={props.onLargeSidebarSelection.bind(this, 'products')}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/" exact style={{textDecoration: 'none'}}
                 >
                     <p>Book</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, 'rentals')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/#rentals" exact style={{textDecoration: 'none'}}
@@ -44,7 +45,8 @@ export default function LargeSidebar(props) {
                     <RentalIcon className='large-sidebar__button-icon' />
                     <p>Rental & DIY</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, 'services')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/#full-service" exact style={{textDecoration: 'none'}}
@@ -52,7 +54,8 @@ export default function LargeSidebar(props) {
                     <ServiceIcon className='large-sidebar__button-icon' />
                     <p>Full Service</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, 'memberships')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/#memberships" exact style={{textDecoration: 'none'}}

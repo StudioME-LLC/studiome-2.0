@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+import * as actions from './redux/actions';
+
 import './App.scss';
 import "scroll-behavior-polyfill";
 
@@ -8,7 +11,6 @@ import "scroll-behavior-polyfill";
 import Header from './Navigation/Header';
 import SmallSidebar from './Navigation/SmallSidebar';
 import LargeSidebar from './Navigation/LargeSidebar';
-import Backdrop from './Navigation/Backdrop';
 import Router from './Navigation/Router';
 
 // Handlers
@@ -16,36 +18,56 @@ import {
 	onScrollHome
 } from './handlers/RefHandlers';
 
-export default class App extends React.Component {
+class App extends React.Component {
 	state = {
 		largeSidebar: false,
-		largeSidebarClassToggle: false,
 		largeSidebarClass: 'large-sidebar',
-
 		sidebarSelection: null,
+
+		backdropClass: '',
 	}
 
-	onSidebarSelection = (selected) => {
+	onLargeSidebarSelection = (selected) => {
+		this.setState({
+			...this.state,
+			sidebarSelection: 'products',
+		})
+
+		if (selected === 'rentals') {
+			this.props.rentalButton();
+		} else if (selected === 'services') {
+			this.props.serviceButton();
+		} else if (selected === 'memberships') {
+			this.props.membershipsButton();
+		}
+
+		if (window.matchMedia('(max-width: 600px)').matches) {
+			this.toggleLargeSidebar()
+		};
+	}
+
+	onSmallSidebarSelection = (selected) => {
 		this.setState({
 			...this.state,
 			sidebarSelection: selected,
+			largeSidebar: false,
 		})
-		console.log('clicked')
 	}
 
 	toggleLargeSidebar = () => {
 		this.setState({
 			largeSidebar: !this.state.largeSidebar,
-			largeSidebarClassToggle: !this.state.largeSidebarClass,
 		})
 
-		if (this.state.largeSidebarClass) {
+		if (!this.state.largeSidebar) {
 			this.setState({
 				largeSidebarClass: 'large-sidebar large-sidebar__active',
+				backdropClass: 'backdrop backdrop__fadeIn',
 			})
 		} else {
 			this.setState({
 				largeSidebarClass: 'large-sidebar',
+				backdropClass: 'backdrop backdrop__fadeOut',
 			})
 		}
 	}
@@ -62,20 +84,18 @@ export default class App extends React.Component {
 						toggleLargeSidebar={this.toggleLargeSidebar}
 						onScrollHome={onScrollHome}
 					/>
+
+					<SmallSidebar onSmallSidebarSelection={this.onSmallSidebarSelection} /> 
 					
-					{!this.state.largeSidebar 
-						? <SmallSidebar onSidebarSelection={this.onSidebarSelection} /> 
-						: <LargeSidebar
-							onSidebarSelection={this.onSidebarSelection}
-							toggleLargeSidebar={this.toggleLargeSidebar}
-							largeSidebarClass={this.state.largeSidebarClass}
-						/>
-					}
+					<LargeSidebar
+						onLargeSidebarSelection={this.onLargeSidebarSelection}
+						toggleLargeSidebar={this.toggleLargeSidebar}
+						largeSidebarClass={this.state.largeSidebarClass}
+					/>
 
 					<div className="main">
-						{this.state.largeSidebar && <div onClick={this.toggleLargeSidebar}>
-							<Backdrop />
-						</div>}
+						<div className={this.state.backdropClass} onClick={this.toggleLargeSidebar} />
+
 						<Router
 							sidebarSelection={this.state.sidebarSelection}
 						/>
@@ -86,3 +106,24 @@ export default class App extends React.Component {
 		);
 	}
 }
+
+const mapStateToProps = state => {
+	return {
+        rentalsButtonClass: state.rentalsButtonClass,
+        servicesButtonClass: state.servicesButtonClass,
+        membershipsButtonClass: state.membershipsButtonClass,
+        rentalToggle: state.rentalToggle,
+        servicesToggle: state.servicesToggle,
+        membershipsToggle: state.membershipsToggle,
+	};
+};
+
+const mapDispatchToProps = dispatch => {
+	return {
+		rentalButton: () => dispatch(actions.rentalButton()),
+		serviceButton: () => dispatch(actions.serviceButton()),
+		membershipsButton: () => dispatch(actions.membershipsButton()),
+	};
+};
+
+export default connect( mapStateToProps, mapDispatchToProps )(App);

@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../redux/actions';
 
 // Components
 import ProductsModal from '../../components/ProductModal';
-import Backdrop from '../../components/MainBackdrop';
 import ProductRentals from './Products/ProductRentals';
 import ProductServices from './Products/ProductServices';
 import ProductMemberships from './Products/ProductMemberships';
 
-export default class Products extends Component {
+class Products extends Component {
 
     state = {
-        // Main Buttons
-        rentalsButtonClass: 'home__products-rentals-button--active',
-        servicesButtonClass: 'home__products-services-button',
-        membershipsButtonClass: 'home__products-memberships-button',
-        rentalToggle: true,
-        servicesToggle: false,
-        membershipsToggle: false,
-
         // Modal Functionality
         modalToggle: false,
         modalClass: 'product-modal',
@@ -32,42 +25,6 @@ export default class Products extends Component {
         url2: '',
         option3: '',
         url3: '',
-    }
-
-    onActiveButton = (button) => {
-
-        if (button === 'rentals') {
-            this.setState({
-                ...this.state,
-                rentalsButtonClass: 'home__products-rentals-button--active',
-                servicesButtonClass: 'home__products-services-button',
-                membershipsButtonClass: 'home__products-memberships-button',
-                rentalToggle: true,
-                servicesToggle: false,
-                membershipsToggle: false,
-            })
-        } else if (button === 'services') {
-            this.setState({
-                ...this.state,
-                rentalsButtonClass: 'home__products-rentals-button',
-                servicesButtonClass: 'home__products-services-button--active',
-                membershipsButtonClass: 'home__products-memberships-button',
-                rentalToggle: false,
-                servicesToggle: true,
-                membershipsToggle: false,
-            })
-        } else if (button === 'memberships') {
-            this.setState({
-                ...this.state,
-                rentalsButtonClass: 'home__products-rentals-button',
-                servicesButtonClass: 'home__products-services-button',
-                membershipsButtonClass: 'home__products-memberships-button--active',
-                rentalToggle: false,
-                servicesToggle: false,
-                membershipsToggle: true,
-            })
-        }
-        
     }
 
     onModalToggle = (product) => {
@@ -174,22 +131,22 @@ export default class Products extends Component {
         return (
             <div className="home__products">
                 <button
-                    className={this.state.rentalsButtonClass}
-                    onClick={this.onActiveButton.bind(this, 'rentals')}
+                    className={this.props.rentalsButtonClass}
+                    onClick={this.props.rentalButton}
                 >
                     Rentals
                 </button>
 
                 <button
-                    className={this.state.servicesButtonClass}
-                    onClick={this.onActiveButton.bind(this, 'services')}
+                    className={this.props.servicesButtonClass}
+                    onClick={this.props.serviceButton}
                 >
                     Services
                 </button>
 
                 <button
-                    className={this.state.membershipsButtonClass}
-                    onClick={this.onActiveButton.bind(this, 'memberships')}
+                    className={this.props.membershipsButtonClass}
+                    onClick={this.props.membershipsButton}
                 >
                     Memberships
                 </button>
@@ -210,18 +167,37 @@ export default class Products extends Component {
                     url3={this.state.url3}
                 />
                 
-                <div className={this.state.backdropClass} onClick={this.onModalToggle}>
-                    <Backdrop />
-                </div>
+                <div className={this.state.backdropClass} onClick={this.onModalToggle} />
 
-                {this.state.rentalToggle && <ProductRentals
+                {this.props.rentalToggle && <ProductRentals
                     onModalToggle={this.onModalToggle}
                 />}
 
-                {this.state.servicesToggle && <ProductServices />}
+                {this.props.servicesToggle && <ProductServices />}
 
-                {this.state.membershipsToggle && <ProductMemberships />}
+                {this.props.membershipsToggle && <ProductMemberships />}
             </div>
         )
     }
 }
+
+const mapStateToProps = state => {
+	return {
+        rentalsButtonClass: state.rentalsButtonClass,
+        servicesButtonClass: state.servicesButtonClass,
+        membershipsButtonClass: state.membershipsButtonClass,
+        rentalToggle: state.rentalToggle,
+        servicesToggle: state.servicesToggle,
+        membershipsToggle: state.membershipsToggle,
+	};
+};
+
+const mapDispatchToProps = dispatch => {
+	return {
+		rentalButton: () => dispatch(actions.rentalButton()),
+		serviceButton: () => dispatch(actions.serviceButton()),
+		membershipsButton: () => dispatch(actions.membershipsButton()),
+	};
+};
+
+export default connect( mapStateToProps, mapDispatchToProps )(Products);
