@@ -27,10 +27,11 @@
     &__hero-video-container {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
-        background-position: center;
-        background-size: cover;
         z-index: 1;
         overflow: hidden;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
     }
 
     &__hero-video {

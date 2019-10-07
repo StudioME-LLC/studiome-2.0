@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Assets
-import webVideo from '../../../assets/home/hero/web-hero.mp4';
+import webVideo from '../../../assets/home/hero/web-hero-2.mp4';
 
 export default function HeroVideo() {
     return (
