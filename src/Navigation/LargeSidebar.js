@@ -29,7 +29,7 @@ export default function LargeSidebar(props) {
             <div className="large-sidebar__container">
                 {/*Book*/}
                 <NavLink
-                    onClick={props.onLargeSidebarSelection.bind(this, 'products')}
+                    onClick={props.onScrollHome}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/" exact style={{textDecoration: 'none'}}

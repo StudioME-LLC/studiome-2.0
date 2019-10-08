@@ -11,7 +11,7 @@ export default function Sidebar(props) {
     return (
         <div className="small-sidebar">
             <NavLink
-                onClick={props.onSmallSidebarSelection.bind(this, 'products')}
+                onClick={props.onScrollHome}
                 activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
                 to="/" exact style={{textDecoration: 'none'}}

@@ -28,6 +28,7 @@ class App extends React.Component {
 	}
 
 	onLargeSidebarSelection = (selected) => {
+		console.log('Go to products')
 		this.setState({
 			...this.state,
 			sidebarSelection: 'products',
@@ -46,10 +47,9 @@ class App extends React.Component {
 		};
 	}
 
-	onSmallSidebarSelection = (selected) => {
+	onSmallSidebarSelection = () => {
 		this.setState({
 			...this.state,
-			sidebarSelection: selected,
 			largeSidebar: false,
 		})
 	}
@@ -57,6 +57,7 @@ class App extends React.Component {
 	toggleLargeSidebar = () => {
 		this.setState({
 			largeSidebar: !this.state.largeSidebar,
+			sidebarSelection: null,
 		})
 
 		if (!this.state.largeSidebar) {
@@ -85,9 +86,10 @@ class App extends React.Component {
 						onScrollHome={onScrollHome}
 					/>
 
-					<SmallSidebar onSmallSidebarSelection={this.onSmallSidebarSelection} /> 
+					<SmallSidebar onScrollHome={onScrollHome} /> 
 					
 					<LargeSidebar
+						onScrollHome={onScrollHome}
 						onLargeSidebarSelection={this.onLargeSidebarSelection}
 						toggleLargeSidebar={this.toggleLargeSidebar}
 						largeSidebarClass={this.state.largeSidebarClass}

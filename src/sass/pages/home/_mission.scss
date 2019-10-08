@@ -93,7 +93,7 @@
         @include respond(phone) {
             grid-column: 2 / 4;
             font-size: 1.4rem;
-            width: 50rem;
+            width: 40rem;
         }
 
         @include respond(small-phone) {
