@@ -3,7 +3,7 @@
     &__web-hero {
         display: grid;
         grid-template-columns: 1fr 40rem;
-        grid-template-rows: 60rem 18rem;
+        grid-template-rows: 54rem 18rem;
 
         @include respond(tab-land) {
             grid-template-rows: 50rem 18rem;
@@ -69,8 +69,8 @@
         align-self: flex-start;
         justify-self: flex-end;
 
-        height: 80%;
-        width: 50rem;
+        height: 60%;
+        width: 47rem;
 
         padding-left: 10rem;
 
@@ -103,7 +103,7 @@
         align-self: flex-start;
 
         text-align: right;
-        margin-top: 15rem;
+        margin-top: 9rem;
         margin-right: 4rem;
         z-index: 3;
         display: flex;
@@ -127,7 +127,7 @@
         margin-bottom: 2rem;
 
         @include respond(tab-land) {
-            margin-top: 10rem;
+            margin-top: 8rem;
         }
 
         @include respond(phone) {

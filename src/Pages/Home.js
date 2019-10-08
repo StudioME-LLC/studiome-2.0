@@ -1,10 +1,10 @@
 import React, { Component, createRef } from 'react';
 
 // Sections
-import Hero from './Sections/Hero';
-import Products from './Sections/Products';
-import Mission from './Sections/Mission';
-import Explain from './Sections/Explain';
+import Hero from './Home/Hero';
+import Products from './Home/Products';
+import Mission from './Home/Mission';
+import Explain from './Home/Explain';
 
 
 export default class Home extends Component {
