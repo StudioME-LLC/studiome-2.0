@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "763cebd7f7c0c6687b7ff9593fb27485",
+    "revision": "dc1b98915a4ff370d2c14ed3d4d67e7f",
     "url": "/index.html"
   },
   {
-    "revision": "8e4fa096661bdf20d9d8",
-    "url": "/static/css/main.84777e31.chunk.css"
+    "revision": "8f3e42fc41e8a77187bf",
+    "url": "/static/css/main.332e6933.chunk.css"
   },
   {
     "revision": "6a26d55c821d408c24cb",
@@ -16,24 +16,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/3.64c2acea.chunk.js"
   },
   {
-    "revision": "32b3008a772e91be3fbb",
-    "url": "/static/js/4.f8ff67dd.chunk.js"
+    "revision": "3496cdfdb38e7f017888",
+    "url": "/static/js/4.f55feefa.chunk.js"
   },
   {
-    "revision": "51730cd5ba6e740c6bd4",
-    "url": "/static/js/5.905dfeb3.chunk.js"
+    "revision": "35d515b65ec1325bc2aa",
+    "url": "/static/js/5.6bbb27e4.chunk.js"
   },
   {
-    "revision": "7a19d86e62c511ce8f9d",
-    "url": "/static/js/6.501f0db0.chunk.js"
+    "revision": "8ca2c397d33f582c1733",
+    "url": "/static/js/6.5e893750.chunk.js"
   },
   {
-    "revision": "8e4fa096661bdf20d9d8",
-    "url": "/static/js/main.42d34dcd.chunk.js"
+    "revision": "8f3e42fc41e8a77187bf",
+    "url": "/static/js/main.6bf05e43.chunk.js"
   },
   {
-    "revision": "21da4ff450e7884b2735",
-    "url": "/static/js/runtime~main.3b0428f7.js"
+    "revision": "fe0eedf734a9c006145d",
+    "url": "/static/js/runtime~main.462d9857.js"
   },
   {
     "revision": "0632eae1e936681e224db537c1ecbf9d",
@@ -72,6 +72,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Equipment-4.ef40932b.jpg"
   },
   {
+    "revision": "b0f5e2b606b38d98e1fe92864639f5e5",
+    "url": "/static/media/Joe.b0f5e2b6.png"
+  },
+  {
+    "revision": "327442a4cdb66c5c1b024129451d7a39",
+    "url": "/static/media/Keith.327442a4.png"
+  },
+  {
     "revision": "bdd77eb4fb35ba34207e38951ff44013",
     "url": "/static/media/MP-Studio-Main.bdd77eb4.jpg"
   },
@@ -106,6 +114,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d782b939e1de9736bf3cd9197257a8d2",
     "url": "/static/media/Studio-E.d782b939.jpg"
+  },
+  {
+    "revision": "2be49cc59d268672b0a803e562ee857c",
+    "url": "/static/media/Team-Banner.2be49cc5.jpg"
   },
   {
     "revision": "2a5c64c4f65bc1c0471ebdf5192197fc",
