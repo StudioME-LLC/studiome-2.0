@@ -4,7 +4,7 @@
     &__team-container {
         display: grid;
         grid-template-columns: 1fr repeat(4, 22.5rem) 1fr;
-        grid-template-rows: 30rem 60rem;
+        grid-template-rows: 30rem 60rem 60rem 60rem 10rem;
     }
 
     &__team-banner {
@@ -59,6 +59,26 @@
             grid-row: 2 / 3;
         }
 
+        &--3 {
+            grid-column: 2 / 4;
+            grid-row: 3 / 4;
+        }
+
+        &--4 {
+            grid-column: 4 / 6;
+            grid-row: 3 / 4;
+        }
+
+        &--5 {
+            grid-column: 2 / 4;
+            grid-row: 4 / 5;
+        }
+
+        &--6 {
+            grid-column: 4 / 6;
+            grid-row: 4 / 5;
+        }
+
         perspective: 150rem;
         -webkit-perspective: 150rem;
         -moz-perspective: 150rem;
@@ -69,7 +89,7 @@
         &:hover .about__team-card--front {
             transform: rotateY(180deg);
         }
-    
+
         &:hover .about__team-card--back {
             transform: rotateY(0deg);
         }
@@ -102,6 +122,10 @@
             &--2 {
                 background-color: $color-orange;
             }
+
+            &--3 {
+                background-color: $color-green;
+            }
         }
     }
 
@@ -118,6 +142,18 @@
 
         &--2 {
             background-image: url(./assets/about/team/Joe.png);
+        }
+
+        &--3 {
+            background-image: url(./assets/about/team/Elliott.png);
+        }
+
+        &--5 {
+            background-image: url(./assets/about/team/Alex.png);
+        }
+
+        &--6 {
+            background-image: url(./assets/about/team/Mike.png);
         }
     }
 

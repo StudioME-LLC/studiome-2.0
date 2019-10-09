@@ -2,51 +2,41 @@ import React, { Component } from 'react';
 
 // Sections
 import Intro from './About/Intro';
+import Team from './About/Team';
 
 export default class About extends Component {
     render() {
         return (
             <React.Fragment>
                 <Intro />
-                <div className="about__team-container">
-                    <div className="about__team-banner" />
-                    <div className="about__team-banner-container">
-                        <h1 className="about__team-heading">Team</h1>
-                        <div className="about__team-border" />
+                <Team />
+                <div className="about__work">
+                    <div className="about__work-banner" />
+                    <div className="about__work-banner-container">
+                        <h1 className="about__work-heading">Our Work</h1>
+                        <div className="about__work-border" />
                     </div>
 
-                    <div className="about__team-card-container about__team-card-container--1">
-                        <div className="about__team-card about__team-card--front">
-                            <div className="about__team-card-picture about__team-card-picture--1">
-                                &nbsp;
-                            </div>
-                            <h4 className="about__team-card-name">
-                                <span className="about__team-card-name-span about__team-card-name-span--1">Keith Parish</span>
-                            </h4>
-                        </div>
-                        <div className="about__team-card about__team-card--back about__team-card--back--1">
-                            <h1 className="about__team-card-role">Co-Founder</h1>
-                            <p className="about__team-card-info-1">Keith’s passion for video has led him across the country and beyond, producing and directing projects ranging from television shows to documentaries.</p>
-                            <p className="about__team-card-info-2">Keith graduated from the University of Pittsburgh with a degree in marketing and film studies. His background in marketing and experience in television allows him to understand not only the technical and visual aspects of production, but also the business purpose and message behind each production.</p>
-                        </div>
-                    </div>
-                    <div className="about__team-card-container about__team-card-container--2">
-                        <div className="about__team-card about__team-card--front">
-                            <div className="about__team-card-picture about__team-card-picture--2">
-                                &nbsp;
-                            </div>
-                            <h4 className="about__team-card-name">
-                                <span className="about__team-card-name-span about__team-card-name-span--2">Joe Leachko</span>
-                            </h4>
-                        </div>
-                        <div className="about__team-card about__team-card--back about__team-card--back--2">
-                            <h1 className="about__team-card-role">Co-Founder</h1>
-                            <p className="about__team-card-info-1">Keith’s passion for video has led him across the country and beyond, producing and directing projects ranging from television shows to documentaries.</p>
-                            <p className="about__team-card-info-2">Keith graduated from the University of Pittsburgh with a degree in marketing and film studies. His background in marketing and experience in television allows him to understand not only the technical and visual aspects of production, but also the business purpose and message behind each production.</p>
-                        </div>
-                    </div>
+                    <h3 className="about__work-heading-1">In just 3 years since opening the studio, our team has produced and edited over 1,000 videos. Our work spans from animations, to promos, from e-learning videos, to commercials. And our expertise lies in our ability to produce these varying projects quickly and easily.</h3>
+
+                    <iframe
+                        className="about__work-video about__work-video--1"
+                        src="https://player.vimeo.com/video/250807267"
+                        title="example-1" frameBorder="0"
+                        allow="autoplay; fullscreen" allowFullScreen>
+                    </iframe>
+                    <p className="about__work-description about__work-description--1">Description 1</p>
+                    <div className="about__work-border about__work-border--1" />
+
+                    <iframe
+                        className="about__work-video about__work-video--2"
+                        src="https://player.vimeo.com/video/225163302"
+                        title="example-1" frameBorder="0"
+                        allow="autoplay; fullscreen" allowFullScreen>
+                    </iframe>
+                    <p className="about__work-description about__work-description--2">Description 2</p>
+                    <div className="about__work-border about__work-border--2" />
                 </div>
-                
             </React.Fragment>
         )
     }

@@ -90,7 +90,7 @@ class Products extends Component {
                 this.setState({
                     heading: "Audio Studio",
                     subheading: "Pick a duration to view:",
-                    option1: "Houry",
+                    option1: "Hourly",
                     url1: "https://studiome.me/product/soundproof-audio-studio-hourly/",
                     option2: "Daily",
                     url2: "https://studiome.me/product/soundproof-audio-studio-full-day/",
