@@ -1,0 +1,125 @@
+.about {
+
+    // Banner
+    &__contact {
+        display: grid;
+        grid-template-columns: 1fr repeat(4, 26rem) 1fr;
+        grid-template-rows: 30rem 50rem 15rem 5rem 5rem 30rem;
+    }
+
+    &__contact-banner {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+
+        background-image: url(./assets/about/contact/Contact-Blur.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__contact-banner-container {
+        grid-column: 3 / 5;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 4rem;
+        width: 80rem;
+
+        border-radius: 15px;
+    }
+
+    &__contact-heading {
+        color: $color-grey-hover;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+    }
+
+    &__contact-border {
+        margin: 2rem auto;
+        height: 2px;
+        width: 15rem;
+        background-color: $color-green;
+    }
+
+    // Content
+    &__contact-form {
+        grid-column: 4 / 6;
+        grid-row: 2 / 7;
+        justify-self: flex-end;
+        align-self: flex-start;
+
+        width: 512px;
+        height: 1000px;
+
+        margin-top: 10rem;
+    }
+
+    &__contact-map {
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+        justify-self: flex-start;
+        align-self: flex-start;
+
+        margin-top: 10rem;
+        border: .4rem solid $color-orange;
+        transition: all .5s;
+
+        width: 480px;
+        height: 360px;
+
+        &:hover {
+            border: .4rem solid $color-green;
+        }
+    }
+
+    &__contact-heading-1 {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+        justify-self: flex-start;
+        align-self: center;
+
+        color: $color-grey;
+        text-transform: uppercase;
+    }
+
+    &__contact-paragraph-1 {
+        grid-column: 2 / 4;
+        grid-row: 4 / 5;
+        justify-self: flex-start;
+        align-self: flex-start;
+
+        font-size: 2.4rem;
+    }
+
+    &__contact-link-1 {
+        text-decoration: none;
+        color: $color-orange;
+        transition: all .2s ease;
+
+        &:hover {
+            border-bottom: 2px solid $color-green;
+            color: $color-green;
+        }
+    }
+
+    &__contact-paragraph-2 {
+        grid-column: 2 / 4;
+        grid-row: 5 / 6;
+        justify-self: flex-start;
+        align-self: flex-start;
+
+        font-size: 2.4rem;
+    }
+
+    &__contact-link-2 {
+        text-decoration: none;
+        color: $color-orange;
+
+        &:hover {
+            border-bottom: 2px solid $color-green;
+            color: $color-green;
+        }
+    }
+}

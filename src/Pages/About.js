@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // Sections
 import Intro from './About/Intro';
 import Team from './About/Team';
+import Work from './About/Work';
 
 export default class About extends Component {
     render() {
@@ -10,32 +11,42 @@ export default class About extends Component {
             <React.Fragment>
                 <Intro />
                 <Team />
-                <div className="about__work">
-                    <div className="about__work-banner" />
-                    <div className="about__work-banner-container">
-                        <h1 className="about__work-heading">Our Work</h1>
-                        <div className="about__work-border" />
+                <Work />
+                <div className="about__contact">
+                    <div className="about__contact-banner" />
+                    <div className="about__contact-banner-container">
+                        <h1 className="about__contact-heading">Contact</h1>
+                        <div className="about__contact-border" />
                     </div>
 
-                    <h3 className="about__work-heading-1">In just 3 years since opening the studio, our team has produced and edited over 1,000 videos. Our work spans from animations, to promos, from e-learning videos, to commercials. And our expertise lies in our ability to produce these varying projects quickly and easily.</h3>
-
                     <iframe
-                        className="about__work-video about__work-video--1"
-                        src="https://player.vimeo.com/video/250807267"
-                        title="example-1" frameBorder="0"
-                        allow="autoplay; fullscreen" allowFullScreen>
-                    </iframe>
-                    <p className="about__work-description about__work-description--1">Description 1</p>
-                    <div className="about__work-border about__work-border--1" />
-
+                        title="contact-form"
+                        className="about__contact-form"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdHptWG04E7RA0f9AKuFmbKDxEh2iW9YqzewO8TR2rM2dMjPA/viewform?embedded=true"
+                        frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
                     <iframe
-                        className="about__work-video about__work-video--2"
-                        src="https://player.vimeo.com/video/225163302"
-                        title="example-1" frameBorder="0"
-                        allow="autoplay; fullscreen" allowFullScreen>
+                        className="about__contact-map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.577984058043!2d-79.9295610838317!3d40.46247657935969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834f273cde9d741%3A0x425c4b6140239b61!2sStudioME!5e0!3m2!1sen!2sus!4v1549830213825"
+                        frameBorder="0"
+                        allowFullScreen
+                        title="map"
+                    >
                     </iframe>
-                    <p className="about__work-description about__work-description--2">Description 2</p>
-                    <div className="about__work-border about__work-border--2" />
+
+                    <h2 className="about__contact-heading-1">Interested in an internship?</h2>
+                    <p className="about__contact-paragraph-1">
+                        <a
+                            target="_blank" rel="noopener noreferrer"
+                            className="about__contact-link-1"
+                            href="https://studiome.me/video-production-internships/"
+                        >Video Production</a>
+                    </p>
+                    <p className="about__contact-paragraph-2">
+                        <a
+                            target="_blank" rel="noopener noreferrer"
+                            className="about__contact-link-1"
+                            href="https://studiome.me/marketing-social-media-internships/"
+                        >Marketing / Social Media</a></p>
                 </div>
             </React.Fragment>
         )
