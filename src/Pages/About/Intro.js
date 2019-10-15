@@ -25,8 +25,6 @@ export default function Intro() {
 						title="1"
 						className="about__intro-store-video"
 						src='https://player.vimeo.com/video/197530141'
-						width="887" 
-						height="506" 
 						frameBorder="0" 
 						webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen>
 					</iframe>
