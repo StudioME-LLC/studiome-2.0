@@ -38,6 +38,11 @@
         width: 80rem;
 
         border-radius: 15px;
+
+        @include respond(tab-port) {
+            width: 60rem;
+            grid-column: 2 / 5;
+        }
     }
 
     &__contact-heading {
