@@ -6,7 +6,8 @@
         grid-template-rows: 30rem;
 
         @include respond(tab-port) {
-            grid-template-columns: 1fr repeat(4, 17.5rem) 1fr;
+            grid-template-columns: 1fr repeat(4, 12.5rem) 1fr;
+            grid-template-rows: 25rem;
         }
     }
 
@@ -210,8 +211,8 @@
         }
 
         @include respond(tab-port) {
-            width: 568px;
-		    height: 324px;
+            width: 511px;
+		    height: 292px;
         }
     }
 
@@ -401,8 +402,8 @@
         }
 
         @include respond(tab-port) {
-            width: 568px;
-		    height: 324px;
+            width: 511px;
+		    height: 292px;
         }
     }
 
