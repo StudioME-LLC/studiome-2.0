@@ -14,6 +14,11 @@
             grid-template-columns: 1fr repeat(4, 12.5rem) 1fr;
             grid-template-rows: 25rem 30rem repeat(3, 30rem 10rem 8rem) 10rem;
         }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr repeat(4, 10rem) 1fr;
+            grid-template-rows: 15rem 20rem repeat(3, 30rem 10rem 8rem) 7rem;
+        }
     }
 
     &__work-banner {
@@ -37,6 +42,10 @@
         color: $color-grey-hover;
         text-transform: uppercase;
         font-size: 4.5rem;
+
+        @include respond(phone) {
+            font-size: 3.6rem;
+        }
     }
 
     &__work-border {
@@ -44,6 +53,10 @@
         height: 2px;
         width: 15rem;
         background-color: $color-green;
+
+        @include respond(phone) {
+            margin: 1rem auto;
+        }
     }
 
     &__work-subheading {
@@ -70,12 +83,23 @@
             font-size: 1.8rem;
             padding: 3rem;
         }
+
+        @include respond(phone) {
+            width: 36rem;
+            font-size: 1.4rem;
+            padding: 1.5rem;
+        }
     }
 
     &__work-video {
         align-self: center;
         width: 448px;
         height: 252px;
+
+        @include respond(phone) {
+            width: 358px;
+            height: 204px;
+        }
 
         &--1 {
             grid-column: 2 / 5;

@@ -15,6 +15,11 @@
             grid-template-columns: 1fr repeat(3, 16.6rem) 1fr;
             grid-template-rows: 30rem 100rem 40rem 15rem 5rem 5rem 10rem;
         }
+
+        @include respond(phone) {
+            grid-template-columns: 1fr repeat(3, 12rem) 1fr;
+            grid-template-rows: 15rem 100rem 35rem 10rem 4rem 4rem 7rem;
+        }
     }
 
     &__contact-banner {
@@ -43,12 +48,21 @@
             width: 50rem;
             grid-column: 2 / 5;
         }
+
+        @include respond(phone) {
+            width: 100%;
+            padding: 1.5rem;
+        }
     }
 
     &__contact-heading {
         color: $color-grey-hover;
         text-transform: uppercase;
         font-size: 4.5rem;
+
+        @include respond(phone) {
+            font-size: 3.6rem;
+        }
     }
 
     &__contact-border {
@@ -56,6 +70,10 @@
         height: 2px;
         width: 15rem;
         background-color: $color-green;
+
+        @include respond(phone) {
+            margin: 1rem auto;
+        }
     }
 
     // Content
@@ -79,6 +97,11 @@
 
         @include respond(tab-port) {
             grid-column: 2 / 5;
+        }
+
+        @include respond(phone) {
+            width: 358px;
+            height: 1000px;
         }
     }
 
@@ -116,6 +139,11 @@
             justify-self: center;
             width: 480px;
             height: 360px;
+        }
+
+        @include respond(phone) {
+            width: 374px;
+            height: 278px;
         }
     }
 
