@@ -25,7 +25,9 @@ export default function Router(props) {
                 <Route path="/about" exact
                     render={() => 
                         <React.Suspense fallback={<Spinner />}>
-                            <About />
+                            <About
+                                sidebarSelection={props.sidebarSelection}
+                            />
                         </React.Suspense>} 
                 />
                 <Route path="/projects" exact>Our Projects Page</Route>

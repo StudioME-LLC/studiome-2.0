@@ -22,6 +22,7 @@ export default function Sidebar(props) {
 
 
             <NavLink
+                onClick={props.onScrollHome}
                 activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
                 to="/about" exact style={{textDecoration: 'none'}}

@@ -29,7 +29,7 @@ export default function LargeSidebar(props) {
             <div className="large-sidebar__container">
                 {/*Book*/}
                 <NavLink
-                    onClick={props.onScrollHome}
+                    onClick={props.onLargeSidebarSelection.bind(this, 'rentals')}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/" exact style={{textDecoration: 'none'}}
@@ -73,14 +73,15 @@ export default function LargeSidebar(props) {
                 </a>
 
                 {/*About*/}
-                <NavLink 
+                <NavLink
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/about" exact style={{textDecoration: 'none'}}
                 >
                     <p>About</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, 'general')} 
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/about/#general" exact style={{textDecoration: 'none'}}
@@ -88,7 +89,8 @@ export default function LargeSidebar(props) {
                     <GeneralIcon className='large-sidebar__button-icon' />
                     <p>General</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, 'team')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/about/#team" exact style={{textDecoration: 'none'}}
@@ -96,7 +98,8 @@ export default function LargeSidebar(props) {
                     <TeamIcon className='large-sidebar__button-icon' />
                     <p>Team</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, 'work')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/about/#work" exact style={{textDecoration: 'none'}}

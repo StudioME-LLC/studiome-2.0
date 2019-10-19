@@ -28,22 +28,40 @@ class App extends React.Component {
 	}
 
 	onLargeSidebarSelection = (selected) => {
-		console.log('Go to products')
-		this.setState({
-			...this.state,
-			sidebarSelection: 'products',
-		})
-
 		if (selected === 'rentals') {
 			this.props.rentalButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
 		} else if (selected === 'services') {
 			this.props.serviceButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
 		} else if (selected === 'memberships') {
 			this.props.membershipsButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
+		} else if (selected === 'general') {
+			onScrollHome();
+		} else if (selected === 'team') {
+			this.setState({
+				...this.state,
+				sidebarSelection: 'team',
+			})
+		} else if (selected === 'work') {
+			this.setState({
+				...this.state,
+				sidebarSelection: 'work',
+			})
 		}
 
 		if (window.matchMedia('(max-width: 600px)').matches) {
-			this.toggleLargeSidebar()
+			this.productsToggle()
 		};
 	}
 
@@ -58,6 +76,24 @@ class App extends React.Component {
 		this.setState({
 			largeSidebar: !this.state.largeSidebar,
 			sidebarSelection: null,
+		})
+
+		if (!this.state.largeSidebar) {
+			this.setState({
+				largeSidebarClass: 'large-sidebar large-sidebar__active',
+				backdropClass: 'backdrop backdrop__fadeIn',
+			})
+		} else {
+			this.setState({
+				largeSidebarClass: 'large-sidebar',
+				backdropClass: 'backdrop backdrop__fadeOut',
+			})
+		}
+	}
+
+	productsToggle = () => {
+		this.setState({
+			largeSidebar: !this.state.largeSidebar,
 		})
 
 		if (!this.state.largeSidebar) {
