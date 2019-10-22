@@ -119,7 +119,7 @@ export default function LargeSidebar(props) {
                 <NavLink 
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    to="/projects/#team" exact style={{textDecoration: 'none'}}
+                    to="/projects/#learn" exact style={{textDecoration: 'none'}}
                 >
                     <LearnIcon className='large-sidebar__button-icon' />
                     <p>Learn</p>
@@ -127,7 +127,7 @@ export default function LargeSidebar(props) {
                 <NavLink 
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    to="/projects/#team" exact style={{textDecoration: 'none'}}
+                    to="/projects/#events" exact style={{textDecoration: 'none'}}
                 >
                     <EventsIcon className='large-sidebar__button-icon' />
                     <p>Studio Events</p>
@@ -135,7 +135,7 @@ export default function LargeSidebar(props) {
                 <NavLink 
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    to="/projects/#team" exact style={{textDecoration: 'none'}}
+                    to="/projects/#podcast" exact style={{textDecoration: 'none'}}
                 >
                     <PodcastIcon className='large-sidebar__button-icon' />
                     <p>Our Podcast</p>

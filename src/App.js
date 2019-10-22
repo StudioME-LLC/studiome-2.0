@@ -135,6 +135,7 @@ class App extends React.Component {
 						<div className={this.state.backdropClass} onClick={this.toggleLargeSidebar} />
 
 						<Router
+							onLargeSidebarSelection={this.onLargeSidebarSelection}
 							sidebarSelection={this.state.sidebarSelection}
 						/>
 					</div>

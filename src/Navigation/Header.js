@@ -26,9 +26,11 @@ export default function Header(props) {
                     <Cart className="header__cart-icon" />
                 </button>
             </a>
-            <button className="header__user-button">
-                <User className="header__user-icon" />
-            </button>
+            <a href="https://studiome.me/my-account/">
+                <button className="header__user-button">
+                    <User className="header__user-icon" />
+                </button>
+            </a>
         </div>
     )
 }

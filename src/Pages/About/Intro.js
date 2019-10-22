@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-export default function Intro() {
+export default function Intro(props) {
     return (
         <React.Fragment>
                 <div className="about__intro-container">
@@ -16,8 +17,25 @@ export default function Intro() {
                     <h2 className="about__intro-heading-1">How it all began:</h2>
                     <p className="about__intro-story-1">StudioME opened it's doors in late 2016 by co-founders, Keith Parish and Joe Leachko. Noticing the changing media landscape, they created StudioME to be a more efficient resource for media production. They took the traditional studio model and redesigned it to offer more user-friendly, DIY services for new content creators as well as more efficient, cost-effective solutions for media professionals.</p>
                     <p className="about__intro-story-2">Keith Parish has been involved in video production since the age of 13 and has produced videos in over 40 states and 5 countries. Joe Leachko comes from an experiential marketing and architectural design background.</p>
-                    <button className="about__intro-button-rentals">Rental Packages</button>
-                    <button className="about__intro-button-quote">Custom Quote</button>
+                    <NavLink
+                        className="about__intro-button-rentals-link"
+                        onClick={props.onLargeSidebarSelection.bind(this, 'rentals')}
+                        to="/" exact
+                    >
+                        <button
+                            className="about__intro-button-rentals"
+                            
+                            >Rental Packages
+                        </button>
+                    </NavLink>
+                    <a
+                        className="about__intro-button-quote-link"
+                        target="_blank"
+                        href="https://forms.gle/66Qij1NFffSaKcQZ8"
+                        rel="noopener noreferrer"
+                    >
+                        <button className="about__intro-button-quote">Custom Quote</button>
+                    </a>
                 </div>
 
                 <div className="about__intro-store-container">
@@ -34,7 +52,15 @@ export default function Intro() {
                     <h3 className="about__intro-store-heading-2">Operating Hours:</h3>
                     <p className="about__intro-store-paragraph-3">Monday - Saturday</p>
                     <p className="about__intro-store-paragraph-4">8am - 6pm</p>
-                    <button className="about__intro-store-button">Virtual Tour</button>
+
+                    <a
+                        className="about__intro-store-button-link"
+                        target="_blank"
+                        href="https://studiome.me/virtual-tour/"
+                        rel="noopener noreferrer"
+                    >
+                        <button className="about__intro-store-button">Virtual Tour</button>
+                    </a>
                 </div>
 
                 <div className="about__intro-perks-container">

@@ -7,6 +7,7 @@ import Spinner from '../components/Spinner';
 // Pages
 const Home = React.lazy(() => import ('../Pages/Home'));
 const About = React.lazy(() => import ('../Pages/About'));
+const Projects = React.lazy(() => import ('../Pages/Projects'));
 
 
 export default function Router(props) {
@@ -26,11 +27,17 @@ export default function Router(props) {
                     render={() => 
                         <React.Suspense fallback={<Spinner />}>
                             <About
+                                onLargeSidebarSelection={props.onLargeSidebarSelection}
                                 sidebarSelection={props.sidebarSelection}
                             />
                         </React.Suspense>} 
                 />
-                <Route path="/projects" exact>Our Projects Page</Route>
+                <Route path="/projects" exact
+                    render={() => 
+                        <React.Suspense fallback={<Spinner />}>
+                            <Projects/>
+                        </React.Suspense>} 
+                />
                 <Route path="/contact" exact>Contact Page</Route>
                 <Redirect to="/" exact />
             </Switch>
