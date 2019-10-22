@@ -74,6 +74,7 @@ export default function LargeSidebar(props) {
 
                 {/*About*/}
                 <NavLink
+                    onClick={props.toggleLargeSidebar}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/about" exact style={{textDecoration: 'none'}}
@@ -109,14 +110,16 @@ export default function LargeSidebar(props) {
                 </NavLink>
 
                 {/*Our Projects*/}
-                <NavLink 
+                <NavLink
+                    onClick={props.toggleLargeSidebar}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/projects" exact style={{textDecoration: 'none'}}
                 >
                     <p>Our Projects</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.toggleLargeSidebar}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/projects/#learn" exact style={{textDecoration: 'none'}}
@@ -124,7 +127,8 @@ export default function LargeSidebar(props) {
                     <LearnIcon className='large-sidebar__button-icon' />
                     <p>Learn</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.toggleLargeSidebar}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/projects/#events" exact style={{textDecoration: 'none'}}
@@ -132,7 +136,8 @@ export default function LargeSidebar(props) {
                     <EventsIcon className='large-sidebar__button-icon' />
                     <p>Studio Events</p>
                 </NavLink>
-                <NavLink 
+                <NavLink
+                    onClick={props.toggleLargeSidebar}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
                     to="/projects/#podcast" exact style={{textDecoration: 'none'}}
