@@ -73,6 +73,16 @@ class App extends React.Component {
 		};
 	}
 
+	onQuickButtonFix = (selected) => {
+		if (selected === 'rentals') {
+			this.props.rentalButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
+		}
+	}
+
 	onSmallSidebarSelection = (selected) => {
 		this.setState({
 			...this.state,
@@ -158,6 +168,7 @@ class App extends React.Component {
 						<div className={this.state.backdropClass} onClick={this.toggleLargeSidebar} />
 
 						<Router
+							onQuickButtonFix={this.onQuickButtonFix}
 							onLargeSidebarSelection={this.onLargeSidebarSelection}
 							sidebarSelection={this.state.sidebarSelection}
 						/>

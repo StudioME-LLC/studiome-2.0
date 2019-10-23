@@ -72,7 +72,10 @@ export default class About extends Component {
     render() {
         return (
             <React.Fragment>
-                <Intro onLargeSidebarSelection={this.props.onLargeSidebarSelection} />
+                <Intro
+                    onQuickButtonFix={this.props.onQuickButtonFix}
+                    onLargeSidebarSelection={this.props.onLargeSidebarSelection}
+                />
                 <div style={{position: 'relative', top: '-75px'}} ref={this.state.myRefTeam} />
                 <Team />
                 <div style={{position: 'relative', top: '-75px'}} ref={this.state.myRefWork} />

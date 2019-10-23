@@ -19,7 +19,7 @@ export default function Intro(props) {
                     <p className="about__intro-story-2">Keith Parish has been involved in video production since the age of 13 and has produced videos in over 40 states and 5 countries. Joe Leachko comes from an experiential marketing and architectural design background.</p>
                     <NavLink
                         className="about__intro-button-rentals-link"
-                        onClick={props.onLargeSidebarSelection.bind(this, 'rentals')}
+                        onClick={props.onQuickButtonFix.bind(this, 'rentals')}
                         to="/" exact
                     >
                         <button
