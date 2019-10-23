@@ -73,11 +73,23 @@ class App extends React.Component {
 		};
 	}
 
-	onSmallSidebarSelection = () => {
+	onSmallSidebarSelection = (selected) => {
 		this.setState({
 			...this.state,
 			largeSidebar: false,
 		})
+
+		if (selected === 'general') {
+			this.setState({
+				...this.state,
+				sidebarSelection: 'general',
+			})
+		} else if (selected === 'contact') {
+			this.setState({
+				...this.state,
+				sidebarSelection: 'contact',
+			})
+		}
 	}
 
 	toggleLargeSidebar = () => {
@@ -131,7 +143,7 @@ class App extends React.Component {
 					/>
 
 					<SmallSidebar
-						onLargeSidebarSelection={this.onLargeSidebarSelection}
+						onSmallSidebarSelection={this.onSmallSidebarSelection}
 						onScrollHome={onScrollHome}
 					/> 
 					

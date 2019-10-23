@@ -22,7 +22,7 @@ export default function Sidebar(props) {
 
 
             <NavLink
-                onClick={props.onLargeSidebarSelection.bind(this, 'general')} 
+                onClick={props.onSmallSidebarSelection.bind(this, 'general')} 
                 activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
                 to="/about" exact style={{textDecoration: 'none'}}
@@ -41,7 +41,7 @@ export default function Sidebar(props) {
             </NavLink>
 
             <NavLink
-                onClick={props.onLargeSidebarSelection.bind(this, 'contact')}
+                onClick={props.onSmallSidebarSelection.bind(this, 'contact')}
                 activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
                 to="/about/#contact" exact style={{textDecoration: 'none'}}
