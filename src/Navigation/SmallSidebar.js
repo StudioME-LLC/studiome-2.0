@@ -22,7 +22,7 @@ export default function Sidebar(props) {
 
 
             <NavLink
-                onClick={props.onScrollHome}
+                onClick={props.onLargeSidebarSelection.bind(this, 'general')} 
                 activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
                 to="/about" exact style={{textDecoration: 'none'}}
@@ -40,14 +40,15 @@ export default function Sidebar(props) {
                 <p>Our Projects</p>
             </NavLink>
 
-            <a
+            <NavLink
+                onClick={props.onLargeSidebarSelection.bind(this, 'contact')}
+                activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
-                href="https://studiome.me/contact/"
-                style={{textDecoration: 'none'}}
+                to="/about/#contact" exact style={{textDecoration: 'none'}}
             >
                 <Contact className='small-sidebar__button-icon' />
                 <p>Contact</p>
-            </a>
+            </NavLink>
         </div>
     )
 }

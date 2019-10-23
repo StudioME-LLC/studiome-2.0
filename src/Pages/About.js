@@ -10,23 +10,39 @@ export default class About extends Component {
     state = {
         myRefTeam: createRef(),
         myRefWork: createRef(),
+        myRefContact: createRef(),
     }
 
     componentDidMount() {
-        if (this.props.sidebarSelection === 'team') {
+        console.log(this.props.sidebarSelection)
+        if (this.props.sidebarSelection === 'general') {
+            window.scroll({
+                top: 0,
+                behavior: 'smooth',
+            })
+        } else if (this.props.sidebarSelection === 'team') {
             this.onTeamHandler();
         } else if (this.props.sidebarSelection === 'work') {
             this.onWorkHandler();
+        } else if (this.props.sidebarSelection === 'contact') {
+            this.onContactHandler();
         } else {
             return;
         }
     }
 
     componentDidUpdate() {
-        if (this.props.sidebarSelection === 'team') {
+        if (this.props.sidebarSelection === 'general') {
+            window.scroll({
+                top: 0,
+                behavior: 'smooth',
+            })
+        } else if (this.props.sidebarSelection === 'team') {
             this.onTeamHandler();
         } else if (this.props.sidebarSelection === 'work') {
             this.onWorkHandler();
+        } else if (this.props.sidebarSelection === 'contact') {
+            this.onContactHandler();
         } else {
             return;
         }
@@ -46,6 +62,13 @@ export default class About extends Component {
         });
     }
 
+    onContactHandler = () => {
+        window.scroll({
+            top: this.state.myRefContact.current.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -54,6 +77,7 @@ export default class About extends Component {
                 <Team />
                 <div style={{position: 'relative', top: '-75px'}} ref={this.state.myRefWork} />
                 <Work />
+                <div style={{position: 'relative', top: '-75px'}} ref={this.state.myRefContact} />
                 <Contact />
             </React.Fragment>
         )

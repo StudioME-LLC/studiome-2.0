@@ -47,7 +47,10 @@ class App extends React.Component {
 				sidebarSelection: 'products',
 			})
 		} else if (selected === 'general') {
-			onScrollHome();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'general',
+			})
 		} else if (selected === 'team') {
 			this.setState({
 				...this.state,
@@ -57,6 +60,11 @@ class App extends React.Component {
 			this.setState({
 				...this.state,
 				sidebarSelection: 'work',
+			})
+		} else if (selected === 'contact') {
+			this.setState({
+				...this.state,
+				sidebarSelection: 'contact',
 			})
 		}
 
@@ -122,7 +130,10 @@ class App extends React.Component {
 						onScrollHome={onScrollHome}
 					/>
 
-					<SmallSidebar onScrollHome={onScrollHome} /> 
+					<SmallSidebar
+						onLargeSidebarSelection={this.onLargeSidebarSelection}
+						onScrollHome={onScrollHome}
+					/> 
 					
 					<LargeSidebar
 						onScrollHome={onScrollHome}

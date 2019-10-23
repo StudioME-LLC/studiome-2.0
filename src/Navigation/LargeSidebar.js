@@ -74,7 +74,7 @@ export default function LargeSidebar(props) {
 
                 {/*About*/}
                 <NavLink
-                    onClick={props.toggleLargeSidebar}
+                    onClick={props.onLargeSidebarSelection.bind(this, 'general')} 
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
                     to="/about" exact style={{textDecoration: 'none'}}
@@ -147,10 +147,11 @@ export default function LargeSidebar(props) {
                 </NavLink>
 
                 {/*Contact*/}
-                <NavLink 
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, 'contact')}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
-                    to="/contact" exact style={{textDecoration: 'none'}}
+                    to="/about/#contact" exact style={{textDecoration: 'none'}}
                 >
                     <p>Contact</p>
                 </NavLink>
