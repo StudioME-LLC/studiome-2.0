@@ -86,31 +86,6 @@ export default function Intro(props) {
 						<li><span style={{color: '#B6CE61'}}>•</span>  Artist / Musicians</li>
 						<li><span style={{color: '#B6CE61'}}>•</span>  Actors / Voice Talent</li>
 					</ul>
-                    <h2 className="about__intro-perks-heading-3">How Rental Packages Work</h2>
-                    <div className="about__intro-perks-list-3">
-                        <p>
-                            <span style={{color: '#EA6E44'}}>1 –</span> Book studio time, workstations and equipment using the BOOK ME tab or Contact Us to schedule
-                        </p>
-                        <br />
-                        <p>
-                            <span style={{color: '#EA6E44'}}>2 –</span> Once you book, we will follow up with you to provide additional information about your booking
-                        </p>
-                        <br />
-                        <p>
-                            <span style={{color: '#EA6E44'}}>3 –</span> Our friendly studio manager will have everything prepped and ready for you. First-time users receive a brief 10 minute tour
-                        </p>
-                        <br />
-                    </div>
-                    <iframe 
-						title="1"
-						className="about__intro-perks-video"
-						src="https://player.vimeo.com/video/224770179"
-						width="887" 
-						height="506" 
-						frameBorder="0" 
-						webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen>
-					</iframe>
-                    <button className="about__intro-perks-button">Ready to Book?</button>
                 </div>
         </React.Fragment>
     )

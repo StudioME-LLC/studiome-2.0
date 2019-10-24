@@ -457,7 +457,7 @@
         margin-top: 4rem;
         display: grid;
         grid-template-columns: 1fr 45rem 45rem 1fr;
-        grid-template-rows: 10rem 30rem 10rem 35rem 10rem 25rem 60rem 5rem 10rem;
+        grid-template-rows: 10rem 30rem 10rem 35rem 10rem;
 
         @include respond(tab-land) {
             grid-template-columns: 1fr repeat(2, 35rem) 1fr;
@@ -465,17 +465,17 @@
 
         @include respond(tab-port) {
             grid-template-columns: 1fr repeat(2, 25rem) 1fr;
-            grid-template-rows: 10rem 35rem 10rem 40rem 10rem 35rem 40rem 5rem 10rem;
+            grid-template-rows: 10rem 35rem 10rem 40rem 10rem;
         }
 
         @include respond(phone) {
             grid-template-columns: 1fr repeat(2, 20rem) 1fr;
-            grid-template-rows: 7rem 30rem 7rem 35rem 7rem 30rem 22rem 7rem 10rem;
+            grid-template-rows: 7rem 30rem 7rem 35rem 7rem;
         }
 
         @include respond(small-phone) {
             grid-template-columns: 1fr repeat(2, 15rem) 1fr;
-            grid-template-rows: 5rem 25rem 7rem 28rem 11rem 25rem 15rem 9rem 7rem;
+            grid-template-rows: 5rem 25rem 7rem 28rem 7rem;
         }
     }
 
