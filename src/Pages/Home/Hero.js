@@ -51,6 +51,9 @@ export default class Hero extends Component {
                     <h3 className="home__hero-subheading">A user-friendly space for media creation.</h3>
                 </div>
 
+                <div className="home__description-container">
+                    <h3 className="home__studio-description">A user-friendly space for media creation.</h3>
+                </div>
                 <h2 onClick={this.props.onProductsHandler} className="home__hero-arrow-heading">Our Products and Services</h2>
                 <ChevronArrow onClick={this.props.onProductsHandler} className="home__hero-arrow" />
             </div>
