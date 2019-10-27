@@ -766,10 +766,12 @@
         }
     }
 
-    &__products-memberships-survey {
+    &__products-memberships-survey-link {
         justify-self: center;
         align-self: center;
+    }
 
+    &__products-memberships-survey {
         width: 22rem;
         height: 6rem;
 
