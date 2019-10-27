@@ -68,8 +68,7 @@ export default function Team() {
                 </div>
                 <div className="about__team-card about__team-card--back about__team-card--back--1">
                     <h1 className="about__team-card-role">Studio Manager</h1>
-                    <p className="about__team-card-info-1">Something about Chelsea</p>
-                    <p className="about__team-card-info-2">More about Chelsea</p>
+                    <p className="about__team-card-info-1">Chelsea attended Edinboro University of Pennsylvania where she graduated with a degree in applied media arts. She has experience shooting and editing various types of media, from narrative shorts to promotional videos. She enjoys helping individuals and businesses convey their message creatively through video and online media.</p>
                 </div>
             </div>
 
