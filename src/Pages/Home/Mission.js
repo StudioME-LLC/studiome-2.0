@@ -19,7 +19,7 @@ export default function Mission() {
                 <h3 className="home__mission-subheading">We make it as simple as possible to go from concept to creation.</h3>
             </div>
 
-            <p className="home__mission-explanation">StudioME is for media creators of all kinds, from first-timers to professionals.  We offer innovative, user-friendly studio space, equipment rental, editing workstations, and custom media production services.  We help our customers create great looking video, photo and audio content from concept to creation, keeping our promise of "Media Made Easy."</p>
+            <p className="home__mission-explanation">From first-timers to professionals, StudioME is a space for digital media creators of all kinds. We offer user-friendly studio spaces, equipment rentals, editing workstations, and custom production services. Keeping our promise of "Media Made Easy," we help our customers simply create video, photo, and audio content</p>
             <p className="home__mission-offer">What we offer.</p>
 
             <div className="home__mission-container home__mission-container--1">

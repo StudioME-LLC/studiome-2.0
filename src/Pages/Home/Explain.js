@@ -28,7 +28,7 @@ export default function Explain() {
             </div>
 
             <h2 className="home__explain-heading-1">Studio Space</h2>
-            <p className="home__explian-paragraph-1">Our studio rentals are designed to make photo, video, and audio as easy as possible to produce. They are perfect for headshots, kickstarter videos, podcast recording, and much more.</p>
+            <p className="home__explian-paragraph-1">Our studio spaces make it as easy as possible to produce video, photo, and audio content. They designed for headshots, kickstarter videos, podcasts, and more.</p>
             <div className="home__explain-container-1">
                 <div className="home__explain-photo-1 home__explain-photo-1--1" style={{backgroundImage: `url(${Studio1})`}} />
                 <div className="home__explain-photo-1 home__explain-photo-1--2" style={{backgroundImage: `url(${Studio2})`}} />
@@ -37,7 +37,7 @@ export default function Explain() {
             </div>
             
             <div className="home__explain-heading-2">Equipment Rentals</div>
-            <p className="home__explian-paragraph-2">StudioME offers camera bodies, lenses, and gear for photography and videography.This can be used for both in-studio or off-site rentals.</p>
+            <p className="home__explian-paragraph-2">We offer camera bodies, lenses, and other gear for all of your photography and videography needs.</p>
             <div className="home__explain-container-2">
                 <div className="home__explain-photo-2 home__explain-photo-2--1" style={{backgroundImage: `url(${Equipment1})`}} />
                 <div className="home__explain-photo-2 home__explain-photo-2--2" style={{backgroundImage: `url(${Equipment2})`}} />
@@ -45,7 +45,7 @@ export default function Explain() {
                 <div className="home__explain-photo-2 home__explain-photo-2--4" style={{backgroundImage: `url(${Equipment4})`}} />
             </div>
             <div className="home__explain-heading-3">Editing Workstations</div>
-            <p className="home__explian-paragraph-3">Workstations are available for post-production and video FX. The stations include a powerful 27″ iMac, packed with the entire Adobe Cloud, Final Cut X, and iMovie. Stations also include FREE access to our professional music and sound effects libraries.</p>
+            <p className="home__explian-paragraph-3">Workstations are available for post-production and video FX. The stations include a powerful 27″ iMac, packed with the entire Adobe Cloud, Final Cut X, and iMovie. Stations also include free access to our professional music and sound effects libraries.</p>
             <div className="home__explain-container-3">
                 <div className="home__explain-photo-3 home__explain-photo-3--1" style={{backgroundImage: `url(${Workstation4})`}} />
                 <div className="home__explain-photo-3 home__explain-photo-3--2" style={{backgroundImage: `url(${Workstation1})`}} />

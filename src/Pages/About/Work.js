@@ -9,7 +9,7 @@ export default function Work() {
                 <div className="about__work-border" />
             </div>
 
-            <h3 className="about__work-heading-1">In just 3 years since opening the studio, our team has produced and edited over 1,000 videos. Our work spans from animations, to promos, from e-learning videos, to commercials. And our expertise lies in our ability to produce these varying projects quickly and easily.</h3>
+            <h3 className="about__work-heading-1">In the 3 years since opening the studio, our team has produced and edited over 1,000 videos. Our work spans from animations, to promos, to e-learning videos, to commercials. And our expertise lies in our ability to produce these varying projects quickly and easily.</h3>
 
             <iframe
                 className="about__work-video about__work-video--1"
