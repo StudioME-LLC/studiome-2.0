@@ -682,13 +682,10 @@
 
         grid-column: 2 / 5;
         grid-row: 2 / 3;
-
-        width: 85rem;
         height: 70rem;
 
         box-shadow: $shadow-button;
         border-radius: 5px;
-        overflow: hidden;
         color: $color-grey;
 
         display: grid;
@@ -699,28 +696,30 @@
         @include respond(phone) {
             width: 50rem;
             grid-column: 2 / 8;
-            grid-template-rows: 30rem 8rem 2rem 14rem 14rem;
+            grid-template-rows: 30rem 8rem 2rem 8rem 10rem 8rem;
         }
 
         @include respond(small-phone) {
             width: 30rem;
-            grid-column: 2 / 8;
-            grid-template-rows: 25rem 8rem 2rem 14rem 14rem;
+            grid-template-rows: 25rem 8rem 2rem 8rem 15rem 8rem;
         }
     }
 
     &__products-memberships-image {
-        width: 100%;
-        height: 30rem;
-        background-position-y: -550px;
+        height: 100%;
+        background-image: url('./assets/home/products/services/Membership-Banner.png');
+        background-position-y: -500px;
         background-size: cover;
+        grid-row: 1 / 2;
 
         @include respond(phone) {
+            width: 100%;
             background-position-y: -250px;
         }
 
         @include respond(small-phone) {
             height: 25rem;
+            width: 30rem;
             background-position-y: -100px;
         }
     }
@@ -731,6 +730,7 @@
         text-transform: uppercase;
         font-weight: 100;
         font-size: 3.6rem;
+        grid-row: 2 / 3;
 
         @include respond(phone) {
             font-size: 2.4rem;
@@ -754,6 +754,10 @@
         grid-row: 4 / 5;
         text-align: center;
         align-self: center;
+
+        @include respond(small-phone) {
+            align-self: flex-end;
+        }
     }
 
     &__products-get-started-link {
@@ -769,24 +773,28 @@
     }
 
     &__products-memberships-paragraph {
+        grid-row: 5 / 6;
         align-self: center;
         text-align: center;
         font-size: 1.8rem;
-        width: 50rem;
         margin: 0 auto;
+        width: 80%;
 
         @include respond(phone) {
             padding: 4rem;
-            font-size: 1.8rem;
+            width: 90%;
         }
 
         @include respond(small-phone) {
-            padding: 3rem;
-            font-size: 1.4rem;
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 2rem;
+            align-self: flex-end;
         }
     }
 
     &__products-memberships-survey-link {
+        grid-row: 6 / 7;
         justify-self: center;
         align-self: center;
     }

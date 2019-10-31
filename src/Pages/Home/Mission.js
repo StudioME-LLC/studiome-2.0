@@ -28,7 +28,7 @@ export default function Explain() {
             </div>
 
             <h2 className="home__mission-heading-1">Studio Space</h2>
-            <p className="home__mission-paragraph-1">Our studio spaces make it as easy as possible to produce video, photo, and audio content. They designed for headshots, kickstarter videos, podcasts, and more.</p>
+            <p className="home__mission-paragraph-1">Our studio spaces make it as easy as possible to produce video, photo, and audio content. They are designed for headshots, social media videos, kickstarter videos, podcasts, and more.</p>
             <div className="home__mission-container-1">
                 <div className="home__mission-photo-1 home__mission-photo-1--1" style={{backgroundImage: `url(${Studio1})`}} />
                 <div className="home__mission-photo-1 home__mission-photo-1--2" style={{backgroundImage: `url(${Studio2})`}} />
