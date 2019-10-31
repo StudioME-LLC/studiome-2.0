@@ -7,9 +7,18 @@ export default function ProductMemberships() {
     return (
         <div className="home__products-memberships">
             <div className="home__products-memberships-image" style={{backgroundImage: `url(${MembershipsPhoto})`}} />
-            <h2 className="home__products-memberships-heading">Memberships are coming soon!</h2>
-                <div className="home__products-memberships-border" />
-            <p className="home__products-memberships-paragraph">Help us decide how memberships should look by filling out the survey below.</p>
+            <h2 className="home__products-memberships-heading">Memberships</h2>
+            <div className="home__products-memberships-border" />
+            
+            <p className="home__products-get-started">Click <a
+                className="home__products-get-started-link"
+                href="https://studiome.me/get-started/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >here
+            </a> to sign up for our free membership.</p>
+            
+            <p className="home__products-memberships-paragraph">Paid memberships are coming soon! Help us decide how memberships should look by filling out the survey below.</p>
             <a
                 className="home__products-memberships-survey-link"
                 target="_blank"

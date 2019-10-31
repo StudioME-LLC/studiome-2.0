@@ -1,17 +1,17 @@
 .home {
+    // Explain
     &__mission {
         display: grid;
-        grid-template-columns: 1fr repeat(4, 22.5rem) 1fr;
-        grid-template-rows: 30rem 20rem 10rem repeat(2, 15rem) 10rem;
+        grid-template-columns: 1fr 15rem 65rem 15rem 1fr;
+        grid-template-rows: 30rem repeat(9, 15rem) 10rem;
 
         @include respond(phone) {
-            grid-template-columns: 1fr repeat(2, 20rem) 1fr;
-            grid-template-rows: 30rem 20rem 10rem repeat(4, 15rem) 10rem;
+            grid-template-columns: 1fr 2rem 36rem 2rem 1fr;
         }
 
         @include respond(small-phone) {
-            grid-template-columns: 1fr repeat(2, 15rem) 1fr;
-            grid-template-rows: 20rem 20rem 10rem repeat(4, 15rem) 10rem;
+            grid-template-columns: 1fr 1rem 28rem 1rem 1fr;
+            grid-template-rows: 20rem repeat(3, 10rem 12rem 15rem) 10rem;
         }
     }
 
@@ -20,21 +20,17 @@
         grid-column: 1 / -1;
         grid-row: 1 / 2;
 
-        background-image: url(./assets/home/mission/Banner-1.jpg);
+        background-image: url(./assets/home/mission/Banner-2.jpg);
         background-size: cover;
         background-position: center;
     }
 
     &__mission-banner-container {
-        grid-column: 3 / 5;
+        grid-column: 2 / 5;
         grid-row: 1 / 2;
         justify-self: center;
         align-self: center;
         text-align: center;
-
-        @include respond(phone) {
-            grid-column: 1 / -1;
-        }
     }
 
     &__mission-heading {
@@ -45,7 +41,6 @@
         @include respond(small-phone) {
             font-size: 2.8rem;
         }
-
     }
 
     &__mission-border {
@@ -65,164 +60,402 @@
         }
 
         @include respond(small-phone) {
-            width: 32rem;
+            width: 25rem;
             font-size: 1.4rem;
         }
     }
 
-    &__mission-explanation {
-        grid-column: 2 / 6;
+    // 1
+    &__mission-heading-1 {
+        grid-column: 3 / 4;
         grid-row: 2 / 3;
         justify-self: center;
-        align-self: center;
+        align-self: flex-end;
 
-        margin-top: 2rem;
-        padding: 3rem;
-        border: 3px solid $color-orange;
+        margin-bottom: 4rem;
 
-        color: $color-grey;
-        font-size: 2rem;
-        font-weight: 100;
-        text-align: center;
-
-        @include respond(tab-port) {
-            font-size: 1.8rem;
-            width: 80rem;
-        }
-
-        @include respond(phone) {
-            grid-column: 2 / 4;
-            font-size: 1.4rem;
-            width: 40rem;
-        }
-
-        @include respond(small-phone) {
-            padding: 1rem;
-            width: 30rem;
-            border: 2px solid $color-orange;
-        }
-    }
-
-    // Perks
-    &__mission-offer {
-        grid-column: 2 / 6;
-        grid-row: 3 / 4;
-        justify-self: center;
-        align-self: center;
-
-        margin-top: 2rem;
-
+        text-transform: uppercase;
         color: $color-grey;
         font-size: 2.4rem;
         font-weight: 100;
 
-        @include respond(phone) {
-            grid-column: 1 / 5;
+        @include respond(small-phone) {
+            font-size: 2rem;
+            margin-bottom: 2rem;
         }
     }
 
-    &__mission-container {
-        justify-self: center;
-        align-self: center;
+    &__mission-paragraph-1 {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
 
         text-align: center;
-        padding: 3rem;
         color: $color-grey;
+        font-size: 1.8rem;
+
+        @include respond(phone) {
+            grid-column: 2 / 5;
+            font-size: 1.6rem;
+        }
+
+        @include respond(small-phone) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__mission-container-1 {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include respond(phone) {
+            grid-column: 2 / 5;
+            justify-self: center;
+            grid-template-columns: repeat(3, 13.333rem);
+        }
+
+        @include respond(small-phone) {
+            grid-template-columns: repeat(2, 16rem);
+        }
+    }
+
+    &__mission-photo-1 {
+        width: 15rem;
+        height: 15rem;
+        background-size: cover;
+        background-position: center;
+
+        transition: all .3s ease;
+        box-shadow: $shadow-medium;
+
+        @include respond(phone) {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @include respond(small-phone) {
+            width: 14rem;
+            height: 14rem;
+        }
 
         &--1 {
-            grid-column: 2 / 3;
-            grid-row: 4 / 5;
+            grid-column: 1 / 2;
+            border-bottom: 4px solid $color-teal;
 
             @include respond(phone) {
-                grid-column: 2 / 3;
-                grid-row: 4 / 5;
+                display: none;
+                border-bottom: none;
             }
         }
 
         &--2 {
-            grid-column: 3 / 4;
-            grid-row: 4 / 5;
+            grid-column: 2 / 3;
+            border-bottom: 4px solid $color-orange;
 
             @include respond(phone) {
-                grid-column: 3 / 4;
-                grid-row: 4 / 5;
+                border-bottom: 4px solid $color-teal;
+                grid-column: 1 / 2;
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                grid-column: 1 / 2;
             }
         }
 
         &--3 {
-            grid-column: 4 / 5;
-            grid-row: 4 / 5;
+            grid-column: 3 / 4;
+            border-bottom: 4px solid $color-green;
 
             @include respond(phone) {
+                border-bottom: 4px solid $color-orange;
                 grid-column: 2 / 3;
-                grid-row: 5 / 6;
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                display: none;
+                border-bottom: none;
             }
         }
 
         &--4 {
-            grid-column: 5 / 6;
-            grid-row: 4 / 5;
-
-            @include respond(phone) {
-                grid-column: 3 / 4;
-                grid-row: 5 / 6;
-            }
-        }
-
-        &--5 {
-            grid-column: 2 / 3;
-            grid-row: 5 / 6;
-
-            @include respond(phone) {
-                grid-column: 2 / 3;
-                grid-row: 6 / 7;
-            }
-        }
-
-        &--6 {
-            grid-column: 3 / 4;
-            grid-row: 5 / 6;
-
-            @include respond(phone) {
-                grid-column: 3 / 4;
-                grid-row: 6 / 7;
-            }
-        }
-
-        &--7 {
             grid-column: 4 / 5;
-            grid-row: 5 / 6;
+            border-bottom: 4px solid $color-teal;
 
             @include respond(phone) {
-                grid-column: 2 / 3;
-                grid-row: 7 / 8;
-            }
-        }
-
-        &--8 {
-            grid-column: 5 / 6;
-            grid-row: 5 / 6;
-
-            @include respond(phone) {
+                border-bottom: 4px solid $color-green;
                 grid-column: 3 / 4;
-                grid-row: 7 / 8;
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                grid-column: 2 / 3;
+                border-bottom: 4px solid $color-orange;
             }
         }
     }
 
-    &__mission-icon {
+    // 2
+    &__mission-heading-2 {
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
+        justify-self: center;
+        align-self: flex-end;
+
+        margin-bottom: 4rem;
+
+        text-transform: uppercase;
+        color: $color-grey;
+        font-size: 2.4rem;
+        font-weight: 100;
+
+        @include respond(small-phone) {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__mission-paragraph-2 {
+        grid-column: 3 / 4;
+        grid-row: 6 / 7;
+
+        text-align: center;
+        color: $color-grey;
+        font-size: 1.8rem;
+
+        @include respond(phone) {
+            grid-column: 2 / 5;
+            font-size: 1.6rem;
+        }
+
+        @include respond(small-phone) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__mission-container-2 {
+        grid-column: 3 / 4;
+        grid-row: 7 / 8;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include respond(phone) {
+            grid-column: 2 / 5;
+            grid-template-columns: repeat(3, 13.333rem);
+            justify-self: center;
+        }
+
+        @include respond(small-phone) {
+            grid-template-columns: repeat(2, 16rem);
+        }
+    }
+
+    &__mission-photo-2 {
+        width: 15rem;
+        height: 15rem;
+        background-size: cover;
+        background-position: center;
+
+        transition: all .3s ease;
+        box-shadow: $shadow-medium;
+
+        @include respond(phone) {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @include respond(phone) {
+            width: 14rem;
+            height: 14rem;
+        }
 
         &--1 {
-            fill: $color-orange;
+            grid-column: 1 / 2;
+            border-bottom: 4px solid $color-orange;
+
+            @include respond(phone) {
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                border-bottom: 4px solid $color-green;
+            }
         }
 
         &--2 {
-            fill: $color-green;
+            grid-column: 2 / 3;
+            border-bottom: 4px solid $color-green;
+
+            @include respond(phone) {
+                display: none;
+                border-bottom: none;
+            }
+        }
+
+        &--3 {
+            grid-column: 3 / 4;
+            border-bottom: 4px solid $color-teal;
+
+            @include respond(phone) { 
+                grid-column: 2 / 3;
+                justify-self: center;
+                border-bottom: 4px solid $color-green;
+            }
+
+            @include respond(small-phone) {
+                border-bottom: 4px solid $color-teal;
+            }
+        }
+
+        &--4 {
+            grid-column: 4 / 5;
+            border-bottom: 4px solid $color-orange;
+
+            @include respond(phone) {
+                border-bottom: 4px solid $color-teal;
+                grid-column: 3 / 4;
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                display: none;
+                border-bottom: none;
+            }
         }
     }
 
-    &__mission-text {
-        font-size: 1.4rem;
-        margin-top: 2rem;
+    // 3
+    &__mission-heading-3 {
+        grid-column: 3 / 4;
+        grid-row: 8 / 9;
+        justify-self: center;
+        align-self: flex-end;
+
+        margin-bottom: 4rem;
+
+        text-transform: uppercase;
+        color: $color-grey;
+        font-size: 2.4rem;
+        font-weight: 100;
+
+        @include respond(small-phone) {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__mission-paragraph-3 {
+        grid-column: 3 / 4;
+        grid-row: 9 / 10;
+
+        text-align: center;
+        color: $color-grey;
+        font-size: 1.8rem;
+
+        @include respond(phone) {
+            grid-column: 2 / 5;
+            font-size: 1.6rem;
+        }
+
+        @include respond(small-phone) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__mission-container-3 {
+        grid-column: 3 / 4;
+        grid-row: 10 / 11;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include respond(phone) {
+            grid-column: 2 / 5;
+            grid-template-columns: repeat(3, 13.333rem);
+            justify-self: center;
+        }
+
+        @include respond(small-phone) {
+            grid-template-columns: repeat(2, 16rem);
+        }
+    }
+
+    &__mission-photo-3 {
+        width: 15rem;
+        height: 15rem;
+        background-size: cover;
+        background-position: center;
+
+        transition: all .3s ease;
+        box-shadow: $shadow-medium;
+
+        @include respond(phone) {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @include respond(phone) {
+            width: 14rem;
+            height: 14rem;
+        }
+
+        &--1 {
+            grid-column: 1 / 2;
+            border-bottom: 4px solid $color-green;
+
+            @include respond(phone) {
+                grid-column: 1 / 2;
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                border-bottom: 4px solid $color-orange;
+            }
+        }
+
+        &--2 {
+            grid-column: 2 / 3;
+            border-bottom: 4px solid $color-teal;
+
+            @include respond(phone) {
+                display: none;
+                border-bottom: none;
+            }
+        }
+
+        &--3 {
+            grid-column: 3 / 4;
+            border-bottom: 4px solid $color-orange;
+
+            @include respond(phone) {
+                border-bottom: 4px solid $color-teal;
+                grid-column: 2 / 3;
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                border-bottom: 4px solid $color-green;
+            }
+        }
+
+        &--4 {
+            grid-column: 4 / 5;
+            border-bottom: 4px solid $color-green;
+
+            @include respond(phone) {
+                border-bottom: 4px solid $color-orange;
+                grid-column: 3 / 4;
+                justify-self: center;
+            }
+
+            @include respond(small-phone) {
+                display: none;
+                border-bottom: none;
+            }
+        }
     }
 }

@@ -3,10 +3,10 @@
     &__web-hero {
         display: grid;
         grid-template-columns: 1fr 40rem;
-        grid-template-rows: 54rem 15rem 18rem;
+        grid-template-rows: 54rem 15rem 14rem;
 
         @include respond(tab-land) {
-            grid-template-rows: 50rem 15rem 18rem;
+            grid-template-rows: 50rem 15rem 14rem;
         }
 
         @include respond(tab-port) {
@@ -162,6 +162,16 @@
         }
     }
 
+    &__studio-description {
+        margin: 0 auto;
+        align-self: center;
+        font-size: 3.2rem;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
     &__description-container {
         grid-column: 1 / 3;
         grid-row: 2 / 3;
@@ -177,19 +187,25 @@
         }
     }
 
-    &__studio-description {
+    &__hero-arrow-container {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        width: 35rem;
         margin: 0 auto;
-        align-self: center;
-        font-size: 3.2rem;
+        text-align: center;
+        align-self: flex-end;
 
         @include respond(phone) {
-            display: none;
+            grid-row: 2 / 3;
+            margin-top: 2rem;
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
     &__hero-arrow-heading {
-        grid-column: 1 / -1;
-        grid-row: 3 / 4;
         justify-self: center;
         align-self: center;
 
@@ -211,15 +227,9 @@
             align-self: flex-start;
             font-size: 1.8rem;
         }
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 
     &__hero-arrow {
-        grid-column: 1 / -1;
-        grid-row: 3 / 4;
         justify-self: center;
         align-self: flex-end;
 
@@ -231,10 +241,6 @@
         @include respond(phone) {
             grid-column: 1 / 3;
             grid-row: 2 / 3;
-        }
-
-        &:hover {
-            cursor: pointer;
         }
     }
 }

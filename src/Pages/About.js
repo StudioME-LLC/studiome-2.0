@@ -14,7 +14,6 @@ export default class About extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.sidebarSelection)
         if (this.props.sidebarSelection === 'general') {
             window.scroll({
                 top: 0,

@@ -3,8 +3,8 @@ import React, { Component, createRef } from 'react';
 // Sections
 import Hero from './Home/Hero';
 import Products from './Home/Products';
-import Mission from './Home/Mission';
-import Explain from './Home/Explain';
+import Mission from './Home/Explain';
+import Explain from './Home/Mission';
 
 
 export default class Home extends Component {
