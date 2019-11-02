@@ -83,12 +83,12 @@
 
         @include respond(tab-port) {
             grid-template-columns: 1fr repeat(2, 20rem) 1fr;
-            grid-template-rows: 8rem 28rem 12rem 10rem;
+            grid-template-rows: 8rem 26rem 12rem 10rem;
         }
 
         @include respond(small-phone) {
             grid-template-columns: 1fr repeat(2, 15rem) 1fr;
-            grid-template-rows: 8rem 32rem 20rem 5rem;
+            grid-template-rows: 8rem 30rem 12rem 9rem;
         }
     }
 
