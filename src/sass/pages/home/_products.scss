@@ -6,7 +6,12 @@
         grid-template-columns: 1fr repeat(3, 30rem) 1fr;
         grid-template-rows: 20rem 40rem 40rem 7rem;
 
-        @include respond(phone) {
+        @include respond(tab-land) {
+            grid-template-columns: 1fr repeat(3, 28rem) 1fr;
+            grid-template-rows: 20rem 40rem 40rem 7rem;
+        }
+
+        @include respond(tab-port) {
             grid-template-columns: 1fr repeat(6, 6.5rem) 1fr;  
             grid-template-rows: 15rem repeat(3, 28rem) 7rem;
         }
@@ -38,7 +43,7 @@
 
         transition: .3s all ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-column: 2 / 4;
             width: 12rem;
             height: 5rem;
@@ -79,7 +84,7 @@
 
         transition: .3s all ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-column: 2 / 4;
             width: 12rem;
             height: 5rem;
@@ -122,7 +127,7 @@
 
         transition: .3s all ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-column: 4 / 6;
             width: 12rem;
             height: 5rem;
@@ -163,7 +168,7 @@
 
         transition: .3s all ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-column: 4 / 6;
             width: 12rem;
             height: 5rem;
@@ -205,12 +210,12 @@
 
         transition: .3s all ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-column: 6 / 8;
             width: 12rem;
             height: 5rem;
             font-size: 1.4rem;
-            justify-self: right;
+            justify-self: flex-end;
         }
 
         @include respond(small-phone) {
@@ -247,7 +252,7 @@
 
         transition: .3s all ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-column: 6 / 8;
             width: 12rem;
             height: 5rem;
@@ -288,7 +293,7 @@
 
         animation: onRentalFadeIn .7s ease-out;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 18rem;
             height: 25rem;
 
@@ -309,8 +314,8 @@
             grid-column: 2 / 3;
             grid-row: 2 / 3;
 
-            @include respond(phone) {
-                grid-column: 1 / 5;
+            @include respond(tab-port) {
+                grid-column: 2 / 5;
                 grid-row: 2 / 3;
             }
         }
@@ -319,8 +324,8 @@
             grid-column: 3 / 4;
             grid-row: 2 / 3;
 
-            @include respond(phone) {
-                grid-column: 5 / 9;
+            @include respond(tab-port) {
+                grid-column: 5 / 8;
                 grid-row: 2 / 3;
             }
         }
@@ -329,8 +334,8 @@
             grid-column: 4 / 5;
             grid-row: 2 / 3;
 
-            @include respond(phone) {
-                grid-column: 1 / 5;
+            @include respond(tab-port) {
+                grid-column: 2 / 5;
                 grid-row: 3 / 4;
             }
         }
@@ -339,8 +344,8 @@
             grid-column: 2 / 3;
             grid-row: 3 / 4;
 
-            @include respond(phone) {
-                grid-column: 5 / 9;
+            @include respond(tab-port) {
+                grid-column: 5 / 8;
                 grid-row: 3 / 4;
             }
         }
@@ -349,8 +354,8 @@
             grid-column: 3 / 4;
             grid-row: 3 / 4;
 
-            @include respond(phone) {
-                grid-column: 1 / 5;
+            @include respond(tab-port) {
+                grid-column: 2 / 5;
                 grid-row: 4 / 5;
             }
         }
@@ -359,8 +364,8 @@
             grid-column: 4 / 5;
             grid-row: 3 / 4;
 
-            @include respond(phone) {
-                grid-column: 5 / 9;
+            @include respond(tab-port) {
+                grid-column: 5 / 8;
                 grid-row: 4 / 5;
             }
         }
@@ -432,7 +437,7 @@
 
         color: $color-grey;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             font-size: 1.4rem;
             margin: 1.5rem;
         }
@@ -464,7 +469,7 @@
 
         transition: .3s all ease;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 5rem;
             height: 4rem;
             font-size: 1rem;
@@ -506,7 +511,7 @@
         
         animation: onServiceFadeIn .7s ease-out;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 40rem;
             height: 25rem;
             grid-template-rows: 6rem 1.5rem 6rem 10rem;
@@ -522,7 +527,7 @@
             grid-column: 2 / 3;
             grid-row: 2 / 4;
 
-            @include respond(phone) {
+            @include respond(tab-port) {
                 grid-column: 2 / 8;
                 grid-row: 2 / 3;
             }
@@ -532,7 +537,7 @@
             grid-column: 3 / 4;
             grid-row: 2 / 4;
 
-            @include respond(phone) {
+            @include respond(tab-port) {
                 grid-column: 2 / 8;
                 grid-row: 3 / 4;
             }
@@ -542,7 +547,7 @@
             grid-column: 4 / 5;
             grid-row: 2 / 4;
 
-            @include respond(phone) {
+            @include respond(tab-port) {
                 grid-column: 2 / 8;
                 grid-row: 4 / 5;
             }
@@ -562,7 +567,7 @@
             opacity: .8;
         }
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             display: none;
         }
     }
@@ -576,7 +581,7 @@
         font-weight: 100;
         font-size: 2.4rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-row: 1 / 2;
         }
 
@@ -593,7 +598,7 @@
         border-bottom: 1px solid $color-orange;
         width: 10rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-row: 2 / 3;
         }
     }
@@ -603,7 +608,7 @@
         padding: 2rem;
         font-size: 1.4rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-row: 3 / 4;
         }
 
@@ -620,7 +625,7 @@
         text-align: center;
         font-size: 1.4rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             display: none;
         }
     }
@@ -630,7 +635,7 @@
         padding: 2rem 0 0 5rem;
         font-size: 1.2rem;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             display: none;
         }
     }
@@ -640,7 +645,7 @@
         justify-self: center;
         align-self: center;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-row: 4 / 5;
         }
     }
@@ -670,7 +675,7 @@
             box-shadow: none;
         }
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-row: 4 / 5;
         }
     }
@@ -693,7 +698,7 @@
 
         animation: onMembershipsFadeIn .7s ease-out;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 50rem;
             grid-column: 2 / 8;
             grid-template-rows: 30rem 8rem 2rem 8rem 10rem 8rem;
@@ -712,7 +717,7 @@
         background-size: cover;
         grid-row: 1 / 2;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             width: 100%;
             background-position-y: -250px;
         }
@@ -732,7 +737,7 @@
         font-size: 3.6rem;
         grid-row: 2 / 3;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             font-size: 2.4rem;
         }
 
@@ -780,7 +785,7 @@
         margin: 0 auto;
         width: 80%;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             padding: 4rem;
             width: 90%;
         }

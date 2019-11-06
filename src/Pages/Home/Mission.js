@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Photos
 import Studio1 from '../../assets/home/explain/studios/Audio-Room-Main.jpg';
@@ -16,7 +17,7 @@ import Workstation2 from '../../assets/home/explain/workstation/workstation-2.jp
 import Workstation3 from '../../assets/home/explain/workstation/workstation-3.jpg';
 import Workstation4 from '../../assets/home/explain/workstation/workstation-4.jpg';
 
-export default function Explain() {
+export default function Explain(props) {
     return (
         <div className="home__mission">
             <div className="home__mission-banner" />
@@ -52,6 +53,17 @@ export default function Explain() {
                 <div className="home__mission-photo-3 home__mission-photo-3--3" style={{backgroundImage: `url(${Workstation2})`}} />
                 <div className="home__mission-photo-3 home__mission-photo-3--4" style={{backgroundImage: `url(${Workstation3})`}} />
             </div>
+            <NavLink
+                    className="home__mission-book-link"
+                    onClick={props.onQuickButtonFix.bind(this, 'rentals')}
+                    to="/" exact
+                >
+                    <button
+                        className="home__mission-book"
+                        
+                        >Book now!
+                    </button>
+                </NavLink>
         </div>
     )
 }

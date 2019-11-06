@@ -63,8 +63,7 @@ export default class About extends Component {
 
     onContactHandler = () => {
         window.scroll({
-            top: this.state.myRefContact.current.offsetTop,
-            behavior: 'smooth'
+            top: this.state.myRefContact.current.offsetTop
         });
     }
 

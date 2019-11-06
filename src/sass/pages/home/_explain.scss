@@ -4,9 +4,19 @@
         grid-template-columns: 1fr repeat(4, 22.5rem) 1fr;
         grid-template-rows: 30rem 25rem 10rem repeat(2, 15rem) 10rem;
 
+        @include respond(tab-land) {
+            grid-template-columns: 1fr repeat(4, 20rem) 1fr;
+            grid-template-rows: 30rem 25rem 10rem repeat(2, 15rem) 10rem;
+        }
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr repeat(4, 12rem) 1fr;
+            grid-template-rows: 30rem 25rem 10rem repeat(2, 15rem) 10rem;
+        }
+
         @include respond(phone) {
             grid-template-columns: 1fr repeat(2, 20rem) 1fr;
-            grid-template-rows: 30rem 23rem 10rem repeat(4, 15rem) 10rem;
+            grid-template-rows: 20rem 23rem 10rem repeat(4, 15rem) 10rem;
         }
 
         @include respond(small-phone) {
@@ -32,7 +42,7 @@
         align-self: center;
         text-align: center;
 
-        @include respond(phone) {
+        @include respond(tab-port) {
             grid-column: 1 / -1;
         }
     }
@@ -41,6 +51,10 @@
         color: $color-white;
         text-transform: uppercase;
         font-size: 4.5rem;
+
+        @include respond(phone) {
+            font-size: 3.6rem;
+        }
 
         @include respond(small-phone) {
             font-size: 2.8rem;
@@ -87,7 +101,8 @@
 
         @include respond(tab-port) {
             font-size: 1.8rem;
-            width: 80rem;
+            width: 55rem;
+            padding: 2rem;
         }
 
         @include respond(phone) {

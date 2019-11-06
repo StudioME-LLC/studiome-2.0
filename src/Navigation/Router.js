@@ -19,6 +19,7 @@ export default function Router(props) {
                         <React.Suspense fallback={<Spinner />}>
                             <Home
                                 sidebarSelection={props.sidebarSelection}
+                                onQuickButtonFix={props.onQuickButtonFix}
                             />
                         </React.Suspense>} 
                 />

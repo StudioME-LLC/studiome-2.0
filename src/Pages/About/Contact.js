@@ -1,4 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+// SVGs
+import { ReactComponent as Facebook } from '../../assets/about/contact/facebook.svg';
+import { ReactComponent as Instagram } from '../../assets/about/contact/instagram.svg';
+import { ReactComponent as Twitter } from '../../assets/about/contact/twitter.svg';
+import { ReactComponent as YouTube } from '../../assets/about/contact/youtube.svg';
+import { ReactComponent as Vimeo } from '../../assets/about/contact/vimeo.svg';
 
 export default function Contact() {
     return (
@@ -8,6 +15,44 @@ export default function Contact() {
                 <h1 className="about__contact-heading">Contact</h1>
                 <div className="about__contact-border" />
             </div>
+
+            <div className="about__contact-icon-container">
+                <a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://www.facebook.com/studiomepgh/"
+                    className="about__contact-icon-link">
+                    <Facebook className="about__contact-icon about__contact-icon--1" />
+                </a>
+
+                <a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://www.instagram.com/studiome_llc/"
+                    className="about__contact-icon-link">
+                    <Instagram className="about__contact-icon about__contact-icon--2" />
+                </a>
+
+                <a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://twitter.com/StudioME_llc/"
+                    className="about__contact-icon-link">
+                    <Twitter className="about__contact-icon about__contact-icon--3" />
+                </a>
+
+                <a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://www.youtube.com/channel/UC-qyGIloES4TL4CPxWBmrDA/"
+                    className="about__contact-icon-link">
+                    <YouTube className="about__contact-icon about__contact-icon--4" />
+                </a>
+
+                <a
+                    target="_blank" rel="noopener noreferrer"
+                    href="https://vimeo.com/studiomellc/"
+                    className="about__contact-icon-link">
+                    <Vimeo className="about__contact-icon about__contact-icon--5" />
+                </a>
+            </div>
+            
 
             <iframe
                 title="contact-form"
