@@ -1,12 +1,9 @@
 import React from 'react';
 
-// Images
-import MembershipsPhoto from '../../../assets/home/products/services/Membership-Banner.png';
-
 export default function ProductMemberships() {
     return (
         <div className="home__products-memberships">
-            <div className="home__products-memberships-image" style={{backgroundImage: `url(${MembershipsPhoto})`}} />
+            <div className="home__products-memberships-image" />
             <h2 className="home__products-memberships-heading">Memberships</h2>
             <div className="home__products-memberships-border" />
             

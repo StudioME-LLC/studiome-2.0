@@ -700,7 +700,13 @@
 
         @include respond(tab-port) {
             width: 50rem;
-            grid-column: 2 / 8;
+            grid-column: 3 / 7;
+            grid-template-rows: 30rem 8rem 2rem 8rem 10rem 8rem;
+        }
+
+        @include respond(phone) {
+            width: 40rem;
+            grid-column: 3 / 7;
             grid-template-rows: 30rem 8rem 2rem 8rem 10rem 8rem;
         }
 
@@ -720,6 +726,11 @@
         @include respond(tab-port) {
             width: 100%;
             background-position-y: -250px;
+        }
+
+        @include respond(phone) {
+            background-position-y: -200px;
+            background-image: url('./assets/home/products/services/Membership-Banner-small.jpg');
         }
 
         @include respond(small-phone) {
