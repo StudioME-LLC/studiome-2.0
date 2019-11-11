@@ -112,12 +112,12 @@ class Products extends Component {
                 break;
             case 6:
                 this.setState({
-                    heading: "Edit Stations",
+                    heading: "Edit Workstation",
                     subheading: "Pick a duration to view:",
                     option1: "Hourly",
-                    url1: "https://studiome.me/book-me/camera-rental/",
+                    url1: "https://studiome.me/product/editing-workstation-2-hour/",
                     option2: "Daily",
-                    url2: "https://studiome.me/book-me/lighting-rental/",
+                    url2: "https://studiome.me/product/editing-workstation-full-day/",
                     option3: '',
                     url3: '',
                 })

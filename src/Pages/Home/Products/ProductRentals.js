@@ -36,7 +36,13 @@ export default function ProductRentals(props) {
                 onModalToggle={props.onModalToggle.bind(this, 5)}
             />
 
-            <div className="home__products-rentals home__products-rentals--6">
+            <ProductItem
+                index={6}
+                name={"Edit Workstation"}
+                onModalToggle={props.onModalToggle.bind(this, 6)}
+            />
+
+            {/* <div className="home__products-rentals home__products-rentals--6">
                 <a className="home__products-photo-link" href="https://studiome.me/book-me/post-production/">
                     <div className="home__products-photo home__products-photo--6" />
                 </a>
@@ -44,7 +50,7 @@ export default function ProductRentals(props) {
                 <a href="https://studiome.me/book-me/post-production/">
                     <button className="home__products-view">View</button>
                 </a>
-            </div>
+            </div> */}
         </React.Fragment>
     )
 }
