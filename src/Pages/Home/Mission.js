@@ -2,20 +2,20 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 // Photos
-import Studio1 from '../../assets/home/explain/studios/Audio-Room-Main.jpg';
-import Studio2 from '../../assets/home/explain/studios/podcast-main.jpg';
+import Studio1 from '../../assets/home/explain/studios/Audio-Room-small.jpg';
+import Studio2 from '../../assets/home/explain/studios/podcast-small.jpg';
 import Studio3 from '../../assets/home/explain/studios/MP-Studio-Main.jpg';
-import Studio4 from '../../assets/home/explain/studios/Studio-E-Main.jpg';
+import Studio4 from '../../assets/home/explain/studios/Studio-E-small.jpg';
 
 import Equipment1 from '../../assets/home/explain/equipment/Equipment-1.jpg';
 import Equipment2 from '../../assets/home/explain/equipment/Equipment-2.jpg';
 import Equipment3 from '../../assets/home/explain/equipment/Equipment-3.jpg';
 import Equipment4 from '../../assets/home/explain/equipment/Equipment-4.jpg';
 
-import Workstation1 from '../../assets/home/explain/workstation/workstation-1.jpg';
-import Workstation2 from '../../assets/home/explain/workstation/workstation-2.jpg';
-import Workstation3 from '../../assets/home/explain/workstation/workstation-3.jpg';
-import Workstation4 from '../../assets/home/explain/workstation/workstation-4.jpg';
+import Workstation1 from '../../assets/home/explain/workstation/workstation-1-small.jpg';
+import Workstation2 from '../../assets/home/explain/workstation/workstation-2-small.jpg';
+import Workstation3 from '../../assets/home/explain/workstation/workstation-3-small.jpg';
+import Workstation4 from '../../assets/home/explain/workstation/workstation-4-small.jpg';
 
 export default function Explain(props) {
     return (

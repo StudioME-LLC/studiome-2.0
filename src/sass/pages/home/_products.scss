@@ -718,7 +718,7 @@
 
     &__products-memberships-image {
         height: 100%;
-        background-image: url('./assets/home/products/services/Membership-Banner.png');
+        background-image: url('./assets/home/products/services/Membership-Banner.jpg');
         background-position-y: -500px;
         background-size: cover;
         grid-row: 1 / 2;
@@ -730,7 +730,7 @@
 
         @include respond(phone) {
             background-position-y: -200px;
-            background-image: url('./assets/home/products/services/Membership-Banner-small.jpg');
+            background-image: url('./assets/home/products/services/Membership-Banner-xsmall.jpg');
         }
 
         @include respond(small-phone) {
