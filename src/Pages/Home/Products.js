@@ -30,6 +30,13 @@ class Products extends Component {
         loading: false,
     }
 
+    componentDidMount() {
+        this.setState({
+            ...this.state,
+            loading: false,
+        })
+    }
+
     onModalToggle = (product) => {
         if (!this.state.modalToggle) {
             this.setState({
@@ -140,7 +147,7 @@ class Products extends Component {
                 ...this.state,
                 loading: false,
             })
-        }, 10000);
+        }, 3000);
     }
 
     render() {
