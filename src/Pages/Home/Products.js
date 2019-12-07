@@ -4,7 +4,6 @@ import * as actions from '../../redux/actions';
 
 // Components
 import ProductsModal from '../../components/ProductModal';
-import ProductsModalLoading from '../../components/ProductModalLoading';
 import ProductRentals from './Products/ProductRentals';
 import ProductServices from './Products/ProductServices';
 import ProductMemberships from './Products/ProductMemberships';
@@ -135,6 +134,13 @@ class Products extends Component {
             ...this.state,
             loading: true,
         })
+
+        setTimeout(() => {
+            this.setState({
+                ...this.state,
+                loading: false,
+            })
+        }, 10000);
     }
 
     render() {
@@ -163,7 +169,7 @@ class Products extends Component {
                 </button>
 
 
-                {!this.state.loading ? <ProductsModal
+                <ProductsModal
                     toggle={this.onModalToggle}
                     class={this.state.modalClass}
 
@@ -177,12 +183,8 @@ class Products extends Component {
                     option3={this.state.option3}
                     url3={this.state.url3}
                     loadingToggle={this.onLoadingToggle}
-                /> : (
-                <ProductsModalLoading
-                    toggle={this.onModalToggle}
-                    class={this.state.modalClass}
-                    heading={'Test'}
-                />)}
+                    loading={this.state.loading}
+                />
                 
                 <div className={this.state.backdropClass} onClick={this.onModalToggle} />
 

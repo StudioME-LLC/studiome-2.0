@@ -1,12 +1,18 @@
 import React from 'react';
 
+// Components
+import Spinner from '../components/Spinner';
+
 // SVGs
 import { ReactComponent as Close } from '../assets/home/products/cross.svg';
 
 export default function ProductModal(props) {
-    return (
-        <div>
-            {props.option3 === '' ? (<div className={props.class}>
+
+    let content = '';
+
+    if (props.option3 === '') {
+        content = (
+            <div className={props.class}>
                 <div className="product-modal__close-container">
                     <Close onClick={props.toggle} className="product-modal__close" />
                 </div>
@@ -27,7 +33,11 @@ export default function ProductModal(props) {
                 >
                     <button className="product-modal__button">{props.option2}</button>
                 </a>
-            </div>) : (<div className={props.class}>
+            </div>
+        )
+    } else if (props.option3 !== '') {
+        content = (
+            <div className={props.class}>
                 <div className="product-modal__close-container">
                     <Close onClick={props.toggle} className="product-modal__close" />
                 </div>
@@ -55,7 +65,23 @@ export default function ProductModal(props) {
                 >
                     <button className="product-modal__button">{props.option3}</button>
                 </a>
-            </div>)}
+            </div>
+        )
+    }
+
+
+    return (
+        <div>
+            {!props.loading ? content : (
+                <div className={props.class}>
+                    <div className="product-modal__close-container">
+                        <Close onClick={props.toggle} className="product-modal__close" />
+                    </div>
+                    <h2 className="product-modal__heading" >Loading...</h2>
+                    <div className="product-modal__border" />
+                    <div className="product-modal__loader"><Spinner /></div>
+                </div>
+            )}
         </div> 
     )
 }
