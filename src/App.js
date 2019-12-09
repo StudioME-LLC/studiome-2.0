@@ -9,8 +9,8 @@ import "scroll-behavior-polyfill";
 
 // Components
 import Header from './Navigation/Header';
-import SmallSidebar from './Navigation/SmallSidebar';
 import LargeSidebar from './Navigation/LargeSidebar';
+import SmallSidebar from './Navigation/SmallSidebar';
 import Router from './Navigation/Router';
 
 // Handlers
