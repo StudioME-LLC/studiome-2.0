@@ -8,6 +8,8 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 
+import * as serviceWorker from './serviceWorker';
+
 // States & Reducers
 import onRentalButton from './redux/reducers';
 
@@ -25,3 +27,5 @@ const app = (
 )
 
 ReactDOM.render( app, document.getElementById('root'));
+
+serviceWorker.register();
