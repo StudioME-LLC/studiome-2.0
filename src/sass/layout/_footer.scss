@@ -1,6 +1,219 @@
 .footer {
-    background-color: #C0C0C0;
+    background-color: $color-grey-light;
     grid-column: sidebar-end / main-end;
+    grid-row: 3 / 4;
+
+    border-top: 1px solid $color-grey-mild;
+    border-left: 1px solid $color-grey-mild;
+
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        width: 110rem;
+        align-self: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+
+        font-size: 1.8rem;
+
+        @include respond(tab-land) {
+            width: 70rem;
+            font-size: 1.4rem;
+        }
+
+        @include respond(tab-port) {
+            width: 50rem;
+            font-size: 1rem;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    // Product
+    &__product {
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+        z-index: 1;
+
+        justify-self: center;
+        align-self: flex-start;
+
+        margin-top: 5rem;
+
+        display: grid;
+        grid-template-rows: 4rem 3rem repeat(8, 4rem);
+    }
+
+    &__product-heading {
+        grid-row: 1 / 2;
+        text-transform: uppercase;
+    }
+
+    &__product-border {
+        grid-row: 2 / 3;
+        border-top: 2px solid $color-teal;
+        height: 2px;
+        width: 4rem;
+    }
+
+    &__product-link {
+        text-decoration: none;
+        color: #404040;
+        transition: all .3s ease;
+
+        &:hover {
+            color: black;
+            transform: scale(1.04);
+        }
+    }
+
+    // Company
+    &__company {
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+        z-index: 1;
+
+        justify-self: center;
+        align-self: flex-start;
+
+        margin-top: 5rem;
+
+        display: grid;
+        grid-template-rows: 4rem 2rem repeat(3, 4rem);
+    }
+
+    &__company-heading {
+        grid-row: 1 / 2;
+        text-transform: uppercase;
+    }
+
+    &__company-border {
+        grid-row: 2 / 3;
+        border-top: 2px solid $color-teal;
+        height: 2px;
+        width: 4rem;
+    }
+
+    &__company-link {
+        text-decoration: none;
+        color: #404040;
+        transition: all .3s ease;
+
+        &:hover {
+            color: black;
+            transform: scale(1.04);
+        }
+    }
+
+    // Contact
+    &__contact {
+        grid-column: 3 / 4;
+        grid-row: 1 / -1;
+        z-index: 1;
+
+        justify-self: center;
+        align-self: flex-start;
+
+        margin-top: 5rem;
+
+        display: grid;
+        grid-template-rows: 4rem 2rem 2rem 1rem repeat(2, 4rem);
+    }
+
+    &__contact-heading {
+        grid-row: 1 / 2;
+        text-transform: uppercase;
+    }
+
+    &__contact-border {
+        grid-row: 2 / 3;
+        border-top: 2px solid $color-teal;
+        height: 2px;
+        width: 4rem;
+    }
+
+    &__contact-address1 {
+        grid-row: 3 / 4;
+        color: #404040;
+    }
+
+    &__contact-address2 {
+        grid-row: 4 / 5;
+        color: #404040;
+    }
+
+    &__contact-link1 {
+        grid-row: 6 / 7;
+        text-decoration: none;
+        color: #404040;
+        transition: all .3s ease;
+
+        &:hover {
+            color: black;
+            transform: scale(1.04);
+        }
+    }
+
+    &__contact-link2 {
+        grid-row: 7 / 8;
+        text-decoration: none;
+        color: #404040;
+        transition: all .3s ease;
+
+        &:hover {
+            color: black;
+            transform: scale(1.04);
+        }
+    }
+
+    // Social
+    &__social {
+        grid-column: 4 / 5;
+        grid-row: 1 / -1;
+        z-index: 1;
+
+        justify-self: center;
+        align-self: flex-start;
+
+        margin-top: 5rem;
+
+        display: grid;
+        grid-template-rows: 4rem 2rem repeat(5, 6rem);
+    }
+
+    &__social-heading {
+        grid-row: 1 / 2;
+        text-transform: uppercase;
+    }
+
+    &__social-border {
+        grid-row: 2 / 3;
+        border-top: 2px solid $color-teal;
+        height: 2px;
+        width: 4rem;
+    }
+
+    &__social-icon-link {
+        width: 3rem;
+        height: 3rem;
+        align-self: center;
+        fill: #404040;
+        transition: all .5s ease;
+
+        &:hover {
+            fill: black;
+            transform: scale(1.15);
+        }
+    }
+
+    &__social-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 
     @include respond(phone) {
         width: 0px;

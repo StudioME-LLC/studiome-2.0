@@ -1,6 +1,6 @@
 .main {
     grid-column: main-start / main-end;
-    grid-row: 2 / -1;
+    grid-row: 2 / 3;
 
     @include respond(phone) {
         grid-column: sidebar-start / main-end;

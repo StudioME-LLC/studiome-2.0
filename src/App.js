@@ -12,6 +12,7 @@ import Header from './Navigation/Header';
 import LargeSidebar from './Navigation/LargeSidebar';
 import SmallSidebar from './Navigation/SmallSidebar';
 import Router from './Navigation/Router';
+import Footer from './Navigation/Footer';
 
 // Handlers
 import {
@@ -140,6 +141,12 @@ class App extends React.Component {
 	}
 
 	render() {
+		let footer = <Footer onLargeSidebarSelection={this.onLargeSidebarSelection} />;
+
+		if (window.matchMedia('(max-width: 600px)').matches) {
+			footer = '';
+		};
+
 		return (
 			<BrowserRouter>
 				<div className={
@@ -173,6 +180,8 @@ class App extends React.Component {
 							sidebarSelection={this.state.sidebarSelection}
 						/>
 					</div>
+
+					{footer}
 					<div className="footer"></div>
 				</div>
 			</BrowserRouter>
