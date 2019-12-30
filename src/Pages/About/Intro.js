@@ -31,7 +31,7 @@ export default function Intro(props) {
                     <a
                         className="about__intro-button-quote-link"
                         target="_blank"
-                        href="https://forms.gle/66Qij1NFffSaKcQZ8"
+                        href="https://forms.gle/ziysrwi8PtFhJbi57"
                         rel="noopener noreferrer"
                     >
                         <button className="about__intro-button-quote">Custom Quote</button>
