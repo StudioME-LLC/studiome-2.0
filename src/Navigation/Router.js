@@ -6,9 +6,10 @@ import Spinner from '../components/Spinner';
 
 // Pages
 const Home = React.lazy(() => import ('../Pages/Home'));
+const Equipment = React.lazy(() => import ('../Pages/Home/Products/Equipment'));
+
 const About = React.lazy(() => import ('../Pages/About'));
 const Projects = React.lazy(() => import ('../Pages/Projects'));
-
 
 export default function Router(props) {
     return (
@@ -40,7 +41,12 @@ export default function Router(props) {
                             <Projects/>
                         </React.Suspense>} 
                 />
-                <Route path="/contact" exact>Contact Page</Route>
+                <Route path="/equipment" exact
+                    render={() => 
+                        <React.Suspense fallback={<Spinner />}>
+                            <Equipment/>
+                        </React.Suspense>} 
+                />
                 <Redirect to="/" exact />
             </Switch>
         </React.Fragment>

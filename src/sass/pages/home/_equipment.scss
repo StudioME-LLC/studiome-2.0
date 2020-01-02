@@ -1,0 +1,218 @@
+.equipment {
+    display: grid;
+    grid-template-columns: 1fr 90rem 1fr;
+    grid-template-rows: 30rem 8rem auto 10rem;
+
+    &__container {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+
+        display: grid;
+        grid-template-columns: repeat(4, 22.5rem);
+        grid-template-rows: auto;
+    }
+
+    // Banner
+    &__banner {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+
+        background-image: url(../../../assets/home/products/Equipment-Banner-Dark.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__banner-container {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+    }
+
+    &__heading {
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+    }
+
+    &__border {
+        margin: 2rem auto;
+        height: 2px;
+        width: 15rem;
+        background-color: $color-green;
+    }
+
+    // Product Components
+    &__component {
+        margin-bottom: 5rem;
+        display: grid;
+        justify-content: center;
+        transition: all .4s ease;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        &:active,
+        &:focus {
+            transform: scale(1);
+            transition: all .3s ease;
+        }
+    }
+
+    &__component-photo {
+        width: 15rem;
+        height: 15rem;
+        align-self: center;
+        justify-self: center;
+
+        border: 3px solid $color-teal;
+        border-radius: 50%;
+        box-shadow: $shadow-button;
+        background-size: cover;
+        background-position: center;
+
+        transition: all .4s ease;
+    }
+
+    &__component:hover > &__component-photo {
+        border: 3px solid $color-orange;
+        box-shadow: $shadow-large;
+    }
+
+    &__component:active > &__component-photo {
+        border: 3px solid $color-green;
+        box-shadow: $shadow-button;
+        transition: all .1s ease;
+    }
+
+    &__component-heading {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        text-align: center;
+        color: $color-grey;
+        max-width: 18rem;
+
+        transition: all .4s ease;
+    }
+
+    &__component:hover > &__component-heading {
+        color: #2d2d2d;
+    }
+
+    // Selected
+    &__container-2 {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+
+        display: grid;
+        grid-template-columns: repeat(4, 22.5rem);
+        grid-template-rows: 4rem 8rem 40rem auto;
+    }
+
+    &__selected-heading {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+
+        font-size: 2.4rem;
+        text-align: center;
+        color: $color-grey;
+    }
+
+    &__selected-photo {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        justify-self: center;
+        align-self: center;
+
+        width: 40rem;
+        height: 40rem;
+        align-self: center;
+        justify-self: center;
+
+        border: 5px solid $color-green;
+        border-radius: 50%;
+        box-shadow: $shadow-button;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__selected-description {
+        grid-column: 1 / 5;
+        grid-row: 4 / 5;
+
+        justify-self: center;
+        align-self: center;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+
+        color: $color-grey;
+    }
+
+    &__selected-button {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+        justify-self: flex-end;
+
+        height: 3rem;
+        width: 5rem;
+    }
+
+    // Prices Container
+    &__prices-container {
+        grid-column: 3 / 5;
+        grid-row: 3 / 4;
+
+        display: grid;
+        grid-template-columns: 1fr repeat(3, 10rem) 1fr;
+        grid-template-rows: repeat(4, 6rem) 1fr;
+    }
+
+    &__prices-heading-1 {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        align-self: center;
+
+        text-align: center;
+    }
+
+    &__prices-1 {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    &__prices-2 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+
+    &__prices-3 {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+
+    &__prices-heading-2 {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        align-self: center;
+
+        text-align: center;
+    }
+
+    &__prices-4 {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    &__prices-5 {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+    }
+
+    &__prices-6 {
+        grid-column: 4 / 5;
+        grid-row: 4 / 5;
+    }
+}

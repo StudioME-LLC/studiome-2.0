@@ -392,37 +392,37 @@
         }
 
         &--1 {
-            background-image: url(./assets/home/products/Studio-E.jpg);
+            background-image: url(../../../assets/home/products/Studio-E.jpg);
             background-position: center;
             background-size: cover;
         }
 
         &--2 {
-            background-image: url(./assets/home/products/MP-Studio.jpg);
+            background-image: url(../../../assets/home/products/MP-Studio.jpg);
             background-position: center;
             background-size: cover;
         }
 
         &--3 {
-            background-image: url(./assets/home/products/Podcast.jpg);
+            background-image: url(../../../assets/home/products/Podcast.jpg);
             background-position: center;
             background-size: cover;
         }
 
         &--4 {
-            background-image: url(./assets/home/products/Audio-Room.jpg);
+            background-image: url(../../../assets/home/products/Audio-Room.jpg);
             background-position: center;
             background-size: cover;
         }
 
         &--5 {
-            background-image: url(./assets/home/products/Camera.jpg);
+            background-image: url(../../../assets/home/products/Camera.jpg);
             background-position: center;
             background-size: cover;
         }
 
         &--6 {
-            background-image: url(./assets/home/products/Workstation.jpg);
+            background-image: url(../../../assets/home/products/Workstation.jpg);
             background-position: center;
             background-size: cover;
         }
@@ -718,7 +718,7 @@
 
     &__products-memberships-image {
         height: 100%;
-        background-image: url('./assets/home/products/services/Membership-Banner.jpg');
+        background-image: url('../../../assets/home/products/services/Membership-Banner.jpg');
         background-position-y: -500px;
         background-size: cover;
         grid-row: 1 / 2;
@@ -730,7 +730,7 @@
 
         @include respond(phone) {
             background-position-y: -200px;
-            background-image: url('./assets/home/products/services/Membership-Banner-xsmall.jpg');
+            background-image: url('../../../assets/home/products/services/Membership-Banner-xsmall.jpg');
         }
 
         @include respond(small-phone) {
