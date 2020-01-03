@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+
+// SVGs
+import { ReactComponent as BackIcon} from '../../../assets/home/products/circle-left.svg';
 
 export default class Equipment extends Component {
 
@@ -30,6 +33,7 @@ export default class Equipment extends Component {
         this.setState({
             ...this.state,
             selected: !this.state.selected,
+            index: index,
             selectedProduct: this.state.products[index],
         })
 
@@ -38,11 +42,31 @@ export default class Equipment extends Component {
         });
     }
 
+    onPreviousButton = () => {
+        this.setState({
+            ...this.state,
+            selectedProduct: this.state.products[this.state.index - 1],
+            index: this.state.index - 1,
+        })
+    }
+
+    onNextButton = () => {
+        this.setState({
+            ...this.state,
+            selectedProduct: this.state.products[this.state.index +1 ],
+            index: this.state.index + 1,
+        })
+    }
+
     onBackButton = () => {
         this.setState({
             ...this.state,
             selected: !this.state.selected,
         })
+
+        window.scroll({
+            top: 0,
+        });
     }
     
     render() {
@@ -56,20 +80,67 @@ export default class Equipment extends Component {
         if (this.state.selected) {
             content = (
                 <div className="equipment__container-2" >
+                    <div className="equipment__selected-button" onClick={this.onBackButton} >
+                        <BackIcon className="equipment__back-icon" />
+                        <p className="equipment__back-text">Back</p>
+                    </div>
+
                     <h1 className="equipment__selected-heading">{this.state.selectedProduct.title}</h1>
                     <div className="equipment__selected-photo" style={{backgroundImage: `url(${this.state.selectedProduct.photo})`}} alt="Selected-Photo" />
                     <div className="equipment__selected-description" dangerouslySetInnerHTML={{__html: this.state.selectedProduct.description}} />
-                    <button className="equipment__selected-button" onClick={this.onBackButton}>Back</button>
 
                     <div className="equipment__prices-container">
+                        {this.state.index > 0 ? <button className="equipment__previous" onClick={this.onPreviousButton}>&larr; {this.state.products[this.state.index - 1 ].title.slice(0,15)}...</button> : null}
+                        {this.state.index + 1 !== this.state.products.length ? <button className="equipment__next" onClick={this.onNextButton}>{this.state.products[this.state.index + 1 ].title.slice(0,15)}... &rarr;</button> : null}
                         <h3 className="equipment__prices-heading-1">In-Studio</h3>
-                        <button className="equipment__prices-1">2 Hours</button>
-                        <button className="equipment__prices-2">6 Hours</button>
-                        <button className="equipment__prices-3">10 Hours</button>
+                        <a target="_blank" rel="noopener noreferrer"
+                            href={this.state.selectedProduct.rental_links[0].link}
+                            className="equipment__prices-1"
+                        >
+                            <button className="equipment__button">{this.state.selectedProduct.rental_links[0].dayhour}</button>
+                        </a>
+                        <p className="equipment__prices-price-1">{this.state.selectedProduct.rental_links[0].cost}</p>
+
+                        <a target="_blank" rel="noopener noreferrer"
+                            href={this.state.selectedProduct.rental_links[1].link}
+                            className="equipment__prices-2"
+                        >
+                            <button className="equipment__button">{this.state.selectedProduct.rental_links[1].dayhour}</button>
+                        </a>
+                        <p className="equipment__prices-price-2">{this.state.selectedProduct.rental_links[1].cost}</p>
+
+                        <a target="_blank" rel="noopener noreferrer"
+                            href={this.state.selectedProduct.rental_links[2].link}
+                            className="equipment__prices-3"
+                        >
+                            <button className="equipment__button">{this.state.selectedProduct.rental_links[2].dayhour}</button>
+                        </a>
+                        <p className="equipment__prices-price-3">{this.state.selectedProduct.rental_links[2].cost}</p>
+
                         <h3 className="equipment__prices-heading-2">Off-Site</h3>
-                        <button className="equipment__prices-4">1 Day</button>
-                        <button className="equipment__prices-5">3 Days</button>
-                        <button className="equipment__prices-6">1 Week</button>
+                        <a target="_blank" rel="noopener noreferrer"
+                            href={this.state.selectedProduct.rental_links[3].link}
+                            className="equipment__prices-4"
+                        >
+                            <button className="equipment__button">{this.state.selectedProduct.rental_links[3].dayhour}</button>
+                        </a>
+                        <p className="equipment__prices-price-4">{this.state.selectedProduct.rental_links[3].cost}</p>
+
+                        <a target="_blank" rel="noopener noreferrer"
+                            href={this.state.selectedProduct.rental_links[4].link}
+                            className="equipment__prices-5"
+                        >
+                            <button className="equipment__button">{this.state.selectedProduct.rental_links[4].dayhour}</button>
+                        </a>
+                        <p className="equipment__prices-price-5">{this.state.selectedProduct.rental_links[4].cost}</p>
+
+                        <a target="_blank" rel="noopener noreferrer"
+                            href={this.state.selectedProduct.rental_links[5].link}
+                            className="equipment__prices-6"
+                        >
+                            <button className="equipment__button">{this.state.selectedProduct.rental_links[5].dayhour}</button>
+                        </a>
+                        <p className="equipment__prices-price-6">{this.state.selectedProduct.rental_links[5].cost}</p>
                     </div>
                 </div>
             )
