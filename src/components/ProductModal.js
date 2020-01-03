@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Components
 import Spinner from '../components/Spinner';
@@ -35,7 +36,7 @@ export default function ProductModal(props) {
                 </a>
             </div>
         )
-    } else if (props.option3 !== '') {
+    } else if (props.option3 !== '' && props.heading !== 'Equipment') {
         content = (
             <div className={props.class}>
                 <div className="product-modal__close-container">
@@ -65,6 +66,38 @@ export default function ProductModal(props) {
                 >
                     <button className="product-modal__button">{props.option3}</button>
                 </a>
+            </div>
+        )
+    } else if (props.option3 !== '' && props.heading === 'Equipment') {
+        content = (
+            <div className={props.class}>
+                <div className="product-modal__close-container">
+                    <Close onClick={props.toggle} className="product-modal__close" />
+                </div>
+                <h2 className="product-modal__heading" >{props.heading}</h2>
+                <div className="product-modal__border" />
+                <p className="product-modal__subheading">{props.subheading}</p>
+                <NavLink
+                    onClick={props.loadingToggle}
+                    className="product-modal__placement-1"
+                    to="/equipment" exact
+                >
+                    <button className="product-modal__button">{props.option1}</button>
+                </NavLink>
+                <NavLink
+                    onClick={props.loadingToggle}
+                    className="product-modal__placement-2"
+                    to="/equipment" exact
+                >
+                    <button className="product-modal__button">{props.option2}</button>
+                </NavLink>
+                <NavLink
+                    onClick={props.loadingToggle}
+                    className="product-modal__placement-3"
+                    to="/equipment" exact
+                >
+                    <button className="product-modal__button">{props.option3}</button>
+                </NavLink>
             </div>
         )
     }

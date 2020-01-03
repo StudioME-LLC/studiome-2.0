@@ -1,43 +1,55 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "55fa66b094fbdf42ff490e0af7a653ef",
+    "revision": "426b7f8e279e6b2d98715b4f7d6cb085",
     "url": "/index.html"
   },
   {
-    "revision": "949d6f7e8555ea1b88f9",
-    "url": "/static/css/main.c42ca62f.chunk.css"
+    "revision": "6c70b6d27a1842c50fd8",
+    "url": "/static/css/main.2e6995c9.chunk.css"
   },
   {
-    "revision": "85bc26dacca0910ebad8",
-    "url": "/static/js/2.296218d7.chunk.js"
+    "revision": "3d22b9534bc6e93c3a9a",
+    "url": "/static/js/2.f1f9a8d9.chunk.js"
   },
   {
-    "revision": "72adbf56e2abecfe1b70",
-    "url": "/static/js/3.58812bce.chunk.js"
+    "revision": "0f5e6f1b5203b86ab1202ae62480dbf2",
+    "url": "/static/js/2.f1f9a8d9.chunk.js.LICENSE"
   },
   {
-    "revision": "0f91df78c31a3d4d7be1",
-    "url": "/static/js/4.b9a86d02.chunk.js"
+    "revision": "bcbe355d1d62ab777298",
+    "url": "/static/js/3.36175777.chunk.js"
   },
   {
-    "revision": "b0018caab128fa1f99ac",
-    "url": "/static/js/5.663e75de.chunk.js"
+    "revision": "f94514a1894d905132d1061cab787c3f",
+    "url": "/static/js/3.36175777.chunk.js.LICENSE"
   },
   {
-    "revision": "93c7e22aa93811de77d1",
-    "url": "/static/js/6.09dac33d.chunk.js"
+    "revision": "6dfb7efe1c3e6b5f228a",
+    "url": "/static/js/4.9fd0bc82.chunk.js"
   },
   {
-    "revision": "a2ca086fdf9bdc35cd58",
-    "url": "/static/js/7.8b4a7fc0.chunk.js"
+    "revision": "c62060b55d98e6d5e0c0",
+    "url": "/static/js/5.73e8a49c.chunk.js"
   },
   {
-    "revision": "949d6f7e8555ea1b88f9",
-    "url": "/static/js/main.a873ab19.chunk.js"
+    "revision": "ca5e93337372832b145c",
+    "url": "/static/js/6.e6e77d5b.chunk.js"
   },
   {
-    "revision": "0c20772b778b43411db5",
-    "url": "/static/js/runtime~main.c80faf26.js"
+    "revision": "8aa0625bb093d064272c",
+    "url": "/static/js/7.11c3677c.chunk.js"
+  },
+  {
+    "revision": "cd398dbec10d30415203",
+    "url": "/static/js/8.e05f98c1.chunk.js"
+  },
+  {
+    "revision": "6c70b6d27a1842c50fd8",
+    "url": "/static/js/main.c11341e0.chunk.js"
+  },
+  {
+    "revision": "f75d0252b95c40b024da",
+    "url": "/static/js/runtime-main.73e259a7.js"
   },
   {
     "revision": "230212261468867c1ac1c957b23e74a2",
@@ -90,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ef40932bcff9c312e9281bc1d767ae66",
     "url": "/static/media/Equipment-4.ef40932b.jpg"
+  },
+  {
+    "revision": "b5c85038303b63c3daf852f5a18dba34",
+    "url": "/static/media/Equipment-Banner-Dark.b5c85038.jpg"
   },
   {
     "revision": "b0f5e2b606b38d98e1fe92864639f5e5",
@@ -174,6 +190,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ffd002cb295a0307f7c9e56d90d513e2",
     "url": "/static/media/chevron-thin-down.ffd002cb.svg"
+  },
+  {
+    "revision": "c463a3ce0145a678d3c3a9fcbc5c9fb2",
+    "url": "/static/media/circle-left.c463a3ce.svg"
   },
   {
     "revision": "02bdd87d83086abe9da8b7ada5bc0c0c",

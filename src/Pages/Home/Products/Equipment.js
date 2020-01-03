@@ -3,12 +3,16 @@ import React, { Component } from 'react';
 // SVGs
 import { ReactComponent as BackIcon} from '../../../assets/home/products/circle-left.svg';
 
+// Components
+import Spinner from '../../../components/Spinner';
+
 export default class Equipment extends Component {
 
     state = {
         products: [],
         selected: false,
         selectedProduct: null,
+        isLoading: true,
     }
 
 	componentDidMount() {
@@ -25,6 +29,7 @@ export default class Equipment extends Component {
             this.setState({
                 ...this.state,
                 products: products,
+                isLoading: false,
             })
         })
     }
@@ -70,12 +75,15 @@ export default class Equipment extends Component {
     }
     
     render() {
-        let content = this.state.products.map((product, index) => (
+        let content = <div style={{gridColumn: '2 / 4'}}><Spinner /></div>
+        
+        if (!this.state.isLoading) {
+            content = this.state.products.map((product, index) => (
             <div className="equipment__component" onClick={this.onProductSelect.bind(this, index)} key={index}>
                 <div className="equipment__component-photo" style={{backgroundImage: `url(${product.photo})`}} alt="Equipment-Photo" />
                 <h1 className="equipment__component-heading">{product.title}</h1>
             </div>
-        ));
+        ))}
 
         if (this.state.selected) {
             content = (
