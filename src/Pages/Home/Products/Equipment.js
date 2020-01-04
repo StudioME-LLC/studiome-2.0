@@ -22,7 +22,7 @@ export default class Equipment extends Component {
     }
 
 	componentDidMount() {
-		return fetch('https://studiome.me/wp-json/wp/v2/pages/907')
+		return fetch(this.props.link)
 		.then(response => response.json())
 		.then(responseJson => {
             let productsArray = responseJson.acf.product_blocks;
@@ -175,7 +175,7 @@ export default class Equipment extends Component {
             <div className="equipment">
                 <div className="equipment__banner" />
                 <div className="equipment__banner-container">
-                    <h1 className="equipment__heading">Equipment</h1>
+                    <h1 className="equipment__heading">{this.props.title}</h1>
                     <div className="equipment__border" />
                 </div>
 

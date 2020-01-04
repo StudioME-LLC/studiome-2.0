@@ -80,21 +80,21 @@ export default function ProductModal(props) {
                 <NavLink
                     onClick={props.loadingToggle}
                     className="product-modal__placement-1"
-                    to="/equipment" exact
+                    to="/cameras" exact
                 >
                     <button className="product-modal__button">{props.option1}</button>
                 </NavLink>
                 <NavLink
                     onClick={props.loadingToggle}
                     className="product-modal__placement-2"
-                    to="/equipment" exact
+                    to="/lighting" exact
                 >
                     <button className="product-modal__button">{props.option2}</button>
                 </NavLink>
                 <NavLink
                     onClick={props.loadingToggle}
                     className="product-modal__placement-3"
-                    to="/equipment" exact
+                    to="/audio" exact
                 >
                     <button className="product-modal__button">{props.option3}</button>
                 </NavLink>
