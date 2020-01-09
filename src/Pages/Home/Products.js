@@ -125,7 +125,7 @@ class Products extends Component {
                     heading: "Edit Workstation",
                     subheading: "Pick a duration to view:",
                     option1: "Hourly",
-                    url1: "https://studiome.me/product/editing-workstation-2-hour/",
+                    url1: "https://studiome.me/product/editing-workstation-1-hour/",
                     option2: "Daily",
                     url2: "https://studiome.me/product/editing-workstation-full-day/",
                     option3: '',
