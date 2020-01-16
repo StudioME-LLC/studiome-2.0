@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 
 
 import { createStore } from 'redux';
@@ -13,7 +15,10 @@ import * as serviceWorker from './serviceWorker';
 // States & Reducers
 import onRentalButton from './redux/reducers';
 
-
+// Apollo client setup
+const client = new ApolloClient({
+	uri: 'http://localhost:4000/graphql',
+})
 
 const store = createStore(
 	onRentalButton,
@@ -21,9 +26,11 @@ const store = createStore(
 );
 
 const app = (
-    <Provider store={store}>
-        <App />
-    </Provider>
+    <ApolloProvider client={client}>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </ApolloProvider>
 )
 
 ReactDOM.render( app, document.getElementById('root'));

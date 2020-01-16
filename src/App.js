@@ -7,12 +7,18 @@ import * as actions from './redux/actions';
 import './App.scss';
 import "scroll-behavior-polyfill";
 
+import { graphql } from 'react-apollo';
+import { flowRight as compose } from 'lodash';
+
 // Components
 import Header from './Navigation/Header';
 import LargeSidebar from './Navigation/LargeSidebar';
 import SmallSidebar from './Navigation/SmallSidebar';
 import Router from './Navigation/Router';
 import Footer from './Navigation/Footer';
+
+// Queries
+import { addImpressionQuery } from './analytics/queries';
 
 // Handlers
 import {
@@ -26,6 +32,15 @@ class App extends React.Component {
 		sidebarSelection: null,
 
 		backdropClass: '',
+	}
+
+	componentDidMount() {
+		this.props.addImpressionQuery({
+			variables: {
+				date: new Date().toISOString().slice(0, 10),
+				productId: "5e20d83d8b8aa9033d26adab"
+			}
+		})
 	}
 
 	onLargeSidebarSelection = (selected) => {
@@ -208,4 +223,7 @@ const mapDispatchToProps = dispatch => {
 	};
 };
 
-export default connect( mapStateToProps, mapDispatchToProps )(App);
+export default compose(
+	connect( mapStateToProps, mapDispatchToProps ),
+	graphql(addImpressionQuery, { name: "addImpressionQuery" })
+)(App);
