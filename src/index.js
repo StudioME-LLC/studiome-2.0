@@ -17,7 +17,7 @@ import onRentalButton from './redux/reducers';
 
 // Apollo client setup
 const client = new ApolloClient({
-	uri: 'http://localhost:4000/graphql',
+	uri: 'https://studiome-analytics-server.herokuapp.com/graphql',
 })
 
 const store = createStore(
