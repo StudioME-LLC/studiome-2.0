@@ -1,6 +1,6 @@
 import { gql } from 'apollo-boost';
 
-const addImpressionQuery = gql`
+const addImpression = gql`
     mutation($date: String!, $productId: String!) {
         addImpression(date: $date, productId: $productId) {
             date
@@ -9,4 +9,4 @@ const addImpressionQuery = gql`
     }
 `
 
-export { addImpressionQuery };
+export { addImpression };

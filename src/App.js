@@ -18,7 +18,7 @@ import Router from './Navigation/Router';
 import Footer from './Navigation/Footer';
 
 // Queries
-import { addImpressionQuery } from './analytics/queries';
+import { addImpression } from './analytics/queries';
 
 // Handlers
 import {
@@ -35,7 +35,7 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
-		this.props.addImpressionQuery({
+		this.props.addImpression({
 			variables: {
 				date: new Date().toISOString().slice(0, 10),
 				productId: "5e20d83d8b8aa9033d26adab"
@@ -225,5 +225,5 @@ const mapDispatchToProps = dispatch => {
 
 export default compose(
 	connect( mapStateToProps, mapDispatchToProps ),
-	graphql(addImpressionQuery, { name: "addImpressionQuery" })
+	graphql(addImpression, { name: "addImpression" })
 )(App);
