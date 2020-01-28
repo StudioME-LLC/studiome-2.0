@@ -41,17 +41,14 @@ export default function Router(props) {
                             <Projects/>
                         </React.Suspense>} 
                 />
-                <Route path="/cameras" exact
+                <Route path="/equipment" exact
                     render={() => 
                         <React.Suspense fallback={<Spinner />}>
-                            <Equipment
-                                title={'Cameras'}
-                                link={'https://studiome.me/wp-json/wp/v2/pages/907'}
-                            />
+                            <Equipment />
                         </React.Suspense>} 
                 />
 
-                <Route path="/lighting" exact
+                {/* <Route path="/lighting" exact
                     render={() => 
                         <React.Suspense fallback={<Spinner />}>
                             <Equipment
@@ -69,7 +66,7 @@ export default function Router(props) {
                                 link={'https://studiome.me/wp-json/wp/v2/pages/963'}
                             />
                         </React.Suspense>} 
-                />
+                /> */}
                 <Redirect to="/" exact />
             </Switch>
         </React.Fragment>

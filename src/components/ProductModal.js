@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+
+// Redux
+import { connect } from 'react-redux';
+import * as actions from '../redux/actions';
 
 // Components
 import Spinner from '../components/Spinner';
@@ -7,114 +11,142 @@ import Spinner from '../components/Spinner';
 // SVGs
 import { ReactComponent as Close } from '../assets/home/products/cross.svg';
 
-export default function ProductModal(props) {
-
-    let content = '';
-
-    if (props.option3 === '') {
-        content = (
-            <div className={props.class}>
-                <div className="product-modal__close-container">
-                    <Close onClick={props.toggle} className="product-modal__close" />
-                </div>
-                <h2 className="product-modal__heading" >{props.heading}</h2>
-                <div className="product-modal__border" />
-                <p className="product-modal__subheading">{props.subheading}</p>
-                <a
-                    className="product-modal__alt-placement-1"
-                    href={props.url1}
-                    onClick={props.loadingToggle}
-                >
-                    <button className="product-modal__button">{props.option1}</button>
-                </a>
-                <a
-                    className="product-modal__alt-placement-2"
-                    href={props.url2}
-                    onClick={props.loadingToggle}
-                >
-                    <button className="product-modal__button">{props.option2}</button>
-                </a>
-            </div>
-        )
-    } else if (props.option3 !== '' && props.heading !== 'Equipment') {
-        content = (
-            <div className={props.class}>
-                <div className="product-modal__close-container">
-                    <Close onClick={props.toggle} className="product-modal__close" />
-                </div>
-                <h2 className="product-modal__heading" >{props.heading}</h2>
-                <div className="product-modal__border" />
-                <p className="product-modal__subheading">{props.subheading}</p>
-                <a
-                    className="product-modal__placement-1"
-                    href={props.url1}
-                    onClick={props.loadingToggle}
-                >
-                    <button className="product-modal__button">{props.option1}</button>
-                </a>
-                <a
-                    className="product-modal__placement-2"
-                    href={props.url2}
-                    onClick={props.loadingToggle}
-                >
-                    <button className="product-modal__button">{props.option2}</button>
-                </a>
-                <a
-                    className="product-modal__placement-3"
-                    href={props.url3}
-                    onClick={props.loadingToggle}
-                >
-                    <button className="product-modal__button">{props.option3}</button>
-                </a>
-            </div>
-        )
-    } else if (props.option3 !== '' && props.heading === 'Equipment') {
-        content = (
-            <div className={props.class}>
-                <div className="product-modal__close-container">
-                    <Close onClick={props.toggle} className="product-modal__close" />
-                </div>
-                <h2 className="product-modal__heading" >{props.heading}</h2>
-                <div className="product-modal__border" />
-                <p className="product-modal__subheading">{props.subheading}</p>
-                <NavLink
-                    onClick={props.loadingToggle}
-                    className="product-modal__placement-1"
-                    to="/cameras" exact
-                >
-                    <button className="product-modal__button">{props.option1}</button>
-                </NavLink>
-                <NavLink
-                    onClick={props.loadingToggle}
-                    className="product-modal__placement-2"
-                    to="/lighting" exact
-                >
-                    <button className="product-modal__button">{props.option2}</button>
-                </NavLink>
-                <NavLink
-                    onClick={props.loadingToggle}
-                    className="product-modal__placement-3"
-                    to="/audio" exact
-                >
-                    <button className="product-modal__button">{props.option3}</button>
-                </NavLink>
-            </div>
-        )
+class ProductModal extends Component {
+    onCameraSelect = () => {
+        this.props.loadingToggle();
+        this.props.cameraButton();
     }
 
+    onLightingSelect = () => {
+        this.props.loadingToggle();
+        this.props.lightingButton();
+    }
 
-    return (
-        <div>
-            {!props.loading ? content : (
-                <div className={props.class}>
+    onAudioSelect = () => {
+        this.props.loadingToggle();
+        this.props.audioButton();
+    }
+
+    render() {
+        let content = '';
+
+        if (this.props.option3 === '') {
+            content = (
+                <div className={this.props.class}>
                     <div className="product-modal__close-container">
-                        <Close onClick={props.toggle} className="product-modal__close" />
+                        <Close onClick={this.props.toggle} className="product-modal__close" />
                     </div>
-                    <h2 className="product-modal__heading" >Loading...</h2>
+                    <h2 className="product-modal__heading" >{this.props.heading}</h2>
                     <div className="product-modal__border" />
-                    <div className="product-modal__loader"><Spinner /></div>
+                    <p className="product-modal__subheading">{this.props.subheading}</p>
+                    <a
+                        className="product-modal__alt-placement-1"
+                        href={this.props.url1}
+                        onClick={this.props.loadingToggle}
+                    >
+                        <button className="product-modal__button">{this.props.option1}</button>
+                    </a>
+                    <a
+                        className="product-modal__alt-placement-2"
+                        href={this.props.url2}
+                        onClick={this.props.loadingToggle}
+                    >
+                        <button className="product-modal__button">{this.props.option2}</button>
+                    </a>
                 </div>
-            )}
-        </div> 
-    )
+            )
+        } else if (this.props.option3 !== '' && this.props.heading !== 'Equipment') {
+            content = (
+                <div className={this.props.class}>
+                    <div className="product-modal__close-container">
+                        <Close onClick={this.props.toggle} className="product-modal__close" />
+                    </div>
+                    <h2 className="product-modal__heading" >{this.props.heading}</h2>
+                    <div className="product-modal__border" />
+                    <p className="product-modal__subheading">{this.props.subheading}</p>
+                    <a
+                        className="product-modal__placement-1"
+                        href={this.props.url1}
+                        onClick={this.props.loadingToggle}
+                    >
+                        <button className="product-modal__button">{this.props.option1}</button>
+                    </a>
+                    <a
+                        className="product-modal__placement-2"
+                        href={this.props.url2}
+                        onClick={this.props.loadingToggle}
+                    >
+                        <button className="product-modal__button">{this.props.option2}</button>
+                    </a>
+                    <a
+                        className="product-modal__placement-3"
+                        href={this.props.url3}
+                        onClick={this.props.loadingToggle}
+                    >
+                        <button className="product-modal__button">{this.props.option3}</button>
+                    </a>
+                </div>
+            )
+        } else if (this.props.option3 !== '' && this.props.heading === 'Equipment') {
+            content = (
+                <div className={this.props.class}>
+                    <div className="product-modal__close-container">
+                        <Close onClick={this.props.toggle} className="product-modal__close" />
+                    </div>
+                    <h2 className="product-modal__heading" >{this.props.heading}</h2>
+                    <div className="product-modal__border" />
+                    <p className="product-modal__subheading">{this.props.subheading}</p>
+                    <NavLink
+                        onClick={this.onCameraSelect}
+                        className="product-modal__placement-1"
+                        to="/equipment" exact
+                        category={'907'}
+                    >
+                        <button className="product-modal__button">{this.props.option1}</button>
+                    </NavLink>
+                    <NavLink
+                        onClick={this.onLightingSelect}
+                        className="product-modal__placement-2"
+                        to="/equipment" exact
+                        category={'965'}
+                    >
+                        <button className="product-modal__button">{this.props.option2}</button>
+                    </NavLink>
+                    <NavLink
+                        onClick={this.onAudioSelect}
+                        className="product-modal__placement-3"
+                        to="/equipment" exact
+                        category={'963'}
+                    >
+                        <button className="product-modal__button">{this.props.option3}</button>
+                    </NavLink>
+                </div>
+            )
+        }
+
+        return (
+            <div>
+                {!this.props.loading ? content : (
+                    <div className={this.props.class}>
+                        <div className="product-modal__close-container">
+                            <Close onClick={this.props.toggle} className="product-modal__close" />
+                        </div>
+                        <h2 className="product-modal__heading" >Loading...</h2>
+                        <div className="product-modal__border" />
+                        <div className="product-modal__loader"><Spinner /></div>
+                    </div>
+                )}
+            </div> 
+        )
+    }
 }
+
+const mapDispatchToProps = dispatch => {
+	return {
+		cameraButton: () => dispatch(actions.cameraButton()),
+		lightingButton: () => dispatch(actions.lightingButton()),
+		audioButton: () => dispatch(actions.audioButton()),
+	};
+};
+
+export default connect( null, mapDispatchToProps )(ProductModal);

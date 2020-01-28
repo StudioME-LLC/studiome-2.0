@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-
-// SVGs
-import { ReactComponent as BackIcon} from '../../../assets/home/products/circle-left.svg';
+import { connect } from 'react-redux';
 
 // Components
 import Spinner from '../../../components/Spinner';
+import EquipmentSelected from '../../../components/Equipment/EquipmentSelected';
 
-export default class Equipment extends Component {
+class Equipment extends Component {
 
     state = {
         products: [],
         selected: false,
         selectedProduct: null,
         isLoading: true,
+        classActive: '907'
     }
 
     componentWillMount() {
@@ -22,7 +22,15 @@ export default class Equipment extends Component {
     }
 
 	componentDidMount() {
-		return fetch(this.props.link)
+        this.switchEquipment(this.props.activeEquipmentButton);
+        this.setState({
+            ...this.state,
+            classActive: this.props.activeEquipmentButton
+        })
+    }
+
+    switchEquipment = (selected) => {
+        return fetch(`https://studiome.me/wp-json/wp/v2/pages/${selected}`)
 		.then(response => response.json())
 		.then(responseJson => {
             let productsArray = responseJson.acf.product_blocks;
@@ -36,6 +44,7 @@ export default class Equipment extends Component {
                 ...this.state,
                 products: products,
                 isLoading: false,
+                classActive: selected
             })
         })
     }
@@ -83,6 +92,7 @@ export default class Equipment extends Component {
     render() {
         let content = <div style={{gridColumn: '1 / -1'}}><Spinner /></div>
         
+        // Equipment List
         if (!this.state.isLoading) {
             content = this.state.products.map((product, index) => (
             <div className="equipment__component" onClick={this.onProductSelect.bind(this, index)} key={index}>
@@ -91,98 +101,60 @@ export default class Equipment extends Component {
             </div>
         ))}
 
+        // Equipment Details
         if (this.state.selected) {
-            content = (
-                <div className="equipment__container-2" >
-                    <div className="equipment__selected-button" onClick={this.onBackButton} >
-                        <BackIcon className="equipment__back-icon" />
-                        <p className="equipment__back-text">Back</p>
-                    </div>
-                    {this.state.index > 0 
-                        ? <button className="equipment__previous" onClick={this.onPreviousButton}>
-                            &larr; {this.state.products[this.state.index - 1 ].title.slice(0,15)}...
-                            </button> 
-                        : null
-                    }
-
-                    {this.state.index + 1 !== this.state.products.length 
-                        ? <button className="equipment__next" onClick={this.onNextButton}>
-                            {this.state.products[this.state.index + 1 ].title.slice(0,15)}... &rarr;
-                            </button> 
-                        : null
-                    }
-
-                    <h1 className="equipment__selected-heading">{this.state.selectedProduct.title}</h1>
-                    <div className="equipment__selected-photo" style={{backgroundImage: `url(${this.state.selectedProduct.photo})`}} alt="Selected-Photo" />
-                    <div className="equipment__selected-description" dangerouslySetInnerHTML={{__html: this.state.selectedProduct.description}} />
-
-                    <div className="equipment__prices-container">
-                        <h3 className="equipment__prices-heading-1">In-Studio</h3>
-                        <a target="_blank" rel="noopener noreferrer"
-                            href={this.state.selectedProduct.rental_links[0].link}
-                            className="equipment__prices equipment__prices--1"
-                        >
-                            <button className="equipment__button">{this.state.selectedProduct.rental_links[0].dayhour}</button>
-                        </a>
-                        <p className="equipment__prices-price equipment__prices-price--1">{this.state.selectedProduct.rental_links[0].cost}</p>
-
-                        <a target="_blank" rel="noopener noreferrer"
-                            href={this.state.selectedProduct.rental_links[1].link}
-                            className="equipment__prices equipment__prices--2"
-                        >
-                            <button className="equipment__button">{this.state.selectedProduct.rental_links[1].dayhour}</button>
-                        </a>
-                        <p className="equipment__prices-price equipment__prices-price--2">{this.state.selectedProduct.rental_links[1].cost}</p>
-
-                        <a target="_blank" rel="noopener noreferrer"
-                            href={this.state.selectedProduct.rental_links[2].link}
-                            className="equipment__prices equipment__prices--3"
-                        >
-                            <button className="equipment__button">{this.state.selectedProduct.rental_links[2].dayhour}</button>
-                        </a>
-                        <p className="equipment__prices-price equipment__prices-price--3">{this.state.selectedProduct.rental_links[2].cost}</p>
-
-                        <h3 className="equipment__prices-heading-2">Off-Site</h3>
-                        <a target="_blank" rel="noopener noreferrer"
-                            href={this.state.selectedProduct.rental_links[3].link}
-                            className="equipment__prices equipment__prices--4"
-                        >
-                            <button className="equipment__button">{this.state.selectedProduct.rental_links[3].dayhour}</button>
-                        </a>
-                        <p className="equipment__prices-price equipment__prices-price--4">{this.state.selectedProduct.rental_links[3].cost}</p>
-
-                        <a target="_blank" rel="noopener noreferrer"
-                            href={this.state.selectedProduct.rental_links[4].link}
-                            className="equipment__prices equipment__prices--5"
-                        >
-                            <button className="equipment__button">{this.state.selectedProduct.rental_links[4].dayhour}</button>
-                        </a>
-                        <p className="equipment__prices-price equipment__prices-price--5">{this.state.selectedProduct.rental_links[4].cost}</p>
-
-                        <a target="_blank" rel="noopener noreferrer"
-                            href={this.state.selectedProduct.rental_links[5].link}
-                            className="equipment__prices equipment__prices--6"
-                        >
-                            <button className="equipment__button">{this.state.selectedProduct.rental_links[5].dayhour}</button>
-                        </a>
-                        <p className="equipment__prices-price equipment__prices-price--6">{this.state.selectedProduct.rental_links[5].cost}</p>
-                    </div>
-                </div>
-            )
+            content = <EquipmentSelected
+                onBackButton={this.onBackButton}
+                selectedProduct={this.state.selectedProduct}
+                index={this.state.index}
+                products={this.state.products}
+                onPreviousButton={this.onPreviousButton}
+                onNextButton={this.onNextButton}
+            />
         }
 
         return (
+            // Main Page
             <div className="equipment">
                 <div className="equipment__banner" />
                 <div className="equipment__banner-container">
-                    <h1 className="equipment__heading">{this.props.title}</h1>
+                    <h1 className="equipment__heading">Equipment</h1>
                     <div className="equipment__border" />
                 </div>
 
                 <div className="equipment__container">
-                    {content}
+                    <button
+                        className={this.state.classActive === '907' 
+                            ? 'equipment__camera-button--active' :
+                             'equipment__camera-button'}
+                        onClick={this.switchEquipment.bind(this, '907')}
+                    >Cameras</button>
+                    <button
+                        className={this.state.classActive === '965' 
+                        ? 'equipment__lighting-button--active' 
+                        : 'equipment__lighting-button'}
+                        onClick={this.switchEquipment.bind(this, '965')}
+                    >Lighting</button>
+                    <button
+                        className={this.state.classActive === '963' 
+                        ? 'equipment__audio-button--active' 
+                        : 'equipment__audio-button'}
+                        onClick={this.switchEquipment.bind(this, '963')}
+                    >Audio</button>
+
+                    <div className="equipment__component-container">
+                        {content}
+                    </div>
                 </div>
             </div>
         )
     }
 }
+
+const mapStateToProps = state => {
+	return {
+        activeEquipmentButton: state.activeEquipmentButton,
+	};
+};
+
+export default connect( mapStateToProps )(Equipment);

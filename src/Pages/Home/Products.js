@@ -113,11 +113,11 @@ class Products extends Component {
                     heading: "Equipment",
                     subheading: "Pick a category to view:",
                     option1: "Camera",
-                    url1: "https://studiome.me/book-me/camera-rental/",
+                    url1: "",
                     option2: "Lighting",
-                    url2: "https://studiome.me/book-me/lighting-rental/",
+                    url2: "",
                     option3: 'Audio',
-                    url3: 'https://studiome.me/book-me/audio-rental/',
+                    url3: "",
                 })
                 break;
             case 6:

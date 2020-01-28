@@ -18,3 +18,22 @@ export const membershipsButton = () => {
         type: actionTypes.MEMBERSHIPS_BUTTON
     };
 };
+
+// Equipment Category Buttons
+export const cameraButton = () => {
+    return {
+        type: actionTypes.CAMERA_BUTTON
+    };
+};
+
+export const lightingButton = () => {
+    return {
+        type: actionTypes.LIGHTING_BUTTON
+    };
+};
+
+export const audioButton = () => {
+    return {
+        type: actionTypes.AUDIO_BUTTON
+    };
+};

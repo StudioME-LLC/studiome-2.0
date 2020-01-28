@@ -8,6 +8,9 @@ const initialState = {
     rentalToggle: true,
     servicesToggle: false,
     membershipsToggle: false,
+
+    // Active Equipment Buttons
+    activeEquipmentButton: '907'
 }
 
 const onRentalButton = (state = initialState, action) => {
@@ -42,6 +45,21 @@ const onRentalButton = (state = initialState, action) => {
                 rentalToggle: false,
                 servicesToggle: false,
                 membershipsToggle: true,
+            }
+        case actionTypes.CAMERA_BUTTON:
+			return {
+				...state,
+                activeEquipmentButton: '907'
+            }
+        case actionTypes.LIGHTING_BUTTON:
+			return {
+				...state,
+                activeEquipmentButton: '965'
+            }
+        case actionTypes.AUDIO_BUTTON:
+			return {
+				...state,
+                activeEquipmentButton: '963'
             }
             
         default: return state;
