@@ -336,6 +336,27 @@
         }
     }
 
+    &__component-container-selected {
+        grid-column: 1 / -1;
+        grid-row: 1 / 3;
+
+        display: grid;
+        grid-template-columns: repeat(4, 22.5rem);
+        grid-template-rows: auto;
+
+        @include respond(tab-port) {
+            grid-template-columns: repeat(4, 12.5rem);
+        }
+
+        @include respond(phone) {
+            grid-template-columns: repeat(3, 13.3333rem);
+        }
+
+        @include respond(small-phone) {
+            grid-template-columns: repeat(3, 10rem);
+        }
+    }
+
     // Product Components
     &__component {
         margin-bottom: 5rem;

@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc3eb600.chunk.css",
+    "main.css": "/static/css/main.6a8626c7.chunk.css",
     "main.js": "/static/js/main.fa1ea577.chunk.js",
     "main.js.map": "/static/js/main.fa1ea577.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.483e6f84.js",
-    "runtime-main.js.map": "/static/js/runtime-main.483e6f84.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f2e42800.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f2e42800.js.map",
     "static/js/2.52ad3560.chunk.js": "/static/js/2.52ad3560.chunk.js",
     "static/js/2.52ad3560.chunk.js.map": "/static/js/2.52ad3560.chunk.js.map",
     "static/js/3.a087c321.chunk.js": "/static/js/3.a087c321.chunk.js",
@@ -17,12 +17,12 @@
     "static/js/6.836a7e1c.chunk.js.map": "/static/js/6.836a7e1c.chunk.js.map",
     "static/js/7.b8e88104.chunk.js": "/static/js/7.b8e88104.chunk.js",
     "static/js/7.b8e88104.chunk.js.map": "/static/js/7.b8e88104.chunk.js.map",
-    "static/js/8.0a02fd1a.chunk.js": "/static/js/8.0a02fd1a.chunk.js",
-    "static/js/8.0a02fd1a.chunk.js.map": "/static/js/8.0a02fd1a.chunk.js.map",
+    "static/js/8.b657dfc0.chunk.js": "/static/js/8.b657dfc0.chunk.js",
+    "static/js/8.b657dfc0.chunk.js.map": "/static/js/8.b657dfc0.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e464b037c82a3562b5f9f2db92ecd2ad.js": "/precache-manifest.e464b037c82a3562b5f9f2db92ecd2ad.js",
+    "precache-manifest.8a771b676e1252d00d0ab1642e65a1e3.js": "/precache-manifest.8a771b676e1252d00d0ab1642e65a1e3.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.cc3eb600.chunk.css.map": "/static/css/main.cc3eb600.chunk.css.map",
+    "static/css/main.6a8626c7.chunk.css.map": "/static/css/main.6a8626c7.chunk.css.map",
     "static/js/2.52ad3560.chunk.js.LICENSE": "/static/js/2.52ad3560.chunk.js.LICENSE",
     "static/js/3.a087c321.chunk.js.LICENSE": "/static/js/3.a087c321.chunk.js.LICENSE",
     "static/media/App.scss": "/static/media/Workstation.2a5c64c4.jpg",
@@ -75,9 +75,9 @@
     "static/media/youtube.svg": "/static/media/youtube.87dac935.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.483e6f84.js",
+    "static/js/runtime-main.f2e42800.js",
     "static/js/3.a087c321.chunk.js",
-    "static/css/main.cc3eb600.chunk.css",
+    "static/css/main.6a8626c7.chunk.css",
     "static/js/main.fa1ea577.chunk.js"
   ]
 }

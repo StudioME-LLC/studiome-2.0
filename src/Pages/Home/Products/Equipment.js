@@ -30,6 +30,10 @@ class Equipment extends Component {
     }
 
     switchEquipment = (selected) => {
+        this.setState({
+            ...this.state,
+            isLoading: true,
+        })
         return fetch(`https://studiome.me/wp-json/wp/v2/pages/${selected}`)
 		.then(response => response.json())
 		.then(responseJson => {
@@ -121,31 +125,38 @@ class Equipment extends Component {
                     <h1 className="equipment__heading">Equipment</h1>
                     <div className="equipment__border" />
                 </div>
+                    <div className="equipment__container">
+                        {!this.state.selected
+                            ? <React.Fragment>
+                            <button
+                                className={this.state.classActive === '907' 
+                                    ? 'equipment__camera-button--active' :
+                                    'equipment__camera-button'}
+                                onClick={this.switchEquipment.bind(this, '907')}
+                            >Cameras</button>
+                            <button
+                                className={this.state.classActive === '965' 
+                                ? 'equipment__lighting-button--active' 
+                                : 'equipment__lighting-button'}
+                                onClick={this.switchEquipment.bind(this, '965')}
+                            >Lighting</button>
+                            <button
+                                className={this.state.classActive === '963' 
+                                ? 'equipment__audio-button--active' 
+                                : 'equipment__audio-button'}
+                                onClick={this.switchEquipment.bind(this, '963')}
+                            >Audio</button>
+                            </React.Fragment>
+                            : null
+                        }
 
-                <div className="equipment__container">
-                    <button
-                        className={this.state.classActive === '907' 
-                            ? 'equipment__camera-button--active' :
-                             'equipment__camera-button'}
-                        onClick={this.switchEquipment.bind(this, '907')}
-                    >Cameras</button>
-                    <button
-                        className={this.state.classActive === '965' 
-                        ? 'equipment__lighting-button--active' 
-                        : 'equipment__lighting-button'}
-                        onClick={this.switchEquipment.bind(this, '965')}
-                    >Lighting</button>
-                    <button
-                        className={this.state.classActive === '963' 
-                        ? 'equipment__audio-button--active' 
-                        : 'equipment__audio-button'}
-                        onClick={this.switchEquipment.bind(this, '963')}
-                    >Audio</button>
-
-                    <div className="equipment__component-container">
-                        {content}
+                        <div className={!this.state.selected 
+                            ? 'equipment__component-container' 
+                            : 'equipment__component-container-selected'}
+                        >
+                            {content}
+                        </div>
                     </div>
-                </div>
             </div>
         )
     }
