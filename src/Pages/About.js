@@ -1,4 +1,5 @@
 import React, { Component, createRef } from 'react';
+import { graphql } from 'react-apollo';
 
 // Sections
 import Intro from './About/Intro';
@@ -6,7 +7,10 @@ import Team from './About/Team';
 import Work from './About/Work';
 import Contact from './About/Contact';
 
-export default class About extends Component {
+// Queries
+import { addImpression } from '../analytics/queries';
+
+class About extends Component {
     state = {
         myRefTeam: createRef(),
         myRefWork: createRef(),
@@ -14,6 +18,13 @@ export default class About extends Component {
     }
 
     componentDidMount() {
+        this.props.addImpression({
+            variables: {
+                date: new Date().toISOString().slice(0, 10),
+                productId: "5e31fec36b3dcd0004ae9369"
+            }
+        })
+
         if (this.props.sidebarSelection === 'general') {
             window.scroll({
                 top: 0,
@@ -84,3 +95,5 @@ export default class About extends Component {
         )
     }
 }
+
+export default graphql(addImpression, {name: "addImpression"})(About);

@@ -119,6 +119,13 @@ class App extends React.Component {
 	}
 
 	toggleLargeSidebar = () => {
+		this.props.addImpression({
+			variables: {
+				date: new Date().toISOString().slice(0, 10),
+				productId: "5e31fed06b3dcd0004ae936a"
+			}
+		})
+		
 		this.setState({
 			largeSidebar: !this.state.largeSidebar,
 			sidebarSelection: null,
