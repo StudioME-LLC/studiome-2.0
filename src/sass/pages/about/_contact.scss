@@ -4,7 +4,7 @@
     &__contact {
         display: grid;
         grid-template-columns: 1fr repeat(4, 26rem) 1fr;
-        grid-template-rows: 30rem 15rem 40rem 15rem 5rem 5rem 30rem;
+        grid-template-rows: 30rem 15rem 40rem 15rem 5rem 5rem 38rem;
 
         @include respond(tab-land) {
             grid-template-columns: 1fr repeat(4, 22rem) 1fr;
@@ -110,6 +110,26 @@
         height: 3rem;
         fill: $color-teal;
 
+        &--1 {
+            animation: iconColor 7s ease infinite;
+        }
+
+        &--2 {
+            animation: iconColor 7s .5s ease infinite;
+        }
+
+        &--3 {
+            animation: iconColor 7s 1s ease infinite;
+        }
+
+        &--4 {
+            animation: iconColor 7s 1.5s ease infinite;
+        }
+
+        &--5 {
+            animation: iconColor 7s 2s ease infinite;
+        }
+
         @include respond(small-phone) {
             width: 2.5rem;
             height: 2.5rem;
@@ -165,7 +185,7 @@
 
         @include respond(tab-land) {
             grid-column: 2 / 4;
-            grid-row: 4 / 5;
+            grid-row: 5 / 6;
             justify-self: flex-start;
             margin-top: 0;
 
@@ -204,7 +224,7 @@
 
         @include respond(tab-land) {
             grid-column: 4 / 6;
-            grid-row: 4 / 5;
+            grid-row: 5 / 6;
             align-self: flex-start;
         }
 
@@ -229,7 +249,7 @@
 
         @include respond(tab-land) {
             grid-column: 4 / 6;
-            grid-row: 5 / 6;
+            grid-row: 6 / 7;
             align-self: flex-start;
         }
 
@@ -264,7 +284,7 @@
 
         @include respond(tab-land) {
             grid-column: 4 / 6;
-            grid-row: 5 / 6;
+            grid-row: 6 / 7;
             align-self: flex-end;
         }
 

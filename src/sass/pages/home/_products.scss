@@ -688,15 +688,20 @@
         grid-column: 2 / 5;
         grid-row: 2 / 3;
         height: 70rem;
+        width: 95%;
 
         box-shadow: $shadow-button;
         border-radius: 5px;
         color: $color-grey;
 
         display: grid;
-        grid-template-rows: 30rem 8rem 2rem 8rem 10rem 8rem;
+        grid-template-rows: 25rem 8rem 2rem 6rem 6rem 15rem 1fr;
 
         animation: onMembershipsFadeIn .7s ease-out;
+
+        @include respond(tab-land) {
+            width: 96%;
+        }
 
         @include respond(tab-port) {
             width: 50rem;
@@ -719,7 +724,7 @@
     &__products-memberships-image {
         height: 100%;
         background-image: url('../../../assets/home/products/services/Membership-Banner.jpg');
-        background-position-y: -500px;
+        background-position-y: -530px;
         background-size: cover;
         grid-row: 1 / 2;
 
@@ -790,6 +795,7 @@
 
     &__products-memberships-paragraph {
         grid-row: 5 / 6;
+        grid-column: 1 / -1;
         align-self: center;
         text-align: center;
         font-size: 1.8rem;
@@ -809,37 +815,17 @@
         }
     }
 
-    &__products-memberships-survey-link {
+    &__products-memberships-package {
         grid-row: 6 / 7;
+        grid-column: 1 / -1;
         justify-self: center;
         align-self: center;
     }
 
-    &__products-memberships-survey {
-        width: 22rem;
-        height: 6rem;
-
-        background-color: $color-green;
-        border: none;
-        border-radius: 5px;
-        box-shadow: $shadow-button;
-        color: $color-white;
-        text-transform: uppercase;
-        outline: none;
-        font-weight: 600;
-        font-size: 1.8rem;
-
-        transition: .3s all ease;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $color-grey-light;
-            color: $color-green;
-        }
-
-        &:active {
-            box-shadow: none;
-        }
+    &__products-memberships-feedback {
+        grid-row: 7 / 8;
+        grid-column: 1 / -1;
+        justify-self: center;
     }
 }
 
