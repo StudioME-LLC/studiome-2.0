@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="about__contact">
             <div className="about__contact-banner" />
             <div className="about__contact-banner-container">
-                <h1 className="about__contact-heading">Contact</h1>
+                <h1 className="about__contact-heading">Speak to Our Creative Team</h1>
                 <div className="about__contact-border" />
             </div>
 

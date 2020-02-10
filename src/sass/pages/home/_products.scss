@@ -695,7 +695,8 @@
         color: $color-grey;
 
         display: grid;
-        grid-template-rows: 25rem 8rem 2rem 6rem 6rem 15rem 1fr;
+        grid-template-rows: 8rem 2rem 8rem 30rem 1fr 10rem 10rem 1fr;
+        grid-template-columns: 1fr 1fr;
 
         animation: onMembershipsFadeIn .7s ease-out;
 
@@ -706,52 +707,30 @@
         @include respond(tab-port) {
             width: 50rem;
             grid-column: 3 / 7;
-            grid-template-rows: 30rem 8rem 2rem 8rem 10rem 8rem;
+            height: 80rem;
+            grid-template-rows: 6rem 2rem 8rem 20rem 8rem 20rem 6rem 6rem;
         }
 
         @include respond(phone) {
             width: 40rem;
             grid-column: 3 / 7;
-            grid-template-rows: 30rem 8rem 2rem 8rem 10rem 8rem;
         }
 
         @include respond(small-phone) {
             width: 30rem;
-            grid-template-rows: 25rem 8rem 2rem 8rem 15rem 8rem;
-        }
-    }
-
-    &__products-memberships-image {
-        height: 100%;
-        background-image: url('../../../assets/home/products/services/Membership-Banner.jpg');
-        background-position-y: -530px;
-        background-size: cover;
-        grid-row: 1 / 2;
-
-        @include respond(tab-port) {
-            width: 100%;
-            background-position-y: -250px;
-        }
-
-        @include respond(phone) {
-            background-position-y: -200px;
-            background-image: url('../../../assets/home/products/services/Membership-Banner-xsmall.jpg');
-        }
-
-        @include respond(small-phone) {
-            height: 25rem;
-            width: 30rem;
-            background-position-y: -100px;
+            grid-template-rows: 5rem 1rem 7rem 18rem 7rem 18rem 6rem 3rem 6rem;
+            height: 73rem;
         }
     }
 
     &__products-memberships-heading {
+        grid-column: 1 / -1;
         align-self: flex-end;
         text-align: center;
         text-transform: uppercase;
         font-weight: 100;
         font-size: 3.6rem;
-        grid-row: 2 / 3;
+        grid-row: 1 / 2;
 
         @include respond(tab-port) {
             font-size: 2.4rem;
@@ -763,21 +742,165 @@
     }
 
     &__products-memberships-border {
-        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
         align-self: flex-end;
         justify-self: center;
 
         border-bottom: 1px solid $color-orange;
         width: 10rem;
     }
+    
+    &__products-memberships-package-description-1 {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        align-self: center;
+        justify-self: center;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: all .5s ease;
+
+        @include respond(tab-port) {
+            grid-column: 1 / -1;
+            grid-row: 3 / 4;
+            opacity: 1;
+        }
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 0 3rem;
+            text-align: center;
+        }
+    }
+
+    &__products-memberships-package-description-2 {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        align-self: center;
+        justify-self: center;
+        transform: translateY(10px);
+        opacity: 0;
+        transition: all .5s ease;
+
+        @include respond(tab-port) {
+            grid-column: 1 / -1;
+            grid-row: 5 / 6;
+            opacity: 1;
+        }
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 0 3rem;
+            text-align: center;
+        }
+    }
+
+    &__products-membersip-container-1 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        align-self: center;
+        justify-self: flex-end;
+        margin-right: 2rem;
+
+        @include respond(tab-port) {
+            grid-column: 1 / -1;
+            justify-self: center;
+            margin-right: 0;
+        }
+
+        &:hover > .home__products-memberships-package {
+            cursor: pointer;
+            border: 3px solid $color-green;
+            box-shadow: $shadow-large;
+            transform: translateY(0px);
+        }
+
+        &:active > .home__products-memberships-package {
+            box-shadow: $shadow-button;
+        }
+
+        &:active > .home__products-memberships-package {
+            box-shadow: $shadow-button;
+        }
+
+        &:hover ~ .home__products-memberships-package-description-1 {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    &__products-membersip-container-2 {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+        align-self: center;
+        justify-self: flex-start;
+        margin-left: 2rem;
+
+        @include respond(tab-port) {
+            grid-column: 1 / -1;
+            grid-row: 6 / 7;
+            justify-self: center;
+            margin-left: 0;
+        }
+
+        &:hover > .home__products-memberships-package {
+            cursor: pointer;
+            border: 3px solid $color-green;
+            box-shadow: $shadow-large;
+            transform: translateY(0px);
+        }
+
+        &:active > .home__products-memberships-package {
+            box-shadow: $shadow-button;
+        }
+
+        &:active > .home__products-memberships-package {
+            box-shadow: $shadow-button;
+        }
+
+        &:hover ~ .home__products-memberships-package-description-2 {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    &__products-memberships-package {
+        border: 3px solid $color-orange;
+        box-shadow: $shadow-button;
+        border-radius: 10px;
+        height: 25rem;
+        width: 25rem;
+        transition: all .3s ease;
+        transform: translateY(-20px);
+
+        @include respond(tab-port) {
+            height: 15rem;
+            width: 15rem;
+            transform: translateY(0px);
+        }
+    }
 
     &__products-get-started {
-        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+        grid-row: 6 / 7;
         text-align: center;
         align-self: center;
 
+        @include respond(tab-port) {
+            grid-row: 7 / 8;
+            font-size: 1.6rem;
+        }
+
         @include respond(small-phone) {
             align-self: flex-end;
+            font-size: 1.4rem;
+            padding: 0 3rem;
         }
     }
 
@@ -793,39 +916,36 @@
         }
     }
 
-    &__products-memberships-paragraph {
-        grid-row: 5 / 6;
+
+    &__products-memberships-feedback {
         grid-column: 1 / -1;
-        align-self: center;
-        text-align: center;
-        font-size: 1.8rem;
-        margin: 0 auto;
-        width: 80%;
+        grid-row: 7 / 8;
+        justify-self: center;
+        align-self: flex-start;
 
         @include respond(tab-port) {
-            padding: 4rem;
-            width: 90%;
+            grid-row: 8 / 9;
+            width: 70%;
+            text-align: center;
+            font-size: 1.6rem;
         }
 
         @include respond(small-phone) {
-            width: 100%;
-            font-size: 1.6rem;
-            padding: 2rem;
-            align-self: flex-end;
+            grid-row: 9 / 10;
+            font-size: 1.4rem;
         }
     }
 
-    &__products-memberships-package {
-        grid-row: 6 / 7;
-        grid-column: 1 / -1;
-        justify-self: center;
-        align-self: center;
-    }
+    &__products-feedback-link {
+        text-decoration: none;
+        color: $color-teal;
+        font-weight: bold;
+        transition: all .3s ease;
+        border-bottom: 2px solid $color-white;
 
-    &__products-memberships-feedback {
-        grid-row: 7 / 8;
-        grid-column: 1 / -1;
-        justify-self: center;
+        &:hover {
+            border-bottom: 2px solid $color-teal;
+        }
     }
 }
 
