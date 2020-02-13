@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import StudioRendering from '../../assets/about/intro/studiome_rendering.png'
 
 export default function Intro(props) {
     return (
@@ -53,6 +54,7 @@ export default function Intro(props) {
                     <p className="about__intro-store-paragraph-3">Monday - Saturday</p>
                     <p className="about__intro-store-paragraph-4">8am - 6pm</p>
 
+                    <img src={StudioRendering} alt="Studio Rendering" className="about__intro-store-rendering" />
                     <a
                         className="about__intro-store-button-link"
                         target="_blank"
