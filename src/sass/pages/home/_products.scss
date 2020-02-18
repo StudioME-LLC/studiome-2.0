@@ -695,7 +695,7 @@
         color: $color-grey;
 
         display: grid;
-        grid-template-rows: 8rem 2rem 8rem 30rem 1fr 10rem 10rem 1fr;
+        grid-template-rows: 8rem 2rem 8rem 30rem 5rem 10rem 10rem 1fr;
         grid-template-columns: 1fr 1fr;
 
         animation: onMembershipsFadeIn .7s ease-out;
@@ -750,8 +750,8 @@
         border-bottom: 1px solid $color-orange;
         width: 10rem;
     }
-    
-    &__products-memberships-package-description-1 {
+
+    &__products-memberships-name-1 {
         grid-column: 1 / -1;
         grid-row: 3 / 4;
         align-self: center;
@@ -759,11 +759,16 @@
         transform: translateY(10px);
         opacity: 0;
         transition: all .5s ease;
+        text-transform: uppercase;
+        color: $color-teal-dark;
+        font-size: 2.4rem;
 
         @include respond(tab-port) {
+            align-self: center;
             grid-column: 1 / -1;
             grid-row: 3 / 4;
             opacity: 1;
+            margin-bottom: 2.5rem;
         }
 
         @include respond(phone) {
@@ -776,7 +781,7 @@
         }
     }
 
-    &__products-memberships-package-description-2 {
+    &__products-memberships-name-2 {
         grid-column: 1 / -1;
         grid-row: 3 / 4;
         align-self: center;
@@ -784,8 +789,68 @@
         transform: translateY(10px);
         opacity: 0;
         transition: all .5s ease;
+        text-transform: uppercase;
+        color: $color-teal-dark;
+        font-size: 2.4rem;
 
         @include respond(tab-port) {
+            align-self: center;
+            grid-column: 1 / -1;
+            grid-row: 5 / 6;
+            opacity: 1;
+            margin-bottom: 2.5rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 0 3rem;
+            text-align: center;
+        }
+    }
+    
+    &__products-memberships-package-description-1 {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        align-self: center;
+        justify-self: center;
+        opacity: 0;
+        transition: all .5s ease;
+        font-weight: bold;
+
+        @include respond(tab-port) {
+            align-self: flex-end;
+            grid-column: 1 / -1;
+            grid-row: 3 / 4;
+            opacity: 1;
+        }
+
+        @include respond(phone) {
+            font-size: 1.6rem;
+        }
+
+        @include respond(small-phone) {
+            padding: 0 3rem;
+            text-align: center;
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: .5rem;
+        }
+    }
+
+    &__products-memberships-package-description-2 {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        align-self: center;
+        justify-self: center;
+        opacity: 0;
+        transition: all .5s ease;
+        font-weight: bold;
+
+        @include respond(tab-port) {
+            align-self: flex-end;
             grid-column: 1 / -1;
             grid-row: 5 / 6;
             opacity: 1;
@@ -798,6 +863,9 @@
         @include respond(small-phone) {
             padding: 0 3rem;
             text-align: center;
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-bottom: .5rem;
         }
     }
 
@@ -830,6 +898,10 @@
         }
 
         &:hover ~ .home__products-memberships-package-description-1 {
+            opacity: 1;
+        }
+
+        &:hover ~ .home__products-memberships-name-1 {
             opacity: 1;
             transform: translateY(0px);
         }
@@ -865,6 +937,10 @@
         }
 
         &:hover ~ .home__products-memberships-package-description-2 {
+            opacity: 1;
+        }
+
+        &:hover ~ .home__products-memberships-name-2 {
             opacity: 1;
             transform: translateY(0px);
         }

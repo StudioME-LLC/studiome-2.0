@@ -16,7 +16,6 @@ export default function Intro(props) {
                 <div className="about__intro-story-container">
                     <h2 className="about__intro-heading-1">How it all began:</h2>
                     <p className="about__intro-opener">StudioME opened its doors in 2016 by co-founders, Keith Parish and Joe Leachko.  Noticing a changing media landscape, they took on the challenge of redesigning the traditional studio to better serve the modern media creator. This new type of media creator demands quality, fast and affordable media production, whether a professional producer, marketing guru, entrepreneur, educational leader or just someone who wants to share their story on social media. The StudioME Model offers more efficient solutions in a user-friendly space to help take content to the next level in quality.</p>
-                    <p className="about__intro-story-1">Monthly StudioME memberships will soon be available for those who need to create scalable media content on a regular basis.</p>
                     <p className="about__intro-story-2">Keith Parish has been involved in video production since the age of 13 and has produced videos in over 40 states and 5 countries. Joe Leachko comes from an experiential marketing and architectural design background.</p>
                     <NavLink
                         className="about__intro-button-rentals-link"

@@ -19,7 +19,7 @@ export default function ProductMemberships() {
                     className="home__products-memberships-package"
                 />
             </a>
-
+            <h3 className="home__products-memberships-name-1">Pro Membership</h3>
             <p className="home__products-memberships-package-description-1">25% off for $25 a month (3 months due on sign up)</p>
 
             <a
@@ -34,10 +34,8 @@ export default function ProductMemberships() {
                 />
             </a>
 
+            <h3 className="home__products-memberships-name-2">Premium Membership</h3>
             <p className="home__products-memberships-package-description-2">50% off for $50 a month (3 months due on sign up)</p>
-
-
-            
 
 
             <p className="home__products-get-started">Click <a
