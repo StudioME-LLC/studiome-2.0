@@ -39,6 +39,14 @@ export default function Work() {
             </iframe>
             <p className="about__work-description about__work-description--3">David Alan creates custom clothing to fit your creative expression. Here, he uses StudioME to film interview-style promos for his business.</p>
             <div className="about__work-border about__work-border--3" />
+            <a
+                className="about__work-button-link"
+                target="_blank"
+                href="https://vimeo.com/showcase/5174503"
+                rel="noopener noreferrer"
+            >
+                <button className="about__work-button">More Examples</button>
+            </a>
         </div>
     )
 }
