@@ -17,7 +17,7 @@ export default class Events extends Component {
                 </div>
 
                 <p className="events__description">StudioME believes in easy and community-driven media creation.
-                    as part of our mission, we host film classes, professional speakers, and local events.
+                    As part of our mission, we host film classes, professional speakers, and local events.
                 </p>
 
                 <h2 className="events__subheading">Upcoming Events</h2>
