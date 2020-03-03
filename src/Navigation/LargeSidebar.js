@@ -15,7 +15,7 @@ import { ReactComponent as WorkIcon } from '../assets/navigation/SVGs/largeSideb
 
 import { ReactComponent as LearnIcon } from '../assets/navigation/SVGs/largeSidebar/bookmark.svg';
 import { ReactComponent as EventsIcon } from '../assets/navigation/SVGs/largeSidebar/calendar.svg';
-import { ReactComponent as PodcastIcon } from '../assets/navigation/SVGs/largeSidebar/mic.svg';
+import { ReactComponent as ImagesIcon } from '../assets/navigation/SVGs/largeSidebar/images.svg';
 
 export default function LargeSidebar(props) {
     return (
@@ -109,41 +109,41 @@ export default function LargeSidebar(props) {
                     <p>Our Work</p>
                 </NavLink>
 
-                {/*Our Projects*/}
+                {/*The Community*/}
                 <NavLink
-                    onClick={props.toggleLargeSidebar}
+                    onClick={props.onLargeSidebarSelection.bind(this, '')}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
-                    to="/projects" exact style={{textDecoration: 'none'}}
+                    to="/community/events" exact style={{textDecoration: 'none'}}
                 >
-                    <p>Our Projects</p>
+                    <p>The Community</p>
                 </NavLink>
                 <NavLink
-                    onClick={props.toggleLargeSidebar}
+                    onClick={props.onLargeSidebarSelection.bind(this, '')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    to="/projects/#learn" exact style={{textDecoration: 'none'}}
+                    to="/community/events" exact style={{textDecoration: 'none'}}
+                >
+                    <EventsIcon className='large-sidebar__button-icon' />
+                    <p>Event Hosting</p>
+                </NavLink>
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, '')}
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
+                    to="/community/learn" exact style={{textDecoration: 'none'}}
                 >
                     <LearnIcon className='large-sidebar__button-icon' />
                     <p>Learn</p>
                 </NavLink>
                 <NavLink
-                    onClick={props.toggleLargeSidebar}
+                    onClick={props.onLargeSidebarSelection.bind(this, '')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    to="/projects/#events" exact style={{textDecoration: 'none'}}
+                    to="/community/gallery" exact style={{textDecoration: 'none'}}
                 >
-                    <EventsIcon className='large-sidebar__button-icon' />
-                    <p>Studio Events</p>
-                </NavLink>
-                <NavLink
-                    onClick={props.toggleLargeSidebar}
-                    activeClassName="large-sidebar-section-active"
-                    className="large-sidebar__section"
-                    to="/projects/#podcast" exact style={{textDecoration: 'none'}}
-                >
-                    <PodcastIcon className='large-sidebar__button-icon' />
-                    <p>Our Podcast</p>
+                    <ImagesIcon className='large-sidebar__button-icon' />
+                    <p>Gallery</p>
                 </NavLink>
 
                 {/*Contact*/}

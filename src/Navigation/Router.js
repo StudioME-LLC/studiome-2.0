@@ -9,7 +9,9 @@ const Home = React.lazy(() => import ('../Pages/Home'));
 const Equipment = React.lazy(() => import ('../Pages/Home/Products/Equipment'));
 
 const About = React.lazy(() => import ('../Pages/About'));
-const Projects = React.lazy(() => import ('../Pages/Projects'));
+const Events = React.lazy(() => import ('../Pages/Community/Events'));
+const Learn = React.lazy(() => import ('../Pages/Community/Learn'));
+const Gallery = React.lazy(() => import ('../Pages/Community/Gallery'));
 
 export default function Router(props) {
     return (
@@ -35,10 +37,22 @@ export default function Router(props) {
                             />
                         </React.Suspense>} 
                 />
-                <Route path="/projects" exact
+                <Route path="/community/events" exact
                     render={() => 
                         <React.Suspense fallback={<Spinner />}>
-                            <Projects/>
+                            <Events />
+                        </React.Suspense>} 
+                />
+                <Route path="/community/learn" exact
+                    render={() => 
+                        <React.Suspense fallback={<Spinner />}>
+                            <Learn />
+                        </React.Suspense>} 
+                />
+                <Route path="/community/gallery" exact
+                    render={() => 
+                        <React.Suspense fallback={<Spinner />}>
+                            <Gallery />
                         </React.Suspense>} 
                 />
                 <Route path="/equipment" exact
