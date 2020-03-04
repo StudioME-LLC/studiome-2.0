@@ -16,6 +16,7 @@ import LargeSidebar from './Navigation/LargeSidebar';
 import SmallSidebar from './Navigation/SmallSidebar';
 import Router from './Navigation/Router';
 import Footer from './Navigation/Footer';
+import MembershipNotify from './components/MembershipNotify';
 
 // Queries
 import { addImpression } from './analytics/queries';
@@ -32,6 +33,8 @@ class App extends React.Component {
 		sidebarSelection: null,
 
 		backdropClass: '',
+
+		membershipNotify: true,
 	}
 
 	componentDidMount() {
@@ -61,6 +64,7 @@ class App extends React.Component {
 			this.setState({
 				...this.state,
 				sidebarSelection: 'products',
+				membershipNotify: false,
 			})
 		} else if (selected === 'general') {
 			this.setState({
@@ -162,6 +166,13 @@ class App extends React.Component {
 		}
 	}
 
+	closeMembershipNotify = () => {
+		this.setState({
+			...this.state,
+			membershipNotify: false,
+		})
+	}
+
 	render() {
 		let footer = <Footer onLargeSidebarSelection={this.onLargeSidebarSelection} />;
 
@@ -176,6 +187,12 @@ class App extends React.Component {
 					? "small-sidebar-container" 
 					: "large-sidebar-container"
 				}>
+					{this.state.membershipNotify 
+						&& <MembershipNotify
+							onLargeSidebarSelection={this.onLargeSidebarSelection}
+							closeMembershipNotify={this.closeMembershipNotify}
+						/>
+					}
 					<Header
 						toggleLargeSidebar={this.toggleLargeSidebar}
 						onScrollHome={onScrollHome}
