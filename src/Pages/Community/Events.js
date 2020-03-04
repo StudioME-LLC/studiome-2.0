@@ -1,10 +1,21 @@
 import React, { Component } from 'react'
+import { graphql } from 'react-apollo';
 
-export default class Events extends Component {
+// Queries
+import { addImpression } from '../../analytics/queries';
+
+class Events extends Component {
     componentDidMount() {
         window.scroll({
             top: 0,
         });
+
+        this.props.addImpression({
+			variables: {
+				date: new Date().toISOString().slice(0, 10),
+				productId: "5e5fc31d5393db0004e43a68"
+			}
+		})
     }
     
     render() {
@@ -38,3 +49,5 @@ export default class Events extends Component {
         )
     }
 }
+
+export default graphql(addImpression, { name: "addImpression" })(Events);
