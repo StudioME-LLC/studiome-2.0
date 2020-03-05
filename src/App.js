@@ -35,6 +35,8 @@ class App extends React.Component {
 		backdropClass: '',
 
 		membershipNotify: true,
+
+		location: null,
 	}
 
 	componentDidMount() {
@@ -47,50 +49,64 @@ class App extends React.Component {
 	}
 
 	onLargeSidebarSelection = (selected) => {
-		if (selected === 'rentals') {
-			this.props.rentalButton();
-			this.setState({
-				...this.state,
-				sidebarSelection: 'products',
-			})
-		} else if (selected === 'services') {
-			this.props.serviceButton();
-			this.setState({
-				...this.state,
-				sidebarSelection: 'products',
-			})
-		} else if (selected === 'memberships') {
-			this.props.membershipsButton();
-			this.setState({
-				...this.state,
-				sidebarSelection: 'products',
-				membershipNotify: false,
-			})
-		} else if (selected === 'general') {
-			this.setState({
-				...this.state,
-				sidebarSelection: 'general',
-			})
-		} else if (selected === 'team') {
-			this.setState({
-				...this.state,
-				sidebarSelection: 'team',
-			})
-		} else if (selected === 'work') {
-			this.setState({
-				...this.state,
-				sidebarSelection: 'work',
-			})
-		} else if (selected === 'contact') {
-			this.setState({
-				...this.state,
-				sidebarSelection: 'contact',
-			})
-		}
+        let location = window.location.href;
+		location = location.split('#')
+		this.setState({
+			...this.state,
+			location: location[1],
+		})
 
-		if (window.matchMedia('(max-width: 600px)').matches) {
-			this.productsToggle()
-		};
+		// if (selected === 'rentals') {
+		// 	this.props.rentalButton();
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'products',
+		// 	})
+		// } else if (selected === 'services') {
+		// 	this.props.serviceButton();
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'products',
+		// 	})
+		// } else if (selected === 'memberships') {
+		// 	this.props.membershipsButton();
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'products',
+		// 		membershipNotify: false,
+		// 	})
+		// } else if (selected === 'membershipsNotify') {
+		// 	this.props.membershipsButton();
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'products',
+		// 		membershipNotify: false,
+		// 	})
+		// } else if (selected === 'general') {
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'general',
+		// 	})
+		// } else if (selected === 'team') {
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'team',
+		// 	})
+		// } else if (selected === 'work') {
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'work',
+		// 	})
+		// } else if (selected === 'contact') {
+		// 	this.setState({
+		// 		...this.state,
+		// 		sidebarSelection: 'contact',
+		// 	})
+		// }
+
+		// if (window.matchMedia('(max-width: 600px)').matches && selected !== 'membershipsNotify') {
+		// 	this.productsToggle()
+		// };
 	}
 
 	onQuickButtonFix = (selected) => {
@@ -214,6 +230,7 @@ class App extends React.Component {
 						<div className={this.state.backdropClass} onClick={this.toggleLargeSidebar} />
 
 						<Router
+							location={this.state.location}
 							onQuickButtonFix={this.onQuickButtonFix}
 							onLargeSidebarSelection={this.onLargeSidebarSelection}
 							sidebarSelection={this.state.sidebarSelection}

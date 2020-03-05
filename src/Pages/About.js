@@ -25,12 +25,12 @@ class About extends Component {
             }
         })
 
-        if (this.props.sidebarSelection === 'general') {
+        if (this.props.location === 'general') {
             window.scroll({
                 top: 0,
                 behavior: 'smooth',
             })
-        } else if (this.props.sidebarSelection === 'team') {
+        } else if (this.props.location === 'team') {
             this.onTeamHandler();
         } else if (this.props.sidebarSelection === 'work') {
             this.onWorkHandler();
@@ -42,12 +42,12 @@ class About extends Component {
     }
 
     componentDidUpdate() {
-        if (this.props.sidebarSelection === 'general') {
+        if (this.props.location === 'general') {
             window.scroll({
                 top: 0,
                 behavior: 'smooth',
             })
-        } else if (this.props.sidebarSelection === 'team') {
+        } else if (this.props.location === 'team') {
             this.onTeamHandler();
         } else if (this.props.sidebarSelection === 'work') {
             this.onWorkHandler();

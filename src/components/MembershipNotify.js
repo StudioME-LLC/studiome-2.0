@@ -9,7 +9,7 @@ export default function MembershipNotify(props) {
         <div className="membership-notify">
             <p className="membership-notify__paragraph">StudioME now offers memberships!</p>
                 <NavLink
-                    onClick={props.onLargeSidebarSelection.bind(this, 'memberships')}
+                    onClick={props.onLargeSidebarSelection.bind(this, 'membershipsNotify')}
                     className="membership-notify__link"
                     to="/#memberships" exact style={{textDecoration: 'none'}}
                 >
