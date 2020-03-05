@@ -25,16 +25,20 @@ class About extends Component {
             }
         })
 
-        if (this.props.location === 'general') {
+
+        let location = window.location.href;
+		location = location.split('#')
+
+        if (location[1] === 'general') {
             window.scroll({
                 top: 0,
                 behavior: 'smooth',
             })
-        } else if (this.props.location === 'team') {
+        } else if (location[1] === 'team') {
             this.onTeamHandler();
-        } else if (this.props.sidebarSelection === 'work') {
+        } else if (location[1] === 'work') {
             this.onWorkHandler();
-        } else if (this.props.sidebarSelection === 'contact') {
+        } else if (location[1] === 'contact') {
             this.onContactHandler();
         } else {
             return;
@@ -42,16 +46,19 @@ class About extends Component {
     }
 
     componentDidUpdate() {
-        if (this.props.location === 'general') {
+        let location = window.location.href;
+        location = location.split('#')
+        
+        if (location[1] === 'general') {
             window.scroll({
                 top: 0,
                 behavior: 'smooth',
             })
-        } else if (this.props.location === 'team') {
+        } else if (location[1] === 'team') {
             this.onTeamHandler();
-        } else if (this.props.sidebarSelection === 'work') {
+        } else if (location[1] === 'work') {
             this.onWorkHandler();
-        } else if (this.props.sidebarSelection === 'contact') {
+        } else if (location[1] === 'contact') {
             this.onContactHandler();
         } else {
             return;

@@ -46,67 +46,66 @@ class App extends React.Component {
 				productId: "5e20d83d8b8aa9033d26adab"
 			}
 		})
+
+
+		let location = window.location.href;
+		location = location.split('#')
+
+		if (location[1] === 'rentals' ) {
+			this.props.rentalButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
+		} else if (location[1] === 'services') {
+			this.props.serviceButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
+		} else if (location[1] === 'memberships') {
+			this.props.membershipsButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+				membershipNotify: false,
+			})
+		}
 	}
 
 	onLargeSidebarSelection = (selected) => {
-        let location = window.location.href;
-		location = location.split('#')
-		this.setState({
-			...this.state,
-			location: location[1],
-		})
 
-		// if (selected === 'rentals') {
-		// 	this.props.rentalButton();
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'products',
-		// 	})
-		// } else if (selected === 'services') {
-		// 	this.props.serviceButton();
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'products',
-		// 	})
-		// } else if (selected === 'memberships') {
-		// 	this.props.membershipsButton();
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'products',
-		// 		membershipNotify: false,
-		// 	})
-		// } else if (selected === 'membershipsNotify') {
-		// 	this.props.membershipsButton();
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'products',
-		// 		membershipNotify: false,
-		// 	})
-		// } else if (selected === 'general') {
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'general',
-		// 	})
-		// } else if (selected === 'team') {
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'team',
-		// 	})
-		// } else if (selected === 'work') {
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'work',
-		// 	})
-		// } else if (selected === 'contact') {
-		// 	this.setState({
-		// 		...this.state,
-		// 		sidebarSelection: 'contact',
-		// 	})
-		// }
+		if (selected === 'rentals' ) {
+			this.props.rentalButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
+		} else if (selected === 'services') {
+			this.props.serviceButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+			})
+		} else if (selected === 'memberships') {
+			this.props.membershipsButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+				membershipNotify: false,
+			})
+		} else if (selected === 'membershipsNotify') {
+			this.props.membershipsButton();
+			this.setState({
+				...this.state,
+				sidebarSelection: 'products',
+				membershipNotify: false,
+			})
+		}
 
-		// if (window.matchMedia('(max-width: 600px)').matches && selected !== 'membershipsNotify') {
-		// 	this.productsToggle()
-		// };
+		if (window.matchMedia('(max-width: 600px)').matches && selected !== 'membershipsNotify') {
+			this.productsToggle()
+		};
 	}
 
 	onQuickButtonFix = (selected) => {

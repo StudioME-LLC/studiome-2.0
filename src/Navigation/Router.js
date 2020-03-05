@@ -31,9 +31,7 @@ export default function Router(props) {
                     render={() => 
                         <React.Suspense fallback={<Spinner />}>
                             <About
-                                location={props.location}
                                 onQuickButtonFix={props.onQuickButtonFix}
-                                onLargeSidebarSelection={props.onLargeSidebarSelection}
                                 sidebarSelection={props.sidebarSelection}
                             />
                         </React.Suspense>} 
@@ -62,26 +60,6 @@ export default function Router(props) {
                             <Equipment />
                         </React.Suspense>} 
                 />
-
-                {/* <Route path="/lighting" exact
-                    render={() => 
-                        <React.Suspense fallback={<Spinner />}>
-                            <Equipment
-                                title={'Lighting'}
-                                link={'https://studiome.me/wp-json/wp/v2/pages/965'}
-                            />
-                        </React.Suspense>} 
-                />
-
-                <Route path="/audio" exact
-                    render={() => 
-                        <React.Suspense fallback={<Spinner />}>
-                            <Equipment
-                                title={'Audio'}
-                                link={'https://studiome.me/wp-json/wp/v2/pages/963'}
-                            />
-                        </React.Suspense>} 
-                /> */}
                 <Redirect to="/" exact />
             </Switch>
         </React.Fragment>
