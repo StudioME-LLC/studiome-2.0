@@ -31,7 +31,7 @@ class Events extends Component {
                     As part of our mission, we host film classes, professional speakers, and local events.
                 </p>
 
-                <h2 className="events__subheading">Upcoming Events</h2>
+                <h2 className="events__subheading">Past Events</h2>
                 <div className="events__subheading-line" />
 
 
