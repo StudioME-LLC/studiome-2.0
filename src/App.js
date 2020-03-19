@@ -16,7 +16,8 @@ import LargeSidebar from './Navigation/LargeSidebar';
 import SmallSidebar from './Navigation/SmallSidebar';
 import Router from './Navigation/Router';
 import Footer from './Navigation/Footer';
-import MembershipNotify from './components/MembershipNotify';
+// import MembershipNotify from './components/MembershipNotify';
+import TempClosingModal from './components/TempClosingModal';
 
 // Queries
 import { addImpression } from './analytics/queries';
@@ -202,12 +203,13 @@ class App extends React.Component {
 					? "small-sidebar-container" 
 					: "large-sidebar-container"
 				}>
-					{this.state.membershipNotify 
+					{/* {this.state.membershipNotify 
 						&& <MembershipNotify
 							onLargeSidebarSelection={this.onLargeSidebarSelection}
 							closeMembershipNotify={this.closeMembershipNotify}
 						/>
-					}
+					} */}
+					<TempClosingModal onQuickButtonFix={this.onQuickButtonFix} />
 					<Header
 						toggleLargeSidebar={this.toggleLargeSidebar}
 						onScrollHome={onScrollHome}
