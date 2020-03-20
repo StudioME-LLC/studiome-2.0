@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 export default class TempClosingModal extends Component {
     state = {
@@ -48,9 +48,9 @@ export default class TempClosingModal extends Component {
                         <title>attention</title>
                         <path d="M16 3c-3.472 0-6.737 1.352-9.192 3.808s-3.808 5.72-3.808 9.192c0 3.472 1.352 6.737 3.808 9.192s5.72 3.808 9.192 3.808c3.472 0 6.737-1.352 9.192-3.808s3.808-5.72 3.808-9.192c0-3.472-1.352-6.737-3.808-9.192s-5.72-3.808-9.192-3.808zM16 0v0c8.837 0 16 7.163 16 16s-7.163 16-16 16c-8.837 0-16-7.163-16-16s7.163-16 16-16zM14 22h4v4h-4zM14 6h4v12h-4z"></path>
                     </svg>
-                    <p className="temp-closing-modal__paragraph-1">Due to COVID-19, StudioME will <strong>not</strong> be accepting any walk-in bookings until April 1st.</p>
-                    <p className="temp-closing-modal__paragraph-2">If you need to book something, however, we will temporarily open up on an <strong>appointment basis</strong>. Please book by site or by email to make an appointment.</p>
-                    <NavLink
+                    <p className="temp-closing-modal__paragraph-1">In compliance with the PA governor's orders, we will be closing StudioME until further notice.</p>
+                    <p className="temp-closing-modal__paragraph-2"> We are still offering digital services such as video, photo, and audio editing. Please email <a href="mailto: studiomellc@gmail.com">Studiomellc@gmail.com</a> for more.</p>
+                    {/* <NavLink
                         className="temp-closing-modal__button-link"
                         onClick={this.onBookButton}
                         to="/" exact
@@ -60,7 +60,7 @@ export default class TempClosingModal extends Component {
                             
                             >Book an Appointment
                         </button>
-                    </NavLink>
+                    </NavLink> */}
                 </div> }
             </Fragment>
         )
