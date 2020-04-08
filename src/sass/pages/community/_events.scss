@@ -151,6 +151,7 @@
         &:hover {
             cursor: pointer;
             box-shadow: $shadow-large;
+            transform: scale(1.02);
         }
     }
 
