@@ -114,7 +114,7 @@ export default function LargeSidebar(props) {
                     onClick={props.onLargeSidebarSelection.bind(this, '')}
                     activeClassName="large-sidebar-active"
                     className="large-sidebar__header"
-                    to="/community/events" exact style={{textDecoration: 'none'}}
+                    to="/community" exact style={{textDecoration: 'none'}}
                 >
                     <p>The Community</p>
                 </NavLink>

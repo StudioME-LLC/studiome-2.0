@@ -34,10 +34,10 @@ export default function Sidebar(props) {
             <NavLink
                 activeClassName="small-sidebar-active"
                 className="small-sidebar__button"
-                to="/community/events" exact style={{textDecoration: 'none'}}
+                to="/community" exact style={{textDecoration: 'none'}}
             >
                 <Community className='small-sidebar__button-icon' />
-                <p>The Community</p>
+                <p>Community</p>
             </NavLink>
 
             <NavLink
