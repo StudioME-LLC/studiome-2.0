@@ -14,8 +14,9 @@ import { ReactComponent as TeamIcon } from '../assets/navigation/SVGs/largeSideb
 import { ReactComponent as WorkIcon } from '../assets/navigation/SVGs/largeSidebar/film.svg';
 
 import { ReactComponent as LearnIcon } from '../assets/navigation/SVGs/largeSidebar/bookmark.svg';
-import { ReactComponent as EventsIcon } from '../assets/navigation/SVGs/largeSidebar/calendar.svg';
 import { ReactComponent as ImagesIcon } from '../assets/navigation/SVGs/largeSidebar/images.svg';
+import { ReactComponent as EventsIcon } from '../assets/navigation/SVGs/largeSidebar/calendar.svg';
+import { ReactComponent as SwagIcon } from '../assets/navigation/SVGs/largeSidebar/swag.svg';
 
 export default function LargeSidebar(props) {
     return (
@@ -131,6 +132,15 @@ export default function LargeSidebar(props) {
                     onClick={props.onLargeSidebarSelection.bind(this, '')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
+                    to="/community/gallery" exact style={{textDecoration: 'none'}}
+                >
+                    <ImagesIcon className='large-sidebar__button-icon' />
+                    <p>Gallery</p>
+                </NavLink>
+                <NavLink
+                    onClick={props.onLargeSidebarSelection.bind(this, '')}
+                    activeClassName="large-sidebar-section-active"
+                    className="large-sidebar__section"
                     to="/community/learn" exact style={{textDecoration: 'none'}}
                 >
                     <LearnIcon className='large-sidebar__button-icon' />
@@ -140,10 +150,10 @@ export default function LargeSidebar(props) {
                     onClick={props.onLargeSidebarSelection.bind(this, '')}
                     activeClassName="large-sidebar-section-active"
                     className="large-sidebar__section"
-                    to="/community/gallery" exact style={{textDecoration: 'none'}}
+                    to="/community/swag" exact style={{textDecoration: 'none'}}
                 >
-                    <ImagesIcon className='large-sidebar__button-icon' />
-                    <p>Gallery</p>
+                    <SwagIcon className='large-sidebar__button-icon' />
+                    <p>Swag</p>
                 </NavLink>
 
                 {/*Contact*/}
