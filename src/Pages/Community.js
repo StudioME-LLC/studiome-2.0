@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default class Community extends Component {
+
+    componentDidMount() {
+        window.scroll({
+            top: 0,
+        });
+    }
+    
     render() {
         return (
             // Main Page
