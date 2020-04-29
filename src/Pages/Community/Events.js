@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import { graphql } from 'react-apollo';
+import { NavLink } from 'react-router-dom';
 
 // Queries
 import { addImpression } from '../../analytics/queries';
+
+// Components
+import Button from '../../components/Button';
 
 class Events extends Component {
     componentDidMount() {
@@ -26,6 +30,10 @@ class Events extends Component {
                     <h1 className="events__heading">Hosted Events</h1>
                     <div className="events__border" />
                 </div>
+
+                <NavLink className="events__back-button" exact to="/community">
+                    <Button arrow text={"Back"} size={"medium"} />
+                </NavLink>
 
                 <p className="events__description">StudioME believes in easy and community-driven media creation.
                     As part of our mission, we host film classes, professional speakers, and local events.

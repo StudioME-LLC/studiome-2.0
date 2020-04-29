@@ -128,25 +128,6 @@
         }
     }
 
-    // &__intro-story-1 {
-    //     grid-column: 2 / 4;
-    //     grid-row: 3 / 4;
-    //     align-self: flex-end;
-        
-    //     text-align: center;
-    //     color: $color-grey;
-    //     font-size: 2rem;
-
-    //     @include respond(tab-port) {
-    //         font-size: 1.6rem;
-    //     }
-
-    //     @include respond(small-phone) {
-    //         font-size: 1.4rem;
-    //         padding: 0 .5rem;
-    //     }
-    // }
-
     &__intro-story-2 {
         grid-column: 2 / 4;
         grid-row: 3 / 4;

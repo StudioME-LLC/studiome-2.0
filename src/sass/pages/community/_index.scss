@@ -13,7 +13,7 @@
 
     @include respond(phone) {
         grid-template-columns: 1fr repeat(2, 20rem) 1fr;
-        grid-template-rows: 15rem 15rem repeat(4, 40rem) 10rem;
+        grid-template-rows: 15rem 17rem repeat(4, 40rem) 10rem;
     }
 
     @include respond(small-phone) {
@@ -198,11 +198,33 @@
         background-color: $color-green;
         margin-top: 1rem;
     }
+}
 
-    // TEMPORARY CSS
+// TEMPORARY CSS
+.temp-community {
+    display: flex;
+    flex-direction: column;
+
+    &__back-button {
+        align-self: flex-end;
+        margin-top: 6rem;
+        margin-right: 6rem;
+
+        @include respond(phone) {
+            margin-top: 4rem;
+            margin-right: 4rem;
+        }
+
+        @include respond(small-phone) {
+            margin-top: 2rem;
+            margin-right: 2rem;
+        }
+    }
+
     &__temp-heading {
+        align-self: center;
         text-align: center;
-        margin-top: 8rem;
+        margin-top: 2rem;
         color: $color-grey;
 
         @include respond(small-phone) {
@@ -211,8 +233,8 @@
     }
 
     &__gif {
-        width: 50%;
-        height: 50%;
+        width: 80%;
+        height: 80%;
         display: flex;
         margin: 5rem auto;
     }

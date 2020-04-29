@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 // Components
+import Button from '../../components/Button';
 import Spinner from '../../components/Spinner';
 
 export default class Swag extends Component {
@@ -25,8 +27,6 @@ export default class Swag extends Component {
         return fetch(`https://studiome.me/wp-json/wc/v3/products?category=58&consumer_key=ck_eb79db710bcbf62dcae2b878f4af0b921d17606a&consumer_secret=cs_d5e3d7d6a51dae722c9028bf3b3196e570632c55`)
 		.then(response => response.json())
 		.then(responseJson => {
-            console.log(responseJson)
-            console.log(responseJson)
             let productsArray = responseJson;
             let products = [];
 
@@ -71,6 +71,10 @@ export default class Swag extends Component {
                 <h1 className="swag__heading">Swag</h1>
                 <div className="swag__border" />
             </div>
+
+            <NavLink className="swag__back-button" exact to="/community">
+                <Button arrow text={"Back"} size={"medium"} />
+            </NavLink>
 
             <p className="swag__description">With a focus on artists in our community, our swag is designed to celebrate photographers, videographers, podcasters, and media creators in the Pittsburgh area.</p>
 
