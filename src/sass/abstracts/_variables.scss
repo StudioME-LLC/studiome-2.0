@@ -4,12 +4,13 @@ $color-teal: #8DCBC0;
 $color-teal-light: #60f8e9;
 
 $color-green: #B6CE61;
-$color-green-light: #51de70;
 $color-orange: #EA6E44;
 
 $color-white: #fff;
-$color-grey: #757575;
+$color-black: #000;
+
 $color-grey-hover: #5C5C5C;
+$color-grey: #757575;
 $color-grey-mild: #C1C1C1;
 $color-grey-light: #F5F5F5;
 $color-grey-light-hover: #DCDCDC;
@@ -17,16 +18,11 @@ $color-grey-light-hover: #DCDCDC;
 // FONTS
 $font-main: 'Source Sans Pro', sans-serif;
 
-$font-paragraph-small: 1.1rem;
-$font-paragraph-medium: 1.4rem;
-$font-paragraph-large: 1.8rem;
-
 // SHADOWS
 $shadow-medium: 0px 3px 10px -5px rgba(0,0,0,.5);
+$shadow-medium-left: -1px 1px 2px 1px rgba(0,0,0,.2);
 $shadow-dark: 0px 3px 7px -4px rgba(0,0,0,.8);
 $shadow-large: 0px 5px 10px 4px rgba(0,0,0,.3);
-
-$shadow-medium-left: -1px 1px 2px 1px rgba(0,0,0,.2);
 
 $shadow-button: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
 

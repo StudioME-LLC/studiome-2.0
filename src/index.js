@@ -6,7 +6,6 @@ import { ApolloProvider } from 'react-apollo';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-import './index.css';
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';

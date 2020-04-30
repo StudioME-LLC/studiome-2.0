@@ -56,7 +56,7 @@
 
         border-bottom: $border-grey;
         color: $color-grey;
-        font-size: $font-paragraph-small;
+        font-size: 1.1rem;
 
         @include respond(phone) {
             align-self: center;

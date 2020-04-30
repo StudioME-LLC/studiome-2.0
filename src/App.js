@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './redux/actions';
 
-import './App.scss';
+import './sass/main.scss';
 import "scroll-behavior-polyfill";
 
 import { graphql } from 'react-apollo';
