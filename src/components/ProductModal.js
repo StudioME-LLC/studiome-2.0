@@ -36,9 +36,9 @@ class ProductModal extends Component {
                     <div className="product-modal__close-container">
                         <Close onClick={this.props.toggle} className="product-modal__close" />
                     </div>
-                    <h2 className="product-modal__heading" >{this.props.heading}</h2>
+                    <h2 className="product-modal__heading h2 h2--teal b">{this.props.heading}</h2>
                     <div className="product-modal__border" />
-                    <p className="product-modal__subheading">{this.props.subheading}</p>
+                    <p className="product-modal__paragraph p-l">{this.props.subheading}</p>
                     <a
                         className="product-modal__alt-placement-1"
                         href={this.props.url1}
@@ -61,9 +61,9 @@ class ProductModal extends Component {
                     <div className="product-modal__close-container">
                         <Close onClick={this.props.toggle} className="product-modal__close" />
                     </div>
-                    <h2 className="product-modal__heading" >{this.props.heading}</h2>
+                    <h2 className="product-modal__heading h2 h2--teal b">{this.props.heading}</h2>
                     <div className="product-modal__border" />
-                    <p className="product-modal__subheading">{this.props.subheading}</p>
+                    <p className="product-modal__paragraph p-l">{this.props.subheading}</p>
                     <a
                         className="product-modal__placement-1"
                         href={this.props.url1}
@@ -93,9 +93,9 @@ class ProductModal extends Component {
                     <div className="product-modal__close-container">
                         <Close onClick={this.props.toggle} className="product-modal__close" />
                     </div>
-                    <h2 className="product-modal__heading" >{this.props.heading}</h2>
+                    <h2 className="product-modal__heading h2 h2--teal p-l">{this.props.heading}</h2>
                     <div className="product-modal__border" />
-                    <p className="product-modal__subheading">{this.props.subheading}</p>
+                    <p className="product-modal__paragraph p-l">{this.props.subheading}</p>
                     <NavLink
                         onClick={this.onCameraSelect}
                         className="product-modal__placement-1"
@@ -131,7 +131,7 @@ class ProductModal extends Component {
                         <div className="product-modal__close-container">
                             <Close onClick={this.props.toggle} className="product-modal__close" />
                         </div>
-                        <h2 className="product-modal__heading" >Loading...</h2>
+                        <h2 className="product-modal__heading h2 h2--teal" >Loading...</h2>
                         <div className="product-modal__border" />
                         <div className="product-modal__loader"><Spinner /></div>
                     </div>

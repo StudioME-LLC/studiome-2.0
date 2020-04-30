@@ -151,7 +151,6 @@ class Products extends Component {
     }
 
     render() {
-        
         return (
             <div className="home__products">
                 <button

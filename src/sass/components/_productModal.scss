@@ -111,9 +111,6 @@
         text-align: center;
         align-self: center;
 
-        color: $color-teal;
-        font-weight: bold;
-
         @include respond(phone) {
             grid-column: 1 / -1;
             grid-row: 2 / 3;
@@ -135,15 +132,12 @@
         }
     }
 
-    &__subheading {
+    &__paragraph {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
 
         text-align: center;
         align-self: center;
-
-        color: $color-grey;
-        font-size: 1.8rem;
 
         @include respond(phone) {
             grid-row: 3 / 4;
