@@ -7,7 +7,7 @@ export default function ProductItem(props) {
     return (
         <div onClick={props.impression} className={containerClass}>
             <div onClick={props.onModalToggle} className={photoClass} />
-            <div className="home__products-name">{props.name}</div>
+            <p className="home__products-name p-l">{props.name}</p>
             <button onClick={props.onModalToggle} className="home__products-view">View</button>
         </div>
     )

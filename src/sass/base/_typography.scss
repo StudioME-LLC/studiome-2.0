@@ -1,11 +1,28 @@
+// Colors
+.teal {
+    color: $color-teal !important;
+}
+
+.teal-dark {
+    color: $color-teal-dark !important;
+}
+
+.green {
+    color: $color-green !important;
+}
+
+.orange {
+    color: $color-orange !important;
+}
+
+.white {
+    color: $color-white !important;
+}
+
 // Heading Typography
 .h1 {
     font-size: 4.5rem;
     color: $color-grey;
-
-    &--white {
-        color: $color-white;
-    }
 
     @include respond(phone) {
         font-size: 4rem;
@@ -18,15 +35,19 @@
 }
 
 .h2 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     color: $color-grey;
 
-    &--teal {
-        color: $color-teal;
+    @include respond(tab-port) {
+        font-size: 2.4rem;
     }
 
-    &--white {
-        color: $color-white;
+    @include respond(phone) {
+        font-size: 2rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 1.8rem;
     }
 }
 
@@ -34,25 +55,23 @@
     font-size: 2.4rem;
     color: $color-grey;
 
-    &--teal {
-        color: $color-teal;
-    }
-
-    &--white {
-        color: $color-white;
-    }
-
     @include respond(phone) {
         font-size: 1.8rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 1.6rem;
     }
 }
 
 .h4 {
-    
+    font-size: 2rem;
+    color: $color-grey;
 }
 
 .h5 {
-    
+    font-size: 1.8rem;
+    color: $color-grey;
 }
 
 .h6 {
@@ -60,17 +79,48 @@
 }
 
 // Paragraph Typography
-.p-s {
+.p-xs {
+    font-size: 1.2rem;
+    color: $color-grey;
+}
 
+.p-s {
+    font-size: 1.4rem;
+    color: $color-grey;
+
+    @include respond(small-phone) {
+        font-size: 1rem;
+    }
 }
 
 .p-m {
+    font-size: 1.6rem;
+    color: $color-grey;
 
+    @include respond(tab-port) {
+        font-size: 1.4rem;
+    }
+
+    @include respond(phone) {
+        font-size: 1.2rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 1.1rem;
+    }
 }
 
 .p-l {
     font-size: 1.8rem;
     color: $color-grey;
+
+    @include respond(tab-port) {
+        font-size: 1.4rem;
+    }
+
+    @include respond(small-phone) {
+        font-size: 1.2rem;
+    }
 }
 
 // Font Weights

@@ -40,7 +40,7 @@ class ProductMemberships extends React.Component {
     render() {
         return (
             <div className="home__products-memberships">
-                <h2 className="home__products-memberships-heading">Memberships</h2>
+                <h2 className="home__products-memberships-heading h2 l">Memberships</h2>
                 <div className="home__products-memberships-border" />
     
                 <a
@@ -55,8 +55,8 @@ class ProductMemberships extends React.Component {
                         className="home__products-memberships-package"
                     />
                 </a>
-                <h3 className="home__products-memberships-name-1">Pro Membership</h3>
-                <p className="home__products-memberships-package-description-1">25% off for $25 a month (3 months due on sign up)</p>
+                <h3 className="home__products-memberships-name-1 h3 teal-dark">Pro Membership</h3>
+                <p className="home__products-memberships-package-description-1 p-m b">25% off for $25 a month (3 months due on sign up)</p>
     
                 <a
                     onClick={this.impressPremiiumMembership}
@@ -71,22 +71,22 @@ class ProductMemberships extends React.Component {
                     />
                 </a>
     
-                <h3 className="home__products-memberships-name-2">Premium Membership</h3>
-                <p className="home__products-memberships-package-description-2">50% off for $50 a month (3 months due on sign up)</p>
+                <h3 className="home__products-memberships-name-2 h3 teal-dark">Premium Membership</h3>
+                <p className="home__products-memberships-package-description-2 p-m b">50% off for $50 a month (3 months due on sign up)</p>
     
     
-                <p className="home__products-get-started">Click <a
-                    className="home__products-get-started-link"
+                <p className="home__products-get-started p-l">Click <a
+                    className="home__products-get-started-link p-l b teal"
                     href="https://studiome.me/get-started/"
                     target="_blank"
                     rel="noopener noreferrer"
                     >here
                 </a> to sign up for our free membership.</p>
     
-                <p className="home__products-memberships-feedback">Want to give us feedback on our membership plans? <a
+                <p className="home__products-memberships-feedback p-l">Want to give us feedback on our membership plans? <a
                     href="https://forms.gle/9Xor9rmRvPSFWhRA8"
                     rel="noopener noreferrer" target="_blank"
-                    className="home__products-feedback-link"
+                    className="home__products-feedback-link p-l b teal"
                     >
                         Click Here
                     </a>

@@ -15,11 +15,11 @@ export default function ProductServices(props) {
                 >
                     <div className="home__products-services-image" onClick={props.onServicesModalToggle} style={{backgroundImage: `url(${StartToFinishPhoto})`}} />
                 </a>
-                <h2 className="home__products-services-heading">Start to Finish</h2>
+                <h3 className="home__products-services-heading h3 l">Start to Finish</h3>
                 <div className="home__products-services-border" />
-                <p className="home__products-services-paragraph">We can help you at every step from script writing to launch. Let our team of experts take your project to the next level.</p>
-                <h3 className="home__products-services-subheading">Capabilities:</h3>
-                <ul className="home__products-services-list">
+                <p className="home__products-services-paragraph p-s">We can help you at every step from script writing to launch. Let our team of experts take your project to the next level.</p>
+                <h5 className="home__products-services-subheading h5">Capabilities:</h5>
+                <ul className="home__products-services-list p-xs">
                     <li className="home__products-services-list-item">Creative Consultation</li>
                     <li className="home__products-services-list-item">Script Writing & Storyboarding</li>
                     <li className="home__products-services-list-item">Talent & Crew Search</li>
@@ -43,11 +43,11 @@ export default function ProductServices(props) {
                 >
                     <div className="home__products-services-image" onClick={props.onServicesModalToggle} style={{backgroundImage: `url(${ProductionPhoto})`}} />
                 </a>
-                <h2 className="home__products-services-heading">Production</h2>
+                <h3 className="home__products-services-heading h3 l">Production</h3>
                 <div className="home__products-services-border" />
-                <p className="home__products-services-paragraph">We use the same modern approach to streamline both small and large projects, whether in studio or on location.</p>
-                <h3 className="home__products-services-subheading">Capabilities:</h3>
-                <ul className="home__products-services-list">
+                <p className="home__products-services-paragraph p-s">We use the same modern approach to streamline both small and large projects, whether in studio or on location.</p>
+                <h5 className="home__products-services-subheading h5">Capabilities:</h5>
+                <ul className="home__products-services-list p-xs">
                     <li className="products-services-list-item">Video Production</li>
                     <li className="products-services-list-item">Audio Recording</li>
                     <li className="products-services-list-item">Photography</li>
@@ -76,11 +76,11 @@ export default function ProductServices(props) {
                         style={{backgroundImage: `url(${EditingPhoto})`}}
                     />
                 </a>
-                <h2 className="home__products-services-heading">Post Editing</h2>
+                <h3 className="home__products-services-heading h3 l">Post Editing</h3>
                 <div className="home__products-services-border" />
-                <p className="home__products-services-paragraph">Our editors can work to spice up your existing content, create new digital content, or a little of both.</p>
-                <h3 className="home__products-services-subheading">Capabilities:</h3>
-                <ul className="home__products-services-list">
+                <p className="home__products-services-paragraph p-s">Our editors can work to spice up your existing content, create new digital content, or a little of both.</p>
+                <h5 className="home__products-services-subheading h5">Capabilities:</h5>
+                <ul className="home__products-services-list p-xs">
                     <li className="products-services-list-item">Video Editing</li>
                     <li className="products-services-list-item">Photo Editing</li>
                     <li className="products-services-list-item">Audio Editing</li>

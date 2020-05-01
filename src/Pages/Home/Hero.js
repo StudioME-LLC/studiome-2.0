@@ -43,12 +43,12 @@ export default class Hero extends Component {
                 <div className="home__hero-circle" />
                 
                 <div className="home__hero-messaging">
-                    <h1 className="home__hero-heading h1 h1--white">Media Made Easy</h1>
-                    <h3 className="home__hero-subheading h3 h3--white l">A user-friendly space for media creation.</h3>
+                    <h1 className="home__hero-heading h1 h1 white">Media Made Easy</h1>
+                    <h3 className="home__hero-subheading h3 h3 white l">A user-friendly space for media creation.</h3>
                 </div>
 
                 <div className="home__description-container">
-                    <h2 className="home__studio-description h2 h2--white">A user-friendly space for media creation.</h2>
+                    <h2 className="home__studio-description h2 h2 white">A user-friendly space for media creation.</h2>
                 </div>
 
                 <div onClick={this.props.onProductsHandler} className="home__hero-arrow-container">
