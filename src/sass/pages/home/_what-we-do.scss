@@ -1,5 +1,5 @@
 .home {
-    &__explain {
+    &__what-we-do {
         display: grid;
         grid-template-columns: 1fr repeat(4, 22.5rem) 1fr;
         grid-template-rows: 30rem 25rem 10rem repeat(2, 15rem) 10rem;
@@ -26,16 +26,16 @@
     }
 
     // Banner
-    &__explain-banner {
+    &__what-we-do-banner {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
 
-        background-image: url(../../../assets/home/mission/Banner-1.jpg);
+        background-image: url(../../../assets/home/what-we-do/Banner-1.jpg);
         background-size: cover;
         background-position: center;
     }
 
-    &__explain-banner-container {
+    &__what-we-do-banner-container {
         grid-column: 3 / 5;
         grid-row: 1 / 2;
         justify-self: center;
@@ -47,11 +47,11 @@
         }
     }
 
-    &__explain-heading {
+    &__what-we-do-heading {
         text-transform: uppercase;
     }
 
-    &__explain-border {
+    &__what-we-do-border {
         margin: 2rem auto;
         height: 2px;
         width: 15rem;
@@ -59,7 +59,7 @@
     }
 
     // Explaination
-    &__explain-explanation {
+    &__what-we-do-explanation {
         grid-column: 2 / 6;
         grid-row: 2 / 3;
         justify-self: center;
@@ -85,8 +85,7 @@
     }
 
     // Perks
-
-    &__explain-perks-border {
+    &__what-we-do-perks-border {
         border: 3px solid $color-orange;
         grid-column: 2 / 6;
         grid-row: 3 / 6;
@@ -98,7 +97,7 @@
         }
     }
 
-    &__explain-offer {
+    &__what-we-do-offer {
         grid-column: 2 / 6;
         grid-row: 3 / 4;
         justify-self: center;
@@ -111,7 +110,7 @@
         }
     }
 
-    &__explain-container {
+    &__what-we-do-container {
         justify-self: center;
         align-self: center;
 
@@ -199,7 +198,7 @@
         }
     }
 
-    &__explain-icon {
+    &__what-we-do-icon {
 
         &--1 {
             fill: $color-orange;
@@ -210,7 +209,7 @@
         }
     }
 
-    &__explain-text {
+    &__what-we-do-text {
         margin-top: 2rem;
     }
 }

@@ -3,8 +3,8 @@ import React, { Component, createRef } from 'react';
 // Sections
 import Hero from './Home/Hero';
 import Products from './Home/Products';
-import Explain from './Home/Explain';
-import Mission from './Home/Mission';
+import WhatWeDo from './Home/WhatWeDo';
+import Services from './Home/Services';
 
 
 export default class Home extends Component {
@@ -42,8 +42,8 @@ export default class Home extends Component {
                 <Hero onProductsHandler={this.onProductsHandler} />
                 <div style={{position: 'relative', top: '-75px'}} ref={this.state.myRefProducts} />
                 <Products />
-                <Explain />
-                <Mission onQuickButtonFix={this.props.onQuickButtonFix} />
+                <WhatWeDo />
+                <Services onQuickButtonFix={this.props.onQuickButtonFix} />
             </div>
         )
     }

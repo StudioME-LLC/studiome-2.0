@@ -1,6 +1,6 @@
 .home {
     // Explain
-    &__mission {
+    &__services {
         display: grid;
         grid-template-columns: 1fr 5rem 65rem 5rem 1fr;
         grid-template-rows: 30rem repeat(9, 15rem) 30rem;
@@ -21,16 +21,16 @@
     }
 
     // Banner
-    &__mission-banner {
+    &__services-banner {
         grid-column: 1 / -1;
         grid-row: 1 / 2;
 
-        background-image: url(../../../assets/home/mission/Banner-2.jpg);
+        background-image: url(../../../assets/home/services/Banner-2.jpg);
         background-size: cover;
         background-position: center;
     }
 
-    &__mission-banner-container {
+    &__services-banner-container {
         grid-column: 2 / 5;
         grid-row: 1 / 2;
         justify-self: center;
@@ -38,86 +38,46 @@
         text-align: center;
     }
 
-    &__mission-heading {
-        color: $color-white;
+    &__services-heading {
         text-transform: uppercase;
-        font-size: 4.5rem;
-
-        @include respond(phone) {
-            font-size: 3.6rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 2.8rem;
-        }
     }
 
-    &__mission-border {
+    &__services-border {
         margin: 2rem auto;
         height: 2px;
         width: 15rem;
         background-color: $color-orange;
     }
 
-    &__mission-subheading {
-        color: $color-white;
-        font-weight: 100;
-        font-size: 2rem;
-
-        @include respond(phone) {
-            width: 40rem;
-        }
-
-        @include respond(small-phone) {
-            width: 25rem;
-            font-size: 1.4rem;
-        }
-    }
-
     // 1
-    &__mission-heading-1 {
+    &__services-heading-1 {
         grid-column: 3 / 4;
         grid-row: 2 / 3;
         justify-self: center;
         align-self: flex-end;
 
         margin-bottom: 4rem;
-
         text-transform: uppercase;
-        color: $color-grey;
-        font-size: 2.4rem;
-        font-weight: 100;
-
-        @include respond(small-phone) {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
     }
 
-    &__mission-paragraph-1 {
+    &__services-paragraph-1 {
         grid-column: 3 / 4;
         grid-row: 3 / 4;
 
         text-align: center;
-        color: $color-grey;
-        font-size: 1.8rem;
 
         @include respond(phone) {
             grid-column: 2 / 5;
-            font-size: 1.6rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.4rem;
         }
     }
 
-    &__mission-container-1 {
+    &__services-container-1 {
         grid-column: 3 / 4;
         grid-row: 4 / 5;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
 
         @include respond(tab-port) {
             grid-column: 2 / 5;
@@ -130,7 +90,7 @@
         }
     }
 
-    &__mission-photo-1 {
+    &__services-photo-1 {
         width: 15rem;
         height: 15rem;
         background-size: cover;
@@ -208,49 +168,38 @@
     }
 
     // 2
-    &__mission-heading-2 {
+    &__services-heading-2 {
         grid-column: 3 / 4;
         grid-row: 5 / 6;
         justify-self: center;
         align-self: flex-end;
 
         margin-bottom: 4rem;
-
         text-transform: uppercase;
-        color: $color-grey;
-        font-size: 2.4rem;
-        font-weight: 100;
 
         @include respond(small-phone) {
-            font-size: 2rem;
             margin-bottom: 2rem;
         }
     }
 
-    &__mission-paragraph-2 {
+    &__services-paragraph-2 {
         grid-column: 3 / 4;
         grid-row: 6 / 7;
 
         text-align: center;
-        color: $color-grey;
-        font-size: 1.8rem;
 
         @include respond(phone) {
             grid-column: 2 / 5;
-            font-size: 1.6rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.4rem;
         }
     }
 
-    &__mission-container-2 {
+    &__services-container-2 {
         grid-column: 3 / 4;
         grid-row: 7 / 8;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
 
         @include respond(tab-port) {
             grid-column: 2 / 5;
@@ -263,7 +212,7 @@
         }
     }
 
-    &__mission-photo-2 {
+    &__services-photo-2 {
         width: 15rem;
         height: 15rem;
         background-size: cover;
@@ -338,49 +287,38 @@
     }
 
     // 3
-    &__mission-heading-3 {
+    &__services-heading-3 {
         grid-column: 3 / 4;
         grid-row: 8 / 9;
         justify-self: center;
         align-self: flex-end;
 
         margin-bottom: 4rem;
-
         text-transform: uppercase;
-        color: $color-grey;
-        font-size: 2.4rem;
-        font-weight: 100;
 
         @include respond(small-phone) {
-            font-size: 2rem;
             margin-bottom: 2rem;
         }
     }
 
-    &__mission-paragraph-3 {
+    &__services-paragraph-3 {
         grid-column: 3 / 4;
         grid-row: 9 / 10;
 
         text-align: center;
-        color: $color-grey;
-        font-size: 1.8rem;
 
         @include respond(phone) {
             grid-column: 2 / 5;
-            font-size: 1.6rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.4rem;
         }
     }
 
-    &__mission-container-3 {
+    &__services-container-3 {
         grid-column: 3 / 4;
         grid-row: 10 / 11;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
 
         @include respond(tab-port) {
             grid-column: 2 / 5;
@@ -393,7 +331,7 @@
         }
     }
 
-    &__mission-photo-3 {
+    &__services-photo-3 {
         width: 15rem;
         height: 15rem;
         background-size: cover;
@@ -468,14 +406,14 @@
         }
     }
 
-    &__mission-book-link {
+    &__services-book-link {
         grid-row: 11 / 12;
-        grid-column: 3 / 5;
+        grid-column: 3 / 4;
         justify-self: center;
         align-self: center;
     }
 
-    &__mission-book {
+    &__services-book {
         width: 15rem;
         height: 5rem;
 
