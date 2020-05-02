@@ -8,15 +8,15 @@ export default function Intro(props) {
                 <div className="about__intro-container">
                     <div className="about__intro-banner" />
                     <div className="about__intro-banner-container">
-                        <h1 className="about__intro-heading">About Us</h1>
+                        <h1 className="about__intro-heading h1 white">About Us</h1>
                         <div className="about__intro-border" />
                     </div>
                 </div>
 
                 <div className="about__intro-story-container">
-                    <h2 className="about__intro-heading-1">How it all began:</h2>
-                    <p className="about__intro-opener">StudioME opened its doors in 2016 by co-founders, Keith Parish and Joe Leachko.  Noticing a changing media landscape, they took on the challenge of redesigning the traditional studio to better serve the modern media creator. This new type of media creator demands quality, fast and affordable media production, whether a professional producer, marketing guru, entrepreneur, educational leader or just someone who wants to share their story on social media. The StudioME Model offers more efficient solutions in a user-friendly space to help take content to the next level in quality.</p>
-                    <p className="about__intro-story-2">Keith Parish has been involved in video production since the age of 13 and has produced videos in over 40 states and 5 countries. Joe Leachko comes from an experiential marketing and architectural design background.</p>
+                    <h2 className="about__intro-heading-1 h2">How it all began:</h2>
+                    <p className="about__intro-opener p-xl">StudioME opened its doors in 2016 by co-founders, Keith Parish and Joe Leachko.  Noticing a changing media landscape, they took on the challenge of redesigning the traditional studio to better serve the modern media creator. This new type of media creator demands quality, fast and affordable media production, whether a professional producer, marketing guru, entrepreneur, educational leader or just someone who wants to share their story on social media. The StudioME Model offers more efficient solutions in a user-friendly space to help take content to the next level in quality.</p>
+                    <p className="about__intro-story-2 p-xl">Keith Parish has been involved in video production since the age of 13 and has produced videos in over 40 states and 5 countries. Joe Leachko comes from an experiential marketing and architectural design background.</p>
                     <NavLink
                         className="about__intro-button-rentals-link"
                         onClick={props.onQuickButtonFix.bind(this, 'rentals')}
@@ -46,12 +46,12 @@ export default function Intro(props) {
 						frameBorder="0" 
 						webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen>
 					</iframe>
-                    <h3 className="about__intro-store-heading-1">Located in East Liberty:</h3>
-                    <p className="about__intro-store-paragraph-1">5819 Penn Avenue</p>
-                    <p className="about__intro-store-paragraph-2">Pittsburgh, PA 15206</p>
-                    <h3 className="about__intro-store-heading-2">Operating Hours:</h3>
-                    <p className="about__intro-store-paragraph-3">Monday - Saturday</p>
-                    <p className="about__intro-store-paragraph-4">8am - 6pm</p>
+                    <h3 className="about__intro-store-heading-1 h3">Located in East Liberty:</h3>
+                    <p className="about__intro-store-paragraph-1 p-l">5819 Penn Avenue</p>
+                    <p className="about__intro-store-paragraph-2 p-l">Pittsburgh, PA 15206</p>
+                    <h3 className="about__intro-store-heading-2 h3">Operating Hours:</h3>
+                    <p className="about__intro-store-paragraph-3 p-l">Monday - Saturday</p>
+                    <p className="about__intro-store-paragraph-4 p-l">8am - 6pm</p>
 
                     <img src={StudioRendering} alt="Studio Rendering" className="about__intro-store-rendering" />
                     <a
@@ -65,8 +65,8 @@ export default function Intro(props) {
                 </div>
 
                 <div className="about__intro-perks-container">
-                    <h2 className="about__intro-perks-heading-1">How We're Different</h2>
-                    <ul className="about__intro-perks-list-1">
+                    <h2 className="about__intro-perks-heading-1 h2 teal">How We're Different</h2>
+                    <ul className="about__intro-perks-list-1 p-l">
 						<li><span style={{color: '#8DCDC1'}}>✓</span> Innovative, user-friendly space</li>
 						<li><span style={{color: '#8DCDC1'}}>✓</span> From custom to assisted DIY production solutions</li>
 						<li><span style={{color: '#8DCDC1'}}>✓</span> Customer-focused environment</li>
@@ -75,7 +75,7 @@ export default function Intro(props) {
 						<li><span style={{color: '#8DCDC1'}}>✓</span> Specialized studios, reducing waste and saving budget</li>
 						<li><span style={{color: '#8DCDC1'}}>✓</span> Access to media-related resources with free MEmbership</li>
 					</ul>
-                    <h2 className="about__intro-perks-heading-2">Perfect For</h2>
+                    <h2 className="about__intro-perks-heading-2 h2 orange">Perfect For</h2>
                     <ul className="about__intro-perks-list-2">
 						<li><span style={{color: '#B6CE61'}}>•</span>  Content Creators</li>
 						<li><span style={{color: '#B6CE61'}}>•</span>  Podcasters</li>

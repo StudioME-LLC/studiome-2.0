@@ -12,7 +12,7 @@ export default function Contact() {
         <div className="about__contact">
             <div className="about__contact-banner" />
             <div className="about__contact-banner-container">
-                <h1 className="about__contact-heading">Speak to Our Creative Team</h1>
+                <h1 className="about__contact-heading h1">Speak to Our Creative Team</h1>
                 <div className="about__contact-border" />
             </div>
 
@@ -68,20 +68,21 @@ export default function Contact() {
             >
             </iframe>
 
-            <h2 className="about__contact-heading-1">Interested in an internship?</h2>
-            <p className="about__contact-paragraph-1">
+            <h2 className="about__contact-heading-1 h2">Interested in an internship?</h2>
+            <h3 className="about__contact-paragraph-1 h3 l">
                 <a
                     target="_blank" rel="noopener noreferrer"
-                    className="about__contact-link-1"
+                    className="about__contact-link-1 orange"
                     href="https://studiome.me/video-production-internships/"
                 >Video Production</a>
-            </p>
-            <p className="about__contact-paragraph-2">
+            </h3>
+            <h3 className="about__contact-paragraph-2 h3 l">
                 <a
                     target="_blank" rel="noopener noreferrer"
-                    className="about__contact-link-1"
+                    className="about__contact-link-1 orange"
                     href="https://studiome.me/marketing-social-media-internships/"
-                >Marketing / Social Media</a></p>
+                >Marketing / Social Media</a>
+            </h3>
         </div>
     )
 }

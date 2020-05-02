@@ -1,5 +1,4 @@
 .about {
-
     &__intro-container {
         display: grid;
         grid-template-columns: 1fr repeat(4, 22.5rem) 1fr;
@@ -40,17 +39,7 @@
     }
 
     &__intro-heading {
-        color: $color-white;
         text-transform: uppercase;
-        font-size: 4.5rem;
-
-        @include respond(phone) {
-            font-size: 3.6rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 2.4rem;
-        }
     }
 
     &__intro-border {
@@ -62,12 +51,6 @@
         @include respond(phone) {
             margin: 1rem auto;
         }
-    }
-
-    &__intro-subheading {
-        color: $color-white;
-        font-weight: 100;
-        font-size: 2rem;
     }
 
     // Story
@@ -99,12 +82,6 @@
         
         text-align: center;
         text-transform: uppercase;
-        font-size: 3.2rem;
-        color: $color-grey;
-
-        @include respond(small-phone) {
-            font-size: 2.4rem;
-        }
     }
 
     &__intro-opener {
@@ -113,17 +90,9 @@
         align-self: flex-end;
 
         padding: 2rem;
-
         text-align: center;
-        color: $color-grey;
-        font-size: 2rem;
-
-        @include respond(tab-port) {
-            font-size: 1.6rem;
-        }
 
         @include respond(small-phone) {
-            font-size: 1.4rem;
             padding: 0 .5rem;
         }
     }
@@ -134,15 +103,8 @@
         align-self: flex-end;
         
         text-align: center;
-        color: $color-grey;
-        font-size: 2rem;
-
-        @include respond(tab-port) {
-            font-size: 1.6rem;
-        }
 
         @include respond(small-phone) {
-            font-size: 1.4rem;
             padding: 0 .5rem;
         }
     }
@@ -310,14 +272,6 @@
         grid-row: 2 / 3;
 
         text-align: center;
-
-        @include respond(phone) {
-            font-size: 1.8rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.4rem;
-        }
     }
 
     &__intro-store-paragraph-1 {
@@ -325,14 +279,6 @@
         grid-row: 3 / 4;
 
         text-align: center;
-
-        @include respond(phone) {
-            font-size: 1.4rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.2rem;
-        }
     }
 
     &__intro-store-paragraph-2 {
@@ -340,14 +286,6 @@
         grid-row: 4 / 5;
 
         text-align: center;
-
-        @include respond(phone) {
-            font-size: 1.4rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.2rem;
-        }
     }
 
     &__intro-store-heading-2 {
@@ -355,14 +293,6 @@
         grid-row: 2 / 3;
 
         text-align: center;
-
-        @include respond(phone) {
-            font-size: 1.8rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.4rem;
-        }
     }
 
     &__intro-store-paragraph-3 {
@@ -370,14 +300,6 @@
         grid-row: 3 / 4;
 
         text-align: center;
-
-        @include respond(phone) {
-            font-size: 1.4rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.2rem;
-        }
     }
 
     &__intro-store-paragraph-4 {
@@ -385,14 +307,6 @@
         grid-row: 4 / 5;
 
         text-align: center;
-
-        @include respond(phone) {
-            font-size: 1.4rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 1.2rem;
-        }
     }
 
     &__intro-store-rendering {
@@ -485,16 +399,6 @@
 
         text-align: center;
         text-transform: uppercase;
-        color: $color-teal;
-        font-size: 3.2rem;
-
-        @include respond(phone) {
-            font-size: 2.8rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 2.4rem;
-        }
     }
 
     &__intro-perks-list-1 {
@@ -502,20 +406,10 @@
         grid-row: 2 / 3;
         align-self: center;
 
-        color: $color-grey;
-        font-size: 2rem;
         list-style: none;
 
         li {
             margin-top: 1rem;
-        }
-
-        @include respond(phone) {
-            font-size: 1.6rem;
-        }
-
-        @include respond(phone) {
-            font-size: 1.2rem;
         }
     }
 
@@ -526,16 +420,6 @@
 
         text-align: center;
         text-transform: uppercase;
-        color: $color-orange;
-        font-size: 3.2rem;
-
-        @include respond(phone) {
-            font-size: 2.8rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 2.4rem;
-        }
     }
 
     &__intro-perks-list-2 {
@@ -543,132 +427,10 @@
         grid-row: 4 / 5;
         align-self: center;
 
-        color: $color-grey;
-        font-size: 2rem;
         list-style: none;
 
         li {
             margin-top: 1rem;
-        }
-
-        @include respond(phone) {
-            font-size: 1.6rem;
-        }
-
-        @include respond(phone) {
-            font-size: 1.2rem;
-        }
-    }
-
-    &__intro-perks-heading-3 {
-        grid-column: 2 / 4;
-        grid-row: 5 / 6;
-        align-self: flex-end;
-
-        text-align: center;
-        text-transform: uppercase;
-        color: $color-green;
-        font-size: 3.2rem;
-
-        @include respond(phone) {
-            font-size: 2.8rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 2.4rem;
-        }
-    }
-
-    &__intro-perks-list-3 {
-        grid-column: 2 / 4;
-        grid-row: 6 / 7;
-        align-self: center;
-
-        color: $color-grey;
-        font-size: 2rem;
-        list-style: none;
-
-        li {
-            margin-top: 1rem;
-        }
-
-        @include respond(phone) {
-            font-size: 1.6rem;
-        }
-
-        @include respond(phone) {
-            font-size: 1.2rem;
-        }
-    }
-
-    &__intro-perks-video {
-        grid-column: 2 / 4;
-        grid-row: 7 / 8;
-        justify-self: center;
-        align-self: center;
-
-        margin: 2rem;
-        border: .8rem solid $color-orange;
-        transition: all .5s;
-
-        &:hover {
-            border: .8rem solid $color-green;
-        }
-
-        @include respond(tab-land) {
-            width: 710px;
-		    height: 405px;
-        }
-
-        @include respond(tab-port) {
-            width: 511px;
-		    height: 292px;
-        }
-
-        @include respond(phone) {
-            width: 358px;
-            height: 204px;
-            border: .5rem solid $color-orange;
-
-            &:hover {
-                border: .5rem solid $color-green;
-            }
-        }
-
-        @include respond(small-phone) {
-            width: 286px;
-            height: 163px;
-        }
-    }
-
-    &__intro-perks-button {
-        grid-column: 2 / 4;
-        grid-row: 8 / 9;
-        justify-self: center;
-        align-self: flex-end;
-
-        width: 15rem;
-        height: 5rem;
-
-        background-color: $color-green;
-        border: none;
-        border-radius: 5px;
-        box-shadow: $shadow-button;
-        color: $color-white;
-        text-transform: uppercase;
-        outline: none;
-        font-weight: 600;
-
-        transition: .3s all ease;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $color-grey-light;
-            color: $color-green;
-        }
-
-        &:active {
-            box-shadow: none;
         }
     }
 }
