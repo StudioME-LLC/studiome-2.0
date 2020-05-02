@@ -27,7 +27,7 @@ class Events extends Component {
             <div className="events">
                 <div className="events__banner" />
                 <div className="events__banner-container">
-                    <h1 className="events__heading">Hosted Events</h1>
+                    <h1 className="events__heading h1">Hosted Events</h1>
                     <div className="events__border" />
                 </div>
 
@@ -35,11 +35,11 @@ class Events extends Component {
                     <Button arrow text={"Back"} size={"medium"} />
                 </NavLink>
 
-                <p className="events__description">StudioME believes in easy and community-driven media creation.
+                <p className="events__description p-xl">StudioME believes in easy and community-driven media creation.
                     As part of our mission, we host film classes, professional speakers, and local events.
                 </p>
 
-                <h2 className="events__subheading">Past Events</h2>
+                <h3 className="events__subheading h3 b">Past Events</h3>
                 <div className="events__subheading-line" />
 
 
@@ -50,8 +50,8 @@ class Events extends Component {
                     className="events__card"
                 >
                     <div className="events__photo" />
-                    <p className="events__date">Sat, March 14th, 1pm</p>
-                    <h3 className="events__title">Teaching Me with Dorin Williams & StudioME</h3>
+                    <p className="events__date p-s orange">Sat, March 14th, 1pm</p>
+                    <h3 className="events__title p-m">Teaching Me with Dorin Williams & StudioME</h3>
                 </a>
             </div>
         )

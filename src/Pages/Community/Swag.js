@@ -57,7 +57,7 @@ export default class Swag extends Component {
                             className="swag__component" key={index}
                         >
                             <div className="swag__component-photo" style={{backgroundImage: `url(${product.images[0].src})`}} alt="Equipment-Photo" />
-                            <h1 className="swag__component-heading">{product.name}</h1>
+                            <h6 className="swag__component-heading h6 b">{product.name}</h6>
                         </a>
                     ))}
                 </div>
@@ -68,7 +68,7 @@ export default class Swag extends Component {
             <div className="swag">
             <div className="swag__banner" />
             <div className="swag__banner-container">
-                <h1 className="swag__heading">Swag</h1>
+                <h1 className="swag__heading h1">Swag</h1>
                 <div className="swag__border" />
             </div>
 
@@ -76,7 +76,7 @@ export default class Swag extends Component {
                 <Button arrow text={"Back"} size={"medium"} />
             </NavLink>
 
-            <p className="swag__description">With a focus on artists in our community, our swag is designed to celebrate photographers, videographers, podcasters, and media creators in the Pittsburgh area.</p>
+            <p className="swag__description p-xl">With a focus on artists in our community, our swag is designed to celebrate photographers, videographers, podcasters, and media creators in the Pittsburgh area.</p>
 
             {content}
         </div>

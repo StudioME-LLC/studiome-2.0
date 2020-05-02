@@ -20,7 +20,7 @@ export default class Gallery extends Component {
                     <Button arrow text={"Back"} size={"medium"} />
                 </NavLink>
 
-                <h1 className="temp-community__temp-heading">Gallery coming soon!</h1>
+                <h1 className="temp-community__temp-heading h1">Gallery coming soon!</h1>
                 <img className="temp-community__gif" src={GIF} alt="test"/>
             </div>
         )

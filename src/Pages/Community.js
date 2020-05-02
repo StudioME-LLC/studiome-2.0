@@ -15,18 +15,18 @@ export default class Community extends Component {
             <div className="community">
                 <div className="community__banner" />
                 <div className="community__banner-container">
-                    <h1 className="community__heading">The Community</h1>
+                    <h1 className="community__heading h1">The Community</h1>
                     <div className="community__border" />
                 </div>
 
-                <p className="community__description">StudioME believes in easy and community-driven media creation. As part of our mission, we host local events, provide resources for new content creators, and celebrate the artists who create in our studio, as well as Pittsburgh at large.</p>
+                <p className="community__description p-l">StudioME believes in easy and community-driven media creation. As part of our mission, we host local events, provide resources for new content creators, and celebrate the artists who create in our studio, as well as Pittsburgh at large.</p>
 
                 <NavLink
                     to="/community/events" exact style={{textDecoration: 'none'}}
                     className="community__card community__card--1"
                 >
                     <div className="community__card-banner">
-                        <p>Event Hosting</p>
+                        <h3 className="h3 d">Event Hosting</h3>
                         <div className="community__card-line" />
                     </div>
                 </NavLink>
@@ -35,7 +35,7 @@ export default class Community extends Component {
                     className="community__card community__card--2"
                 >
                     <div className="community__card-banner">
-                        <p>Gallery</p>
+                        <h3 className="h3 d">Gallery</h3>
                         <div className="community__card-line" />
                     </div>
                 </NavLink>
@@ -44,7 +44,7 @@ export default class Community extends Component {
                     className="community__card community__card--3"
                 >
                     <div className="community__card-banner">
-                        <p>Learn</p>
+                        <h3 className="h3 d">Learn</h3>
                         <div className="community__card-line" />
                     </div>
                 </NavLink>
@@ -53,7 +53,7 @@ export default class Community extends Component {
                     className="community__card community__card--4"
                 >
                     <div className="community__card-banner">
-                        <p>Swag</p>
+                        <h3 className="h3 d">Swag</h3>
                         <div className="community__card-line" />
                     </div>
                 </NavLink>
