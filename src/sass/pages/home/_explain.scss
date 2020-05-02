@@ -48,18 +48,7 @@
     }
 
     &__explain-heading {
-        color: $color-white;
         text-transform: uppercase;
-        font-size: 4.5rem;
-
-        @include respond(phone) {
-            font-size: 3.6rem;
-        }
-
-        @include respond(small-phone) {
-            font-size: 2.8rem;
-        }
-
     }
 
     &__explain-border {
@@ -69,22 +58,6 @@
         background-color: $color-orange;
     }
 
-    &__explain-subheading {
-        color: $color-white;
-        font-weight: 100;
-        font-size: 2rem;
-
-        @include respond(phone) {
-            width: 40rem;
-        }
-
-        @include respond(small-phone) {
-            width: 32rem;
-            font-size: 1.4rem;
-        }
-    }
-
-
     // Explaination
     &__explain-explanation {
         grid-column: 2 / 6;
@@ -93,21 +66,15 @@
         align-self: center;
 
         padding: 3rem;
-
-        color: $color-grey;
-        font-size: 2rem;
-        font-weight: 100;
         text-align: center;
 
         @include respond(tab-port) {
-            font-size: 1.8rem;
             width: 55rem;
             padding: 2rem;
         }
 
         @include respond(phone) {
             grid-column: 2 / 4;
-            font-size: 1.4rem;
             width: 40rem;
         }
 
@@ -139,10 +106,6 @@
 
         margin-top: 2rem;
 
-        color: $color-grey;
-        font-size: 2.4rem;
-        font-weight: 100;
-
         @include respond(phone) {
             grid-column: 1 / 5;
         }
@@ -154,7 +117,6 @@
 
         text-align: center;
         padding: 3rem;
-        color: $color-grey;
 
         &--1 {
             grid-column: 2 / 3;
@@ -249,7 +211,6 @@
     }
 
     &__explain-text {
-        font-size: 1.4rem;
         margin-top: 2rem;
     }
 }

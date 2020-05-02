@@ -14,50 +14,49 @@ export default function Mission() {
         <div className="home__explain">
             <div className="home__explain-banner" />
             <div className="home__explain-banner-container">
-                <h1 className="home__explain-heading">What we do</h1>
+                <h1 className="home__explain-heading h1 white">What we do</h1>
                 <div className="home__explain-border" />
-                {/* <h3 className="home__explain-subheading">We make it as simple as possible to go from concept to creation.</h3> */}
             </div>
 
-            <p className="home__explain-explanation">From first-timers to professionals, StudioME offers user-friendly studio spaces, equipment rentals, editing workstations, and custom production services for all media creators. The StudioME model was created with the challenge to deliver high quality content using brand new approaches to an outdated, over-priced model. Keeping our promise of "Media Made Easy," we make it as simple as possible to go from concept to creation.</p>
+            <p className="home__explain-explanation p-xl l">From first-timers to professionals, StudioME offers user-friendly studio spaces, equipment rentals, editing workstations, and custom production services for all media creators. The StudioME model was created with the challenge to deliver high quality content using brand new approaches to an outdated, over-priced model. Keeping our promise of "Media Made Easy," we make it as simple as possible to go from concept to creation.</p>
 
             <div className="home__explain-perks-border" />
-            <p className="home__explain-offer">What we offer.</p>
+            <h3 className="home__explain-offer h3 l">What we offer.</h3>
 
             <div className="home__explain-container home__explain-container--1">
                 <Icon1 className="home__explain-icon--1" />
-                <p className="home__explain-text">High Speed Internet</p>
+                <p className="home__explain-text p-s">High Speed Internet</p>
             </div>
             <div className="home__explain-container home__explain-container--2">
                 <div className="home__explain-item">
                     <Icon2 className="home__explain-icon--1" />
-                    <p className="home__explain-text">Retina Display Workstations</p>
+                    <p className="home__explain-text p-s">Retina Display Workstations</p>
                 </div>
             </div>
             <div className="home__explain-container home__explain-container--3">
                 <Icon3 className="home__explain-icon--1" />
-                <p className="home__explain-text">Rentable Camera Gear</p>
+                <p className="home__explain-text p-s">Rentable Camera Gear</p>
             </div>
             <div className="home__explain-container home__explain-container--4">
                 <Icon4 className="home__explain-icon--1" />
-                <p className="home__explain-text">Quiet Studio Space</p>
+                <p className="home__explain-text p-s">Quiet Studio Space</p>
             </div>
 
             <div className="home__explain-container home__explain-container--5">
                 <Icon5 className="home__explain-icon--2" />
-                <p className="home__explain-text">Coffee, Tea, & Water Stations</p>
+                <p className="home__explain-text p-s">Coffee, Tea, & Water Stations</p>
             </div>
             <div className="home__explain-container home__explain-container--6">
                 <Icon6 className="home__explain-icon--2" />
-                <p className="home__explain-text">Dressing Rooms</p>
+                <p className="home__explain-text p-s">Dressing Rooms</p>
             </div>
             <div className="home__explain-container home__explain-container--7">
                 <Icon7 className="home__explain-icon--2" />
-                <p className="home__explain-text">Printing & Photocopying</p>
+                <p className="home__explain-text p-s">Printing & Photocopying</p>
             </div>
             <div className="home__explain-container home__explain-container--8">
                 <Icon8 className="home__explain-icon--2" />
-                <p className="home__explain-text">Professional Media Assistance</p>
+                <p className="home__explain-text p-s">Professional Media Assistance</p>
             </div>
         </div>
     )

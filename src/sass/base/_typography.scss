@@ -123,6 +123,23 @@
     }
 }
 
+.p-xl {
+    font-size: 2rem;
+    color: $color-grey;
+
+    @include respond(tab-port) {
+        font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+        font-size: 1.4rem;
+    }
+
+    @include respond(small-phone) {
+        padding: 1.2rem;
+    }
+}
+
 // Font Weights
 .l {
     font-weight: 100;
