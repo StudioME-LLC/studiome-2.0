@@ -83,7 +83,7 @@
         margin-top: 5rem;
 
         display: grid;
-        grid-template-rows: 4rem 2rem repeat(3, 4rem);
+        grid-template-rows: 4rem 3rem repeat(3, 4rem);
     }
 
     &__company-heading {
@@ -121,7 +121,7 @@
         margin-top: 5rem;
 
         display: grid;
-        grid-template-rows: 4rem 2rem 2rem 1rem repeat(2, 4rem);
+        grid-template-rows: 4rem 3rem 2rem 1rem repeat(2, 4rem);
     }
 
     &__contact-heading {

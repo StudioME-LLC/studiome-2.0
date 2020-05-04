@@ -68,6 +68,10 @@
     font-size: 2rem;
     color: $color-grey;
 
+    @include respond(tab-port) {
+        font-size: 1.8rem;
+    }
+
     @include respond(phone) {
         font-size: 1.6rem;
     }
@@ -80,6 +84,14 @@
 .h5 {
     font-size: 1.8rem;
     color: $color-grey;
+
+    @include respond(tab-land) {
+        font-size: 1.4rem;
+    }
+
+    @include respond(tab-port) {
+        font-size: 1.2rem;
+    }
 }
 
 .h6 {

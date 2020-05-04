@@ -15,7 +15,7 @@ export default function Footer(props) {
 
                 {/* PRODUCT */}
                 <div className="footer__product">
-                    <h3 className="footer__product-heading">Product</h3>
+                    <h4 className="footer__product-heading h4">Product</h4>
                     <hr className="footer__product-border"/>
                     <a
                         target="_blank" rel="noopener noreferrer"
@@ -75,7 +75,7 @@ export default function Footer(props) {
 
                 {/* COMPANY */}
                 <div className="footer__company">
-                    <h3 className="footer__company-heading">Company</h3>
+                    <h4 className="footer__company-heading h4">Company</h4>
                     <hr className="footer__company-border"/>
                     <NavLink
                         onClick={props.onLargeSidebarSelection.bind(this, 'general')}
@@ -103,7 +103,7 @@ export default function Footer(props) {
 
                 {/* CONTACT */}
                 <div className="footer__contact">
-                    <h3 className="footer__contact-heading">Contact</h3>
+                    <h4 className="footer__contact-heading h4">Contact</h4>
                     <hr className="footer__contact-border"/>
                     <p className="footer__contact-address1">5819 Penn Avenue</p>
                     <p className="footer__contact-address2">Pittsburgh, PA 15206</p>
@@ -123,7 +123,7 @@ export default function Footer(props) {
 
                 {/* SOCIAL */}
                 <div className="footer__social">
-                    <h3 className="footer__social-heading">Social</h3>
+                    <h4 className="footer__social-heading h4">Social</h4>
                     <hr className="footer__social-border"/>
                     <a
                         target="_blank" rel="noopener noreferrer"
