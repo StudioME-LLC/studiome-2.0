@@ -4,12 +4,12 @@ import Lottie from 'react-lottie';
 // Components
 import Spinner from '../../components/Spinner';
 
+// Video
+import webVideo from '../../assets/home/hero/web-hero-2.mp4';
+
 // SVGs
 import { ReactComponent as ChevronArrow } from '../../assets/home/products/chevron-thin-down.svg';
 import videoSVG from '../../assets/home/hero/video.json';
-
-// Lazy Loads
-const HeroVideo = React.lazy(() => import ('./Media/HeroVideo'));
 
 export default class Hero extends Component {
     constructor(props) {
@@ -28,34 +28,36 @@ export default class Hero extends Component {
           };
 
         return (
-            <div className="home__web-hero">
+            <section id="hero" className="container">
                 <React.Suspense fallback={<Spinner />}>
-                    <HeroVideo />
+                    <div id="hero__video-container">
+                        <video src={webVideo} id="hero__video" autoPlay loop muted playsInline />
+                    </div>
                 </React.Suspense>
 
-                <div className="home__video-svg">
+                <div id="hero__video-svg">
                     <Lottie options={defaultOptions}
                         isStopped={this.state.isStopped}
                         isPaused={this.state.isPaused}
                     />
                 </div>
 
-                <div className="home__hero-circle" />
+                <div id="hero__circle" />
                 
-                <div className="home__hero-messaging">
-                    <h1 className="home__hero-heading h1 h1 white">Media Made Easy</h1>
-                    <h3 className="home__hero-subheading h3 h3 white l">A user-friendly space for media creation.</h3>
+                <div id="hero__headings-container">
+                    <h1 id="hero__heading" className="h1 h1 white">Media Made Easy</h1>
+                    <h3 id="hero__subheading" className="h3 h3 white l">A user-friendly space for media creation.</h3>
                 </div>
 
-                <div className="home__description-container">
-                    <h2 className="home__studio-description h2 h2 white">A user-friendly space for media creation.</h2>
+                <div id="hero__description-container" className="white">
+                    <h2 id="hero__studio-description" className="h2 h2 white">A user-friendly space for media creation.</h2>
                 </div>
 
-                <div onClick={this.props.onProductsHandler} className="home__hero-arrow-container">
-                    <h3 className="home__hero-arrow-heading h3 l">Our Products and Services</h3>
-                    <ChevronArrow className="home__hero-arrow" />
+                <div onClick={this.props.onProductsHandler} id="hero__arrow-container">
+                    <h3 id="hero__arrow-heading" className="h3 l">Our Products and Services</h3>
+                    <ChevronArrow id="hero__arrow" />
                 </div>
-            </div>
+            </section>
         )
     }
 }

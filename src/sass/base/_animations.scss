@@ -1,0 +1,17 @@
+@keyframes color {
+    0% {
+        background-color: $color-teal;
+    }
+
+    33% {
+        background-color: $color-orange;
+    }
+
+    66% {
+        background-color: $color-green;
+    }
+
+    100% {
+        background-color: $color-teal;
+    }
+}

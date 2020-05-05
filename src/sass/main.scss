@@ -5,11 +5,13 @@
 // Base
 @import "base/base";
 @import "base/typography";
+@import "base/animations";
 
 // Components
+@import "components/containers";
 @import "components/mainBackdrop";
 @import "components/backdrop";
-@import "components/button";
+@import "components/buttons";
 @import "components/spinner";
 @import "components/productModal";
 @import "components/membershipNotify";

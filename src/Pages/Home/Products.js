@@ -152,27 +152,33 @@ class Products extends Component {
 
     render() {
         return (
-            <div className="home__products">
-                <button
-                    className={this.props.rentalsButtonClass}
-                    onClick={this.props.rentalButton}
-                >
-                    Rentals
-                </button>
+            <div id="products" className="container">
+                <div id="products__button-container--1">
+                    <button
+                        className={this.props.rentalsButtonClass}
+                        onClick={this.props.rentalButton}
+                    >
+                        Rentals
+                    </button>
+                </div>
 
-                <button
-                    className={this.props.servicesButtonClass}
-                    onClick={this.props.serviceButton}
-                >
-                    Services
-                </button>
+                <div id="products__button-container--2">
+                    <button
+                        className={this.props.servicesButtonClass}
+                        onClick={this.props.serviceButton}
+                    >
+                        Services
+                    </button>
+                </div>
 
-                <button
-                    className={this.props.membershipsButtonClass}
-                    onClick={this.props.membershipsButton}
-                >
-                    Memberships
-                </button>
+                <div id="products__button-container--3">
+                    <button
+                        className={this.props.membershipsButtonClass}
+                        onClick={this.props.membershipsButton}
+                    >
+                        Memberships
+                    </button>
+                </div>
 
 
                 <ProductsModal
