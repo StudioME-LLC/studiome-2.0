@@ -1,4 +1,4 @@
-.rentals {
+.products-rental-item {
     &__card {
         justify-self: center;
         align-self: flex-start;
@@ -163,15 +163,5 @@
         justify-self: center;
         align-self: flex-start;
         margin-top: 1.5rem;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $color-grey-light;
-            color: $color-green;
-        }
-
-        &:active {
-            box-shadow: none;
-        }
     }
 }

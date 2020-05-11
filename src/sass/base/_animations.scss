@@ -1,3 +1,4 @@
+// Color
 @keyframes color {
     0% {
         background-color: $color-teal;
@@ -13,5 +14,46 @@
 
     100% {
         background-color: $color-teal;
+    }
+}
+
+// Products
+@keyframes onRentalFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes onServiceFadeIn {
+    0% {
+        z-index: 0;
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        z-index: 0;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes onMembershipsFadeIn {
+    0% {
+        z-index: 0;
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        z-index: 0;
+        opacity: 1;
+        transform: translateX(0);
     }
 }

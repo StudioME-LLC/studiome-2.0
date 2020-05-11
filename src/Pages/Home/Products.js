@@ -197,15 +197,11 @@ class Products extends Component {
                     loadingToggle={this.onLoadingToggle}
                     loading={this.state.loading}
                 />
-                
+                {/* Backdrop */}
                 <div className={this.state.backdropClass} onClick={this.onModalToggle} />
 
-                {this.props.rentalToggle && <ProductRentals
-                    onModalToggle={this.onModalToggle}
-                />}
-
+                {this.props.rentalToggle && <ProductRentals onModalToggle={this.onModalToggle} />}
                 {this.props.servicesToggle && <ProductServices />}
-
                 {this.props.membershipsToggle && <ProductMemberships />}
             </div>
         )

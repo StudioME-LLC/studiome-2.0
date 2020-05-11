@@ -1,9 +1,10 @@
 @import './hero';
 
-
 // Products
 @import './products';
-@import './product-cards/rental-card';
+@import './product-cards/products-rental-item';
+@import './product-cards/products-services';
+@import './product-cards/products-memberships';
 
 
 @import './services';
