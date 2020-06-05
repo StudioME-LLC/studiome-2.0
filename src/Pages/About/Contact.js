@@ -53,11 +53,10 @@ export default function Contact() {
                 </a>
             </div>
             
-
             <iframe
                 title="contact-form"
                 className="about__contact-form"
-                src="https://docs.google.com/forms/d/e/1FAIpQLSdHptWG04E7RA0f9AKuFmbKDxEh2iW9YqzewO8TR2rM2dMjPA/viewform?embedded=true"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfxBd-RTFur3ApCLFBB3-tNxCbdCXO7-L0ugJ9zDZMgYGkrOg/viewform?embedded=true"
                 frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
             <iframe
                 className="about__contact-map"
