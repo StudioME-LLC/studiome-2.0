@@ -8,7 +8,7 @@
     color: $color-white;
     text-transform: uppercase;
     outline: none;
-    font-weight: 600;
+    font-weight: 100;
 
     transition: .3s all ease;
 
@@ -35,16 +35,30 @@
         @include respond(tab-port) {
             width: 9rem;
             height: 4rem;
+            font-size: 1.4rem;
         }
 
         @include respond(phone) {
             width: 8rem;
             height: 3rem;
+            font-size: 1.2rem;
         }
     }
 
     &--l {
         width: 15rem;
+
+        @include respond(tab-port) {
+            width: 14rem;
+            height: 5rem;
+            font-size: 1.4rem;
+        }
+
+        @include respond(phone) {
+            width: 12rem;
+            height: 5rem;
+            font-size: 1.2rem;
+        }
     }
 
     &:hover {

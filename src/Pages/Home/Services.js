@@ -17,7 +17,7 @@ import Workstation2 from '../../assets/home/services/workstation/workstation-2-s
 import Workstation3 from '../../assets/home/services/workstation/workstation-3-small.jpg';
 import Workstation4 from '../../assets/home/services/workstation/workstation-4-small.jpg';
 
-export default function Explain(props) {
+export default function Services(props) {
     return (
         <div className="home__services">
             <div className="home__services-banner" />
@@ -52,16 +52,16 @@ export default function Explain(props) {
                 <div className="home__services-photo-3 home__services-photo-3--4" style={{backgroundImage: `url(${Workstation3})`}} />
             </div>
             <NavLink
-                    className="home__services-book-link"
-                    onClick={props.onQuickButtonFix.bind(this, 'rentals')}
-                    to="/" exact
-                >
-                    <button
-                        className="home__services-book"
-                        
-                        >Book now!
-                    </button>
-                </NavLink>
+                className="home__services-book-link"
+                onClick={props.onQuickButtonFix.bind(this, 'rentals')}
+                to="/" exact
+            >
+                <button
+                    className="home__services-book"
+                    
+                    >Book now!
+                </button>
+            </NavLink>
         </div>
     )
 }

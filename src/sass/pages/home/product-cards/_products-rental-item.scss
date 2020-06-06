@@ -17,11 +17,15 @@
         animation: onRentalFadeIn .7s ease-out;
     
         @include respond(tab-port) {
-            width: 18rem;
+            width: 22rem;
             height: 25rem;
     
             grid-template-columns: 2fr 1fr;
             grid-template-rows: 18rem 7rem;
+        }
+
+        @include respond(phone) {
+            width: 18rem;
         }
     
         @include respond(small-phone) {

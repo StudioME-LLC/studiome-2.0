@@ -32,7 +32,7 @@ export default function ProductServices(props) {
                     href="https://forms.gle/ziysrwi8PtFhJbi57"
                     rel="noopener noreferrer"
                 >
-                    <button className="button button--m">Get a quote</button>
+                    <button className="button button--l">Get a quote</button>
                 </a>
             </div>
 
@@ -59,7 +59,7 @@ export default function ProductServices(props) {
                     rel="noopener noreferrer"
                 >
                     <button
-                        className="button button--m"
+                        className="button button--l"
                         onClick={props.onServicesModalToggle}
                         >Get a quote
                     </button>
@@ -95,7 +95,7 @@ export default function ProductServices(props) {
                     rel="noopener noreferrer"
                 >
                     <button
-                        className="button button--m"
+                        className="button button--l"
                         onClick={props.onServicesModalToggle}
                     >Get a quote
                     </button>

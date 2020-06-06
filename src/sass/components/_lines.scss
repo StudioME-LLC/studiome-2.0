@@ -6,3 +6,12 @@
         border-bottom: 1px solid $color-orange;
     }
 }
+
+.line-m {
+    height: 2px;
+    width: 15rem;
+
+    &--orange {
+        background-color: $color-orange;
+    }
+}
