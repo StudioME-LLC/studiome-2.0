@@ -59,7 +59,6 @@
     }
 
     // Team Cards
-
     &__team-card-container {
         justify-self: center;
         align-self: center;
@@ -200,11 +199,11 @@
         }
 
         &--3 {
-            background-image: url(../../../assets/about/team/Elliott.png);
+            background-image: url(../../../assets/about/team/Chelsea.png);
         }
 
         &--4 {
-            background-image: url(../../../assets/about/team/Chelsea.png);
+            background-image: url(../../../assets/about/team/Jake.png);
         }
 
         &--5 {
@@ -271,4 +270,95 @@
             padding: 1rem 3rem;
         }
     }
+
+    // Videos
+    // &__team-videos-border {
+    //     align-self: center;
+    //     width: 100%;
+    //     grid-column: 3 / 5;
+    //     grid-row: 5 / 6;
+    //     margin-bottom: 7rem;
+    //     border-bottom: 3px solid $color-green;
+
+    //     @include respond(tab-port) {
+    //         grid-column: 3 / 5;
+    //         grid-row: 8 / 9;
+    //     }
+
+    //     @include respond(phone) {
+    //         margin-bottom: 3rem;
+    //     }
+    // }
+
+    // &__team-videos-heading {
+    //     grid-column: 2 / -2;
+    //     grid-row: 5 / 6;
+    //     justify-self: center;
+    //     align-self: flex-end;
+
+    //     @include respond(tab-port) {
+    //         grid-row: 8 / 9;
+    //     }
+    // }
+
+    // &__team-videos {
+    //     grid-column: 2 / -2;
+    //     grid-row: 6 / 7;
+    //     justify-self: center;
+    //     align-self: flex-end;
+
+    //     margin: 2rem;
+    //     border: .8rem solid $color-orange;
+    //     transition: all .5s;
+
+    //     width: 887px;
+	// 	height: 506px;
+
+    //     &:hover {
+    //         border: .8rem solid $color-green;
+    //     }
+
+    //     @include respond(tab-land) {
+    //         width: 710px;
+	// 	    height: 405px;
+    //     }
+
+    //     @include respond(tab-port) {
+    //         width: 511px;
+    //         height: 292px;
+    //     }
+
+    //     @include respond(phone) {
+    //         width: 358px;
+    //         height: 204px;
+    //         border: .5rem solid $color-orange;
+    //         align-self: flex-end;
+    //         margin-bottom: 6rem;
+
+    //         &:hover {
+    //             border: .5rem solid $color-green;
+    //         }
+    //     }
+
+    //     @include respond(small-phone) {
+    //         width: 286px;
+    //         height: 163px;
+    //     }
+
+    //     &--1 {
+    //         grid-row: 6 / 7;
+
+    //         @include respond(tab-port) {
+    //             grid-row: 9 / 10;
+    //         }
+    //     }
+
+    //     &--2 {
+    //         grid-row: 7 / 8;
+
+    //         @include respond(tab-port) {
+    //             grid-row: 10 / 11;
+    //         }
+    //     }
+    // }
 }
