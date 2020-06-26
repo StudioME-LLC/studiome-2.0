@@ -18,7 +18,7 @@ export default function Mission() {
                 <div className="home__what-we-do-border" />
             </div>
 
-            <p className="home__what-we-do-explanation p-xl l">From first-timers to professionals, StudioME provides media creators access to user-friendly studio spaces, equipment rentals, editing workstations, and custom production services. The StudioME model was created with the challenge to deliver high quality content using brand new approaches to an outdated, over-priced model. Keeping our promise of "Media Made Easy," we make it as simple as possible to go from concept to creation.</p>
+            <p className="home__what-we-do-explanation p-xl l">From first-timers to professionals, StudioME provides media creators access to user-friendly studio spaces, equipment rentals, editing workstations, and custom production services. The StudioME model was created with the challenge to deliver high quality content using brand new approaches to an outdated, over-priced model. Keeping our promise of "Media Made Easy," we make it as simple as possible to go from concept to creation!</p>
 
             <div className="home__what-we-do-perks-border" />
             <h3 className="home__what-we-do-offer h3 l">What we offer.</h3>
