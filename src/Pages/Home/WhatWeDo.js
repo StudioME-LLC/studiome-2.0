@@ -18,7 +18,7 @@ export default function WhatWeDo() {
                 <div id="what-we-do__banner-border" className="line-m line-m--orange" />
             </div>
 
-            <p id="what-we-do__explanation" className="p-xl l">From first-timers to professionals, StudioME offers user-friendly studio spaces, equipment rentals, editing workstations, and custom production services for all media creators. The StudioME model was created with the challenge to deliver high quality content using brand new approaches to an outdated, over-priced model. Keeping our promise of "Media Made Easy," we make it as simple as possible to go from concept to creation.</p>
+            <p id="what-we-do__explanation" className="p-xl l">From first-timers to professionals, StudioME provides media creators access to user-friendly studio spaces, equipment rentals, editing workstations, and custom production services. The StudioME model was created with the challenge to deliver high quality content using brand new approaches to an outdated, over-priced model. Keeping our promise of "Media Made Easy," we make it as simple as possible to go from concept to creation.</p>
 
             <div id="what-we-do__border" />
             <h3 id="what-we-do__offer" className="h3 l">What we offer.</h3>
