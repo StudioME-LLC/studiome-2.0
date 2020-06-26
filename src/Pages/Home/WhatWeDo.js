@@ -25,7 +25,7 @@ export default function Mission() {
 
             <div className="home__what-we-do-container home__what-we-do-container--1">
                 <Icon1 className="home__what-we-do-icon--1" />
-                <p className="home__what-we-do-text p-s">High Speed Internet / Live Internet Broadcast</p>
+                <p className="home__what-we-do-text p-s">Fast Internet / Live Internet Broadcast</p>
             </div>
             <div className="home__what-we-do-container home__what-we-do-container--2">
                 <div className="home__what-we-do-item">
